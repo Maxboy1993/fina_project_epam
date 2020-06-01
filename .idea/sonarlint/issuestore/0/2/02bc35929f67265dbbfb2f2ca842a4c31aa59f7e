@@ -1,0 +1,31 @@
+
+N
+java:S2209"5Change this instance-reference to a static reference.(„‚·Ùûÿÿÿÿ
+O
+java:S2440"6Remove this instantiation of "FilmsRaitingConnection".(„‚·Ùûÿÿÿÿ
+g
+java:S1450"SRemove the "data" field and declare it as a local variable in the relevant methods.(ğíìÖ
+h
+java:S1192"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ
+=
+java:S1481")Remove this unused "name" local variable.(×¬¾Ö
+p
+java:S1192"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ
+t
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8àû…Õ¦.
+Z
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ÔË£üÿÿÿÿ
+Z
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+D
+java:S1481"+Remove this unused "filmId" local variable.(²°¨Ûıÿÿÿÿ
+D
+java:S1481"0Remove this unused "releaseDate" local variable.(€Ù‚Ô
+Z
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+o
+java:S1192"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ
+Z
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ûÚú¾8ï¢†Õ¦.
+[	java:S125"<This block of commented-out lines of code should be removed.(»•ûÿÿÿÿ8ï¢†Õ¦.

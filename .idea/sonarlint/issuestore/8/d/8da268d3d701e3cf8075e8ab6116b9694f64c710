@@ -1,0 +1,24 @@
+
+E
+java:S1148-"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8í¥Ìß¦.
+c
+java:S34574"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8ÒžÚß¦.
+E
+java:S1148*"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÀÜËß¦.
+q
+java:S1192+"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ8ÒžÚß¦.
+v
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8ÒžÚß¦.
+]	java:S125"<This block of commented-out lines of code should be removed.(æÉ–±üÿÿÿÿ8Ë‹Åß¦.
+c
+java:S3457;"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8ÒžÚß¦.
+x
+java:S1192+"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ8ÒžÚß¦.
+c
+java:S3457."AFormat specifiers should be used instead of string concatenation.(ï‘¶Ôþÿÿÿÿ8Ë‹Åß¦.
+y
+java:S1192+"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ8ÒžÚß¦.
+c
+java:S3457+"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8Ë‹Åß¦.
+]	java:S125"<This block of commented-out lines of code should be removed.(âÏ¶¸øÿÿÿÿ8Ë‹Åß¦.
+]	java:S125!"<This block of commented-out lines of code should be removed.(†òƒëøÿÿÿÿ8éæ»à¦.
