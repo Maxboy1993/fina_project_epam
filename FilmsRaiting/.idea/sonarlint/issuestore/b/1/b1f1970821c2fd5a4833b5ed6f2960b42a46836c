@@ -1,0 +1,23 @@
+
+\
+java:S3457+"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+F
+java:S1481"+Remove this unused "userId" local variable.(ì¢Šùÿÿÿÿ
+G
+java:S1481",Remove this unused "raiting" local variable.(„‚ŸÃøÿÿÿÿ
+V	java:S1255"<This block of commented-out lines of code should be removed.(»•ûÿÿÿÿ
+\
+java:S3457$"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+j
+java:S1192"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ
+r
+java:S1192"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ
+o
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ
+\
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(ûÚú¾
+q
+java:S1192"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ
+A
+java:S1481"+Remove this unused "filmId" local variable.(¼Ù¾à

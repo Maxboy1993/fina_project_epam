@@ -1,0 +1,27 @@
+
+\
+java:S34572"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+i
+java:S1450"SRemove the "data" field and declare it as a local variable in the relevant methods.(ğíìÖ
+V	java:S125D"<This block of commented-out lines of code should be removed.(»•ûÿÿÿÿ
+r
+java:S1192*"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ
+j
+java:S1192*"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ
+o
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ
+?
+java:S1481&")Remove this unused "name" local variable.(×¬¾Ö
+\
+java:S34579"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+Q	java:S125?"<This block of commented-out lines of code should be removed.(ûÚú¾
+F
+java:S1481%"+Remove this unused "filmId" local variable.(²°¨Ûıÿÿÿÿ
+q
+java:S1192*"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ
+F
+java:S1481'"0Remove this unused "releaseDate" local variable.(€Ù‚Ô
+\
+java:S3457*"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+c
+java:S3457,"AFormat specifiers should be used instead of string concatenation.(ÔË£üÿÿÿÿ8ôÍ•Ÿ§.
