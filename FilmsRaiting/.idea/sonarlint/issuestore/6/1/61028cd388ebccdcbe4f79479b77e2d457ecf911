@@ -1,0 +1,15 @@
+
+c
+java:S3457-"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8ÒıôÑ¨.
+x
+java:S1192"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ8ĞÉâÑ¨.
+q
+java:S1192"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ8ĞÉâÑ¨.
+T
+java:S2589"7Remove this expression which always evaluates to "true"(¤òª£8ÉÍÜÑ¨.
+c
+java:S3457&"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8ÒıôÑ¨.
+y
+java:S1192"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ8ĞÉâÑ¨.
+c
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8ĞÉâÑ¨.

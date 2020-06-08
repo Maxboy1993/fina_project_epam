@@ -1,0 +1,10 @@
+
+s
+java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(¶âñ°øÿÿÿÿ8Ò·÷Ò¨.
+\
+java:S3457'"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+Y
+java:S1854.">Remove this useless assignment to local variable "actorsList".(ÑïÆîýÿÿÿÿ
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(›¤£ç8ûµøÒ¨.
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(¼§“ûûÿÿÿÿ

@@ -1,0 +1,20 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(üİ°ç
+A
+java:S1172"&Remove these unused method parameters.(¢öÄƒøÿÿÿÿ
+\
+java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+B
+java:S1068!",Remove this unused "PASSWORD" private field.(éı•
+o
+java:S1450"TRemove the "calSt" field and declare it as a local variable in the relevant methods.(Í³Ùûÿÿÿÿ
+o
+java:S1450
+"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ
+=
+java:S1068"'Remove this unused "URL" private field.(ë•À
+s
+java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ
+V	java:S125#"<This block of commented-out lines of code should be removed.(»•ûÿÿÿÿ
+C
+java:S1068 "-Remove this unused "USER_NAME" private field.(œÒ‚ç

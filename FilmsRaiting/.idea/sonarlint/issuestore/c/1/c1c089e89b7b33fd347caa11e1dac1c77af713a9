@@ -1,0 +1,35 @@
+
+q
+java:S1192,"VDefine a constant instead of duplicating this literal ", SQLException code: " 3 times.(·‡‰¼ùÿÿÿÿ
+r
+java:S1192,"WDefine a constant instead of duplicating this literal ", SQLException state: " 3 times.(·‡‰¼ùÿÿÿÿ
+j
+java:S1192,"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(·‡‰¼ùÿÿÿÿ
+>
+java:S1148+"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+>
+java:S1148."#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+o
+java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ
+A
+java:S1172"&Remove these unused method parameters.(À¥›þøÿÿÿÿ
+\
+java:S3457,"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+\
+java:S3457/"AFormat specifiers should be used instead of string concatenation.(ï‘¶Ôþÿÿÿÿ
+\
+java:S34575"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+\
+java:S3457<"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+=
+java:S1068B"'Remove this unused "URL" private field.(ë•À
+C
+java:S1068C"-Remove this unused "USER_NAME" private field.(œÒ‚ç
+B
+java:S1068D",Remove this unused "PASSWORD" private field.(éý•
+V	java:S125"<This block of commented-out lines of code should be removed.(âÏ¶¸øÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(æÉ–±üÿÿÿÿ
+V	java:S125""<This block of commented-out lines of code should be removed.(†òƒëøÿÿÿÿ
+V	java:S125G"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ

@@ -1,9 +1,0 @@
-
-o
-java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ
-Q	java:S125!"<This block of commented-out lines of code should be removed.(ûÚú¾
-V	java:S125%"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ
-\
-java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ
-\
-java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ

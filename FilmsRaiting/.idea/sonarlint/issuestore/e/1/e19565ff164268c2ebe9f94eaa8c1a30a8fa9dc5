@@ -1,12 +1,0 @@
-
-v
-java:S1450"TRemove the "calSt" field and declare it as a local variable in the relevant methods.(Í³Ùûÿÿÿÿ8Ïï³Ÿ§.
-_
-java:S1128"=Remove this unused import 'com.mysql.cj.jdbc.ConnectionImpl'.(»Ç¹÷úÿÿÿÿ8Ø€¬Ÿ§.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(üİ°ç8ğÄŸ§.
-z
-java:S1450"XRemove the "resultSet" field and declare it as a local variable in the relevant methods.(¿ˆ°úÿÿÿÿ8éĞÁŸ§.
-c
-java:S3457"AFormat specifiers should be used instead of string concatenation.(·‡‰¼ùÿÿÿÿ8¨ı¬Ÿ§.
-v
-java:S1450"YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8Ø€¬Ÿ§.

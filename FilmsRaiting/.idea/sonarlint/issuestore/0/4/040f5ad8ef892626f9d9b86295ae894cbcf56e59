@@ -1,0 +1,11 @@
+
+s
+java:S1450"ZRemove the "inputStream" field and declare it as a local variable in the relevant methods.(έƒ©Λψÿÿÿÿ
+m
+java:S1450"YRemove the "properties" field and declare it as a local variable in the relevant methods.(υχήΰ
+9
+java:S3457"%String contains no format specifiers.(»εχ‚
+>
+java:S3457"%String contains no format specifiers.(Ύ—¥μÿÿÿÿÿ
+Z
+java:S3457"AFormat specifiers should be used instead of string concatenation.(Ωϋÿÿÿÿ
