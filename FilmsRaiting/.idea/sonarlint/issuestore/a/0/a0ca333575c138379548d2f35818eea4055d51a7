@@ -1,8 +1,8 @@
 
-L
-java:S3740"/Provide the parametrized type for this generic.(ÎëÛ«8í–ßó¨.
-V	java:S106¡"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼8…‡„ô¨.
 l
 java:S1192,"ODefine a constant instead of duplicating this literal "SQLException: " 5 times.(‡¯áı8‰„åó¨.
+L
+java:S3740"/Provide the parametrized type for this generic.(ÎëÛ«8í–ßó¨.
 U
 java:S1854"8Remove this useless assignment to local variable "list".(çè8…‡„ô¨.
+V	java:S106¡"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼8…‡„ô¨.

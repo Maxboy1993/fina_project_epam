@@ -1,0 +1,17 @@
+
+r
+java:S1989"VHandle the following exception that could be thrown by "proccessRequest": IOException.(†Ð¢G8–½æ¿©.
+a	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(‰Æáe8ä—¿¿©.
+[
+java:S2130"">Use "Double.parseDouble" for this string-to-double conversion.(ºçŽ“8ä—¿¿©.
+r
+java:S1989"VHandle the following exception that could be thrown by "proccessRequest": IOException.(†Ð¢G8ï‡æ¿©.
+`
+java:S1128">Remove this unused import 'javax.xml.parsers.DocumentBuilder'.(ƒ”¯¹ùÿÿÿÿ8ä—¿¿©.
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(€ƒò8ä—¿¿©.
+u
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(æÁ€Í8õú—¿©.
+`
+java:S2130!">Use "Double.parseDouble" for this string-to-double conversion.(ÒÈúêþÿÿÿÿ8ä—¿¿©.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(¶­‹Ïýÿÿÿÿ8ä—¿¿©.
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(£Žšíøÿÿÿÿ8ä—¿¿©.
