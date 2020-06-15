@@ -1,0 +1,19 @@
+
+N
+java:S1854°"7Remove this useless assignment to local variable "act".(Çè—î
+N
+java:S1854«"8Remove this useless assignment to local variable "list".(çè
+O	java:S106®"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼
+]
+java:S2095E"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+]	java:S125y"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8Î£É¾«.
+]
+java:S2095*"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+^	java:S125Š"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8îÁÉ¾«.
+]	java:S125j"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8ÿÈ¾«.
+]	java:S125J"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8 µÈ¾«.
+T	java:S106²"9Replace this use of System.out or System.err by a logger.(‰©Îøøÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(íçùÕşÿÿÿÿ8†­Æ¾«.
+]	java:S125/"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8îŸÖ¾«.
+]	java:S125W"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8ÃÜÈ¾«.
+]	java:S125;"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8¶Ö¾«.

@@ -1,0 +1,14 @@
+
+]	java:S125""<This block of commented-out lines of code should be removed.(íçùÕşÿÿÿÿ8Àœ¾¾«.
+j
+java:S2095B"HUse try-with-resources or close this "Connection" in a "finally" clause.(  ´Ôıÿÿÿÿ8¸îÂî¨.
+K
+java:S1905p")Remove this unnecessary cast to "Driver".(»ÓŒíûÿÿÿÿ8†Åèî¨.
+c
+java:S2142f"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Õ¡Ùî¨.
+]	java:S125g"<This block of commented-out lines of code should be removed.(Ë÷î—ùÿÿÿÿ8ª‘À¾«.
+T
+java:S2589("7Remove this expression which always evaluates to "true"(·¦Æ˜8¸îÂî¨.
+]	java:S125H"<This block of commented-out lines of code should be removed.(œ«Ùüÿÿÿÿ8ÉÎ¿¾«.
+W	java:S125R"<This block of commented-out lines of code should be removed.(ŞÊúK8Éå¿¾«.
+X	java:S125t"<This block of commented-out lines of code should be removed.(½•±8¬«À¾«.

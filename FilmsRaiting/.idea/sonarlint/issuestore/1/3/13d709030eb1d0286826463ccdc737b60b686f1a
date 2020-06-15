@@ -1,9 +1,0 @@
-
-T
-java:S2589"7Remove this expression which always evaluates to "true"(¤òª£8±­¶Ò¨.
-T
-java:S2589%"7Remove this expression which always evaluates to "true"(¤òª£8±ƒ¹Ò¨.
-^
-java:S3457)"AFormat specifiers should be used instead of string concatenation.(–ç¿8ñß¹Ò¨.
-@
-java:S1148""#Use a logger to log this exception.(Ç’Çê8±­¶Ò¨.

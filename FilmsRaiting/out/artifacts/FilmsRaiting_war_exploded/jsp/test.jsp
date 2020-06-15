@@ -1,6 +1,6 @@
-<%@ page import="model.service.impl.UserServiceImpl" %>
-<%@ page import="entity.User" %>
-<%@ page import="model.dao.impl.UserDaoImpl" %>
+<%@ page import="by.nareiko.films_raiting.model.service.impl.UserServiceImpl" %>
+<%@ page import="by.nareiko.films_raiting.entity.User" %>
+<%@ page import="by.nareiko.films_raiting.model.dao.impl.UserDaoImpl" %>
 <%--
   Created by IntelliJ IDEA.
   User: User

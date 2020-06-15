@@ -1,0 +1,38 @@
+
+J
+java:S1068!"/Remove this unused "CREATE_FILM" private field.(›ßòïýÿÿÿÿ
+V	java:S125R"<This block of commented-out lines of code should be removed.(è©è•úÿÿÿÿ
+·
+java:S1192"›Define a constant instead of duplicating this literal "SELECT Film.filmId, Film.name, Film.genreId, Genre.genre, Film.releaseDate, Film.actorId, " 4 times.(í èèüÿÿÿÿ
+Q	java:S125U"<This block of commented-out lines of code should be removed.(¡Õ±š
+J
+java:S1068#"/Remove this unused "UPDATE_FILM" private field.(ÞèÐØþÿÿÿÿ
+]
+java:S20955"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+ý
+java:S1192"æDefine a constant instead of duplicating this literal "Actor.name, Actor.birthday, Film.directorId, Director.name, Director.birthday, Film.statusId, Status.status FROM Film JOIN Status ON Film.statusId = Status.statusId " 4 times.(—ÿñ™
+J
+java:S1068("4Remove this unused "ACTIVE_STATUS_ID" private field.(‡ûöÝ
+W	java:S125I"<This block of commented-out lines of code should be removed.(•Âß.8æ¶Ø¾«.
+F
+java:S3740Ä"/Provide the parametrized type for this generic.(›ç³¯
+W	java:S125:"<This block of commented-out lines of code should be removed.(•Âß.8ø›Ø¾«.
+W	java:S125t"<This block of commented-out lines of code should be removed.(•Âß.8ŸÞÙ¾«.
+]	java:S125Y"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8øÏØ¾«.
+W	java:S125e"<This block of commented-out lines of code should be removed.(•Âß.8…¢Ù¾«.
+L
+java:S1068*"6Remove this unused "INACTIVE_STATUS_ID" private field.(éÄšý
+]	java:S125%"<This block of commented-out lines of code should be removed.(íçùÕþÿÿÿÿ8‡Õ×¾«.
+L
+java:S1068'"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ
+M
+java:S1481³"6Remove this unused "longActorBirthday" local variable.(©ÃÐ¼
+]
+java:S2095o"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+N
+java:S1068)"3Remove this unused "INACTIVE_STATUS" private field.(—Ðéûÿÿÿÿ
+]
+java:S2095D"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+\
+java:S1854³"ERemove this useless assignment to local variable "longActorBirthday".(©ÃÐ¼
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8­‡Ú¾«.

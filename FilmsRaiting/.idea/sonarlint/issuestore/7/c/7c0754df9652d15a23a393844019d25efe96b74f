@@ -1,6 +1,0 @@
-
-N
-java:S1481",Remove this unused "builder" local variable.(³¿÷¿ýÿÿÿÿ8çÜý—«.
-Z	java:S106#"9Replace this use of System.out or System.err by a logger.(†àðòùÿÿÿÿ8¼Ôš˜«.
-]
-java:S1854";Remove this useless assignment to local variable "builder".(³¿÷¿ýÿÿÿÿ8çÜý—«.

@@ -20,9 +20,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.35" level="application_server_libraries" />
-    <orderEntry type="library" exported="" name="log4j-api-2.13.3" level="project" />
     <orderEntry type="library" exported="" name="mysql-connector-java-8.0.20" level="project" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/log4j-api-2.13.3.jar!/" />
@@ -31,7 +30,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/log4j-core-2.13.3.jar!/" />
@@ -40,6 +39,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="logs" level="project" />
+    <orderEntry type="library" name="logs" level="project" />
   </component>
 </module>
