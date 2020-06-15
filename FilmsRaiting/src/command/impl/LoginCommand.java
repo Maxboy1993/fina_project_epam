@@ -2,6 +2,8 @@ package command.impl;
 
 import command.Command;
 import command.PagePath;
+import entity.User;
+import model.service.impl.UserServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,10 +14,10 @@ public class LoginCommand implements Command {
     private static final String PARAM_LOGIN = "login";
     private static final String PARAM_PASSWORD = "password";
 
-    //private UserServiceIml service;
+    private UserServiceImpl service;
 
-    public LoginCommand(/*UserServiceIml service*/){
-        // this.service = service;
+    public LoginCommand(UserServiceImpl service) {
+        this.service = service;
     }
 
     @Override
@@ -23,19 +25,17 @@ public class LoginCommand implements Command {
         String page;
         String loginValue = request.getParameter(PARAM_LOGIN);
         String passwordValue = request.getParameter(PARAM_PASSWORD);
-        // валидатор вынести в отдельный класс и вызывать из сервиса
-        // должна быть двойная валидация html5 + java
-        if (loginValue != null && !loginValue.isBlank() && passwordValue != null && !passwordValue.isBlank()) {
-            if(true /*service.checkUser(loginValue, passwordValue*/){
-            request.setAttribute("user", loginValue);
-            page = MAIN;
-        }else {
-                //error message
-                page = LOGIN;
-        }
-        }else {
-            //error message
-            page = LOGIN;
+
+        // должна быть двойная валидация html5 + java - добавить в валидатор
+
+        if (service.checkUser(loginValue, passwordValue)) {
+
+            User user = service.findByLoginAndPassword(loginValue, passwordValue);
+            request.setAttribute("user", user.getName());
+            page = PagePath.MAIN;
+        } else {
+            //error message ?????
+            page = PagePath.LOGIN;
         }
         return page;
     }

@@ -1,8 +1,15 @@
 
+V	java:S106¯"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼8«°£¡ª.
 l
-java:S1192,"ODefine a constant instead of duplicating this literal "SQLException: " 5 times.(‡¯áı8‰„åó¨.
-L
-java:S3740"/Provide the parametrized type for this generic.(ÎëÛ«8í–ßó¨.
+java:S11920"ODefine a constant instead of duplicating this literal "SQLException: " 7 times.(‡¯áı8«°£¡ª.
+O
+java:S1128"2Remove this unused import 'entity.AbstractEntity'.(í§øÄ8«°£¡ª.
 U
-java:S1854"8Remove this useless assignment to local variable "list".(çè8…‡„ô¨.
-V	java:S106¡"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼8…‡„ô¨.
+java:S1854±"7Remove this useless assignment to local variable "act".(Çè—î8¾’®¡ª.
+d
+java:S2095F"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8Ó±Å¡ª.
+U
+java:S1854¬"8Remove this useless assignment to local variable "list".(çè8«°£¡ª.
+d
+java:S2095+"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ñÂÈ¡ª.
+[	java:S106³"9Replace this use of System.out or System.err by a logger.(‰©Îøøÿÿÿÿ8¾’®¡ª.

@@ -16,7 +16,7 @@ public enum  RoleType  {
         return roleType;
     }
 
-    public RoleType getRoleTypeByValue(String value) throws EntityException {
+    public static RoleType getRoleTypeByValue(String value) throws EntityException {
         RoleType[] roleTypes = RoleType.values();
         for (RoleType role : roleTypes) {
             if (role.getRoleType().equals(value)){

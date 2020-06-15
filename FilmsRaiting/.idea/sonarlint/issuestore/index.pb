@@ -46,8 +46,6 @@ e
 5src/test_example/statement/FilmsRaitingStatement.java,e\2\e21e25b1dcf9f27f4fa71e77dd6141c690fce41a
 N
 src/entity/AbstractEntity.java,1\f\1f904c0a9bb59995eb980990639598d7a61fcd1c
-X
-(src/model/dao/UnitedFilmsRaitingDAO.java,9\f\9f844fa49a1adf46b6e6ce91bcec3aae3f56ba1c
 L
 src/model/dao/PersonDAO.java,2\e\2eb71dc60100e914f3124a78d67459c06513fc4a
 L
@@ -72,8 +70,6 @@ K
 src/model/dao/FilmsDao.java,a\0\a04333bd1550dc01cd69b677021758fffc9fd043
 L
 src/model/dao/PersonDao.java,7\8\78c20225f4698a216968361573534e6cbcf7efe6
-X
-(src/model/dao/UnitedFilmsRaitingDao.java,3\1\31184265fdefc891243d7055bd80b21374c58587
 T
 $src/model/dao/impl/ActorDaoImpl.java,a\0\a0ca333575c138379548d2f35818eea4055d51a7
 C
@@ -106,3 +102,27 @@ R
 "src/model/service/UserService.java,8\b\8b870d3451b315d49976e1163873fa40c1a48668
 [
 +src/model/service/impl/UserServiceImpl.java,7\c\7c0754df9652d15a23a393844019d25efe96b74f
+L
+src/model/dao/ReviewDao.java,0\e\0efe2e6aae8a73dee82e98bb89b26b58e9b68885
+M
+src/model/dao/RaitingDao.java,6\9\6976c5846a29e92f1d9642ab7b9a76b808c87eb8
+J
+src/model/dao/UserDao.java,0\a\0aa4c9e7f1858fe564742467881098b34e2b1e05
+Y
+)src/model/dao/GeneralFilmsRaitingDao.java,9\d\9d60554b4051c0e0f95214d6e79902d0b1668ae1
+_
+/src/test_example/reader/impl/SQLReaderImpl.java,e\7\e7a93663aca682c923a49eb6edc140ee1735161c
+P
+ src/validator/UserValidator.java,4\b\4b64b6c346f2c99496bc56350b0db459aec3a403
+L
+src/command/CommandType.java,d\7\d7c144502e0545cc6185579146c1dd0c50f1dca8
+N
+src/controller/Controller.java,5\d\5d812c679aa6fb5aae9c123378f48ab7acd0c879
+P
+ src/command/CommandProvider.java,6\6\665921e981793458b2fe2ab27ee6dbee6d4f13bd
+@
+web/jsp/test.jsp,f\b\fb993fe549c22530cb3830df94bc4ca0df8ce2be
+>
+log/Log4j2.log,0\e\0e2d0f55a4e6455ab0363e4b45d8da5e91fa14f9
+U
+%src/model/dao/factory/DaoFactory.java,0\6\065a2b03deba2df6574cbcdb1dd8bc4c89e38651

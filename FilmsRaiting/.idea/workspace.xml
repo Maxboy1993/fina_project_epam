@@ -7,29 +7,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640a19c3-f54a-4a1b-945d-9c56652a62cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/PagePath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/impl/LoginCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/impl/LogoutCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/command/impl/UserCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0aa4c9e7f1858fe564742467881098b34e2b1e05" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0efe2e6aae8a73dee82e98bb89b26b58e9b68885" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b64b6c346f2c99496bc56350b0db459aec3a403" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6976c5846a29e92f1d9642ab7b9a76b808c87eb8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d60554b4051c0e0f95214d6e79902d0b1668ae1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e7a93663aca682c923a49eb6edc140ee1735161c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/Log4j2.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CommandProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/command/CommandType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/GeneralFilmsRaitingDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/RaitingDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/ReviewDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/factory/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validator/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ff6af20af4376ace654c240d5a3be470c80f54e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ff6af20af4376ace654c240d5a3be470c80f54e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1af4d2d9371fcf30c5945097370a14afa1c0cd97" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1af4d2d9371fcf30c5945097370a14afa1c0cd97" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31184265fdefc891243d7055bd80b21374c58587" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3cb795547b1ce56bdf413537b810b743ab027a62" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3cb795547b1ce56bdf413537b810b743ab027a62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/424f0417d864cd60ae04163bbf1f81b5620e59c5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/424f0417d864cd60ae04163bbf1f81b5620e59c5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ec480e5ff3ac4fe5d114614db566a4a1ee34265" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ec480e5ff3ac4fe5d114614db566a4a1ee34265" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78c20225f4698a216968361573534e6cbcf7efe6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78c20225f4698a216968361573534e6cbcf7efe6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c0754df9652d15a23a393844019d25efe96b74f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c0754df9652d15a23a393844019d25efe96b74f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f198ed450f32e45b10ec3c2b1406e609b4a96cd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f198ed450f32e45b10ec3c2b1406e609b4a96cd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f844fa49a1adf46b6e6ce91bcec3aae3f56ba1c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a04333bd1550dc01cd69b677021758fffc9fd043" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a04333bd1550dc01cd69b677021758fffc9fd043" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0ca333575c138379548d2f35818eea4055d51a7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0ca333575c138379548d2f35818eea4055d51a7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3dcd639e718774244dd55cfe333d61003f4bfda" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3dcd639e718774244dd55cfe333d61003f4bfda" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilmsRaiting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmsRaiting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/GenreType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/GenreType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/StatusType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/StatusType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/log4j2" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/log4j2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/FilmsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/FilmsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/PersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/PersonDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/UnitedFilmsRaitingDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/ActorDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/ActorDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/reader/impl/SQLReaderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/reader/impl/SQLReaderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/validator/SQLReaderValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/GenreType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/GenreType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/StatusType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/StatusType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/log4j2" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/log4j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/FilmsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/FilmsDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/PersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/PersonDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/RaitingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/UnitedFilmsRaitingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/UnitedFilmsRaitingDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/UnitedFilmsRaitingDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/ActorDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/ActorDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/reader/impl/SQLReaderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/reader/impl/SQLReaderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/validator/SQLReaderValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/command/impl/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/GenreType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/GenreType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/RoleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/StatusType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/StatusType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j2" beforeDir="false" afterPath="$PROJECT_DIR$/src/log4j2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/dao/FilmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/FilmsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/PersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/UnitedFilmsRaitingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ActorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/ActorDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/DirectorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/DirectorDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/FilmDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/FilmDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test_example/reader/impl/SQLReaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_example/reader/impl/SQLReaderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validator/SQLReaderValidator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,28 +121,27 @@
         <item name="films_raiting: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="films_raiting@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="films_raiting: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="actor: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\fina_project_epam\FilmsRaiting\.idea" />
+      </set>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -109,12 +159,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model/dao/impl" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/apache-tomcat-9.0.35-windows-x64/apache-tomcat-9.0.35/logs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
@@ -133,12 +187,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.35">
-    <configuration name="ActorDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="model.dao.impl.ActorDaoImpl" />
+    <configuration name="UserServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.service.impl.UserServiceImpl" />
       <module name="FilmsRaiting" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.dao.impl.*" />
+          <option name="PATTERN" value="model.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,60 +200,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BATHCommand" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_example.BATHCommand" />
-      <module name="FilmsRaiting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/FilmsRaiting_war_exploded/index.jsp">
+      <method v="2" />
     </configuration>
-    <configuration name="FilmsRaitingCallableStatement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_example.statement.FilmsRaitingCallableStatement" />
-      <module name="FilmsRaiting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_example.statement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FilmsRaitingPrepareStatement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_example.statement.FilmsRaitingPrepareStatement" />
-      <module name="FilmsRaiting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_example.statement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FilmsRaitingStatement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_example.statement.FilmsRaitingStatement" />
-      <module name="FilmsRaiting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test_example.statement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="login.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/FilmsRaiting_war_exploded/jsp/login.jsp">
+      <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/FilmsRaiting_war_exploded/firstpageservlet" />
       <deployment>
         <artifact name="FilmsRaiting:war exploded">
           <settings>
@@ -270,21 +277,164 @@
         </option>
       </method>
     </configuration>
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="FilmsRaiting:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/FilmsRaiting_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="index_jsp_FilmsRaiting" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50324" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="FilmsRaiting:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="test.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/FilmsRaiting_war_exploded/jsp/test.jsp" />
+      <deployment>
+        <artifact name="FilmsRaiting:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/FilmsRaiting_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="test_jsp_FilmsRaiting" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55192" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="FilmsRaiting:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.ActorDaoImpl" />
-      <item itemvalue="Application.BATHCommand" />
-      <item itemvalue="Application.FilmsRaitingCallableStatement" />
-      <item itemvalue="Application.FilmsRaitingPrepareStatement" />
-      <item itemvalue="Application.FilmsRaitingStatement" />
+      <item itemvalue="Application.UserServiceImpl" />
+      <item itemvalue="JavaScript Debug.index.jsp" />
+      <item itemvalue="JavaScript Debug.login.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.35" />
+      <item itemvalue="Tomcat Server.index.jsp" />
+      <item itemvalue="Tomcat Server.test.jsp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ActorDaoImpl" />
-        <item itemvalue="Application.FilmsRaitingStatement" />
-        <item itemvalue="Application.BATHCommand" />
-        <item itemvalue="Application.FilmsRaitingCallableStatement" />
-        <item itemvalue="Application.FilmsRaitingPrepareStatement" />
+        <item itemvalue="Tomcat Server.test.jsp" />
+        <item itemvalue="Application.UserServiceImpl" />
+        <item itemvalue="JavaScript Debug.login.jsp" />
+        <item itemvalue="Tomcat Server.index.jsp" />
+        <item itemvalue="JavaScript Debug.index.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +447,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -332,6 +487,17 @@
       <workItem from="1591681631094" duration="5051000" />
       <workItem from="1591708403628" duration="2380000" />
       <workItem from="1591765793003" duration="5221000" />
+      <workItem from="1591873915008" duration="12047000" />
+      <workItem from="1591890490179" duration="5233000" />
+      <workItem from="1591940051296" duration="6626000" />
+      <workItem from="1591947397536" duration="649000" />
+      <workItem from="1591962455469" duration="811000" />
+      <workItem from="1591981400935" duration="408000" />
+      <workItem from="1591983439441" duration="876000" />
+      <workItem from="1592136916534" duration="9348000" />
+      <workItem from="1592152190646" duration="284000" />
+      <workItem from="1592153854562" duration="8381000" />
+      <workItem from="1592199517993" duration="94000" />
     </task>
     <servers />
   </component>
@@ -339,14 +505,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591637501278">
+    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592199626020">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1591637501278" />
-    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser" timestamp="1591772205629">
+    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1592199626020" />
+    <state x="398" y="152" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592149818339">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1591772205629" />
+    <state x="398" y="152" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1592149818339" />
+    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser" timestamp="1592158995121">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1592158995121" />
+    <state x="434" y="260" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1592149414822">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="434" y="260" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1280.689@0.0.1280.689" timestamp="1592149414822" />
+    <state x="471" y="48" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1592150858201">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="471" y="48" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.689@0.0.1280.689" timestamp="1592150858201" />
     <state x="321" y="82" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1591508257513">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -359,90 +537,103 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="371" y="94" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1591523608629" />
-    <state x="327" y="88" key="FileChooserDialogImpl" timestamp="1591080882105">
+    <state x="327" y="88" key="FileChooserDialogImpl" timestamp="1592150846427">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="327" y="88" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1591080882105" />
-    <state width="845" height="166" key="GridCell.Tab.0.bottom" timestamp="1591706727409">
+    <state x="327" y="88" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1592150846427" />
+    <state width="845" height="166" key="GridCell.Tab.0.bottom" timestamp="1592162801525">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1591706727409" />
-    <state width="845" height="166" key="GridCell.Tab.0.center" timestamp="1591706727409">
+    <state width="845" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592162801525" />
+    <state width="845" height="166" key="GridCell.Tab.0.center" timestamp="1592162801524">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1591706727409" />
-    <state width="845" height="166" key="GridCell.Tab.0.left" timestamp="1591706727408">
+    <state width="845" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1592162801524" />
+    <state width="845" height="166" key="GridCell.Tab.0.left" timestamp="1592162801524">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1591706727408" />
-    <state width="845" height="166" key="GridCell.Tab.0.right" timestamp="1591706727409">
+    <state width="845" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1592162801524" />
+    <state width="845" height="166" key="GridCell.Tab.0.right" timestamp="1592162801524">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1591706727409" />
-    <state width="845" height="166" key="GridCell.Tab.1.bottom" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1592162801524" />
+    <state width="845" height="166" key="GridCell.Tab.1.bottom" timestamp="1592162801526">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.1.center" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592162801526" />
+    <state width="845" height="166" key="GridCell.Tab.1.center" timestamp="1592162801526">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.1.left" timestamp="1591706727409">
+    <state width="845" height="166" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1592162801526" />
+    <state width="845" height="166" key="GridCell.Tab.1.left" timestamp="1592162801526">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1591706727409" />
-    <state width="845" height="166" key="GridCell.Tab.1.right" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1592162801526" />
+    <state width="845" height="166" key="GridCell.Tab.1.right" timestamp="1592162801526">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.2.bottom" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1592162801526" />
+    <state width="845" height="166" key="GridCell.Tab.2.bottom" timestamp="1592162801527">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.2.center" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592162801527" />
+    <state width="845" height="166" key="GridCell.Tab.2.center" timestamp="1592162801527">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.2.left" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1592162801527" />
+    <state width="845" height="166" key="GridCell.Tab.2.left" timestamp="1592162801526">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
-    <state width="845" height="166" key="GridCell.Tab.2.right" timestamp="1591706727410">
+    <state width="845" height="166" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1592162801526" />
+    <state width="845" height="166" key="GridCell.Tab.2.right" timestamp="1592162801527">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1591706727410" />
+    <state width="845" height="166" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1592162801527" />
     <state width="209" height="499" key="HiddenNamespacesPopup" timestamp="1591513855783">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="209" height="499" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1591513855783" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1591623065095">
+    <state x="121" y="0" key="SettingsEditor" timestamp="1592150862508">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1591623065095" />
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1592150862508" />
+    <state x="221" y="3" key="com.intellij.database.dbimport.ImportDialog" timestamp="1591883899549">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="221" y="3" key="com.intellij.database.dbimport.ImportDialog/0.0.1280.689@0.0.1280.689" timestamp="1591883899549" />
     <state x="357" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1591424991573">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="357" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.689@0.0.1280.689" timestamp="1591424991573" />
-    <state x="340" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1591768323296">
+    <state x="340" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1592199527037">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="340" y="173" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1591768323296" />
+    <state x="340" y="173" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1592199527037" />
+    <state x="375" y="245" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1592150788630">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="375" y="245" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.689@0.0.1280.689" timestamp="1592150788630" />
     <state x="297" y="153" key="run.anything.popup" timestamp="1591295952421">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1591295952421" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1591687348043">
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1591885834429">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1591687348043" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1591885834429" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/command/impl/LoginCommand.java</url>
-          <line>10</line>
+          <line>12</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/dao/impl/UserDaoImpl.java</url>
+          <line>234</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

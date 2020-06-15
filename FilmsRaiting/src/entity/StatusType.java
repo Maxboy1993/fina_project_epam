@@ -16,7 +16,7 @@ public enum  StatusType {
         return statusType;
     }
 
-    public StatusType getStatusTypeByValue(String value) throws EntityException {
+    public static StatusType getStatusTypeByValue(String value) throws EntityException {
         StatusType[] statusTypes = StatusType.values();
         for (StatusType status : statusTypes) {
             if (status.getStatusType().equals(value)){

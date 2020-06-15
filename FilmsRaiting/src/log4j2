@@ -12,7 +12,7 @@
             <PatternLayout pattern="${pattern_console}"/>
         </Console>
         
-        <RollingFile name="FileRolling" fileName="log/log4j.log" append="true"
+        <RollingFile name="FileRolling" fileName="log/log4j2.log" append="true"
                      filePattern=
                              "log/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}_%i.log">
             <PatternLayout pattern="${pattern_file}"/>

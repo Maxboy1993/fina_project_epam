@@ -1,3 +1,7 @@
 
-L
-java:S1128"/Remove this unused import 'java.util.Calendar'.(ÿÛö´8¼ÂĞñ¨.
+d
+java:S2095C"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8çƒñŸ«.
+l
+java:S1192-"ODefine a constant instead of duplicating this literal "SQLException: " 7 times.(‡¯áı8çƒñŸ«.
+d
+java:S2095("GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8é‡ÚŸ«.

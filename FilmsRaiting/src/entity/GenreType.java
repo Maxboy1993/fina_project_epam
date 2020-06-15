@@ -32,7 +32,7 @@ public enum  GenreType {
         return genreType;
     }
 
-    public GenreType getGenreTypeByValue(String value) throws EntityException {
+    public static GenreType getGenreTypeByValue(String value) throws EntityException {
         GenreType[] genreTypes = GenreType.values();
         for (GenreType genre : genreTypes) {
             if (genre.getGenreType().equals(value)){
