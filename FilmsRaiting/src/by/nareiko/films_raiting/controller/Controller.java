@@ -2,6 +2,7 @@ package by.nareiko.films_raiting.controller;
 
 import by.nareiko.films_raiting.command.Command;
 import by.nareiko.films_raiting.command.CommandProvider;
+import by.nareiko.films_raiting.pool.ConnectionPool;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processServlet(request, response);
@@ -22,6 +24,18 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processServlet(request, response);
+    }
+
+    @Override
+    public void init() throws ServletException {
+//        super.init();
+        ConnectionPool.getInstance();
+    }
+
+    @Override
+    public void destroy() {
+
+        ConnectionPool.getInstance().destroyPool();
     }
 
     private void processServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{

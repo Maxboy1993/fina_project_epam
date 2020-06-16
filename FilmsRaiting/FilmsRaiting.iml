@@ -39,6 +39,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="logs" level="project" />
+    <orderEntry type="library" exported="" name="logs" level="project" />
+    <orderEntry type="library" exported="" name="log4j-api-2.5" level="project" />
   </component>
 </module>

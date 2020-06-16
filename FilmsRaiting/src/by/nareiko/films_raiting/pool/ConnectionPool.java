@@ -31,7 +31,7 @@ public class ConnectionPool {
     private BlockingQueue<ProxyConnection> freeConnections;
     private Queue<ProxyConnection> givenAwayConnections;
     private static Lock lock = new ReentrantLock(true);
-//    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public static ConnectionPool getInstance() {
         if (pool == null) {
@@ -54,22 +54,24 @@ public class ConnectionPool {
     }
 
     private void initConnection() {
+//        ClassLoader classLoader = this.getClass().getClassLoader();
+//        Properties properties = new Properties();
         try {
+//            properties.load(classLoader.getResourceAsStream("data\\database.properties"));
             Properties properties = new Properties();
-            InputStream inputStream = Files.newInputStream(Paths.get("resourses/data/database.properties"));
+            InputStream inputStream = Files.newInputStream(Paths.get("resourses","data","database.properties"));
             properties.load(inputStream);
             String driverClass = properties.getProperty(DRIVER_CLASS);
             String url = properties.getProperty(URL);
             String userName = properties.getProperty(USER_NAME);
             String password = properties.getProperty(PASSWORD);
             Class.forName(driverClass);
-            Connection connection = DriverManager.getConnection(url, userName, password);
             for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {
-                //replace to ProxyConnection
+                Connection connection = DriverManager.getConnection(url, userName, password);
                 freeConnections.add(new ProxyConnection(connection));
             }
         } catch (ClassNotFoundException | SQLException | IOException e) {
-//            LOGGER.error("Connection pool wasn't initialized: ", e);
+            LOGGER.error("Connection pool wasn't initialized: ", e);
         }
     }
 
@@ -79,7 +81,7 @@ public class ConnectionPool {
             try {
                 connection = freeConnections.take();
             } catch (InterruptedException e) {
-//                LOGGER.error("Connection isn't available: ", e);
+                LOGGER.error("Connection isn't available: ", e);
                 Thread.currentThread().interrupt();
             }
             givenAwayConnections.add(connection);
@@ -95,25 +97,25 @@ public class ConnectionPool {
         freeConnections.add((ProxyConnection) connection);
     }
 
-    public void destroyPool() throws DaoException {
+    public void destroyPool() {
         for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {
             try {
                 freeConnections.take().finishConnection();
             } catch (InterruptedException e) {
-//                LOGGER.error("InterruptedException: ", e.getMessage());
+                LOGGER.error("InterruptedException: ", e.getMessage());
             }
         }
-        deregosterDrivers();
+        deregisterDrivers();
     }
 
-    private void deregosterDrivers() {
+    private void deregisterDrivers() {
         Enumeration<Driver> drivers = DriverManager.getDrivers();
         while (drivers.hasMoreElements()) {
             Driver driver = (Driver) drivers.nextElement();
             try {
                 DriverManager.deregisterDriver(driver);
             } catch (SQLException e) {
-//                LOGGER.error("Deregister driver error", e);
+                LOGGER.error("Deregister driver error", e);
             }
         }
     }

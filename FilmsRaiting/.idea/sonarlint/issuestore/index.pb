@@ -68,3 +68,5 @@ t
 Dsrc/by/nareiko/films_raiting/model/service/impl/UserServiceImpl.java,5\c\5ca84811065c1b6be0b01f80d8e0d5f6c332c31d
 c
 3src/by/nareiko/films_raiting/model/dao/BaseDao.java,5\1\51980f02b11919bb285e7b4e7a3033e53b40f295
+a
+1src/by/nareiko/films_raiting/command/Command.java,8\5\8513e29df21559ce5a586796e01f6aa449c08109

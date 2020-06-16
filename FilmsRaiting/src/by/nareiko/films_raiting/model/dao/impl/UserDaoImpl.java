@@ -35,7 +35,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             "login, password, statusId) VALUES (?, ?, ?, ?, ?, ?)";
     private static final String UPDATE_USER = "UPDATE user SET name = ?, birthday = ?" +
             "roleId = ?, login = ?, password = ?, statusId = ? WHERE userId = ?";
-//    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
     boolean isCreated;
     private static final String ADMIN_ROLE = "admin";
     private static final int ADMIN_ROLE_ID = 1;
@@ -60,7 +60,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
                 user = initUser(resultSet);
             }
         } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
+            LOGGER.error(e);
         }
         return user;
     }
@@ -76,7 +76,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
                 user = initUser(resultSet);
             }
         } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
+            LOGGER.error(e);
         }
         return user;
     }
@@ -93,7 +93,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
 //            }
             user = findByLogin(login);
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: ", e);
         }
         return user;
     }
@@ -105,7 +105,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             ResultSet resultSet = statement.executeQuery(FIND_ALL_USERS);
             users = initUsers(resultSet);
         } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
+            LOGGER.error(e);
         }
         return users;
     }
@@ -120,7 +120,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
                 user = initUser(resultSet);
             }
         } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
+            LOGGER.error(e);
         }
         return user;
     }
@@ -140,7 +140,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             user = findById(id); //?????????????????????
             // протестить
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: ", e);
         }
         return user;
     }
@@ -163,7 +163,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             statement.executeUpdate();
             isCreated = true;
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: ", e);
         }
         return isCreated;
     }
@@ -190,7 +190,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             statement.setInt(6, statusId);
             user1 = findById(user.getUserId());       // так правильно при update???
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: ", e);
         }
         return user1;
     }
@@ -237,7 +237,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
 //            System.out.println(user.toString());
 //        }
         User user1 = new User();
-        user1 = userDao.findById(2);
+        user1 = userDao.findByLoginAndPassword("tom40@gmail.com", "40tom40");
         System.out.println(user1.toString());
     }
 }

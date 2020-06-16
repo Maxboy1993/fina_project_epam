@@ -7,234 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="640a19c3-f54a-4a1b-945d-9c56652a62cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j_api_2_13_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/040f5ad8ef892626f9d9b86295ae894cbcf56e59" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/065a2b03deba2df6574cbcdb1dd8bc4c89e38651" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0aa4c9e7f1858fe564742467881098b34e2b1e05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d40d6b6bd307f0031e5e2f730c027bc9cf8b870" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0efe2e6aae8a73dee82e98bb89b26b58e9b68885" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0ff6af20af4376ace654c240d5a3be470c80f54e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13d709030eb1d0286826463ccdc737b60b686f1a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15c546398ad21edbdc1c73ecb17753ad8eb61eec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/194ebe4232ece69866edd569016a5a386b350513" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1af4d2d9371fcf30c5945097370a14afa1c0cd97" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1ed628a66e702e0e55fddedfc59207de1e8ba329" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f904c0a9bb59995eb980990639598d7a61fcd1c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a55b3d237677984f026c6232801dadad01be33a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2dd563d074fec5d3dd84db660f048b3e5d642b9d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/e/2eb71dc60100e914f3124a78d67459c06513fc4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/31f6361de28dfba9e61836b79985196b21e7c026" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/339d33011f5daed878957b86a9755615a1a6cf5b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/33e59f22f1a5e2f71663cdcb4216ad9ad05040f9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3cb795547b1ce56bdf413537b810b743ab027a62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3de81353beb4d5b1e9bd463bc0656a5773f22c09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/44e53ebb1f69bbaf290144dc8089a1aa3f20aea4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b64b6c346f2c99496bc56350b0db459aec3a403" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/599d91d43b98c509bd4a61cb70cce9c4a9624ac1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d812c679aa6fb5aae9c123378f48ab7acd0c879" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e804cf94a6747c2acf0923c2a48ef31f3017359" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/1/61028cd388ebccdcbe4f79479b77e2d457ecf911" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/665921e981793458b2fe2ab27ee6dbee6d4f13bd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6976c5846a29e92f1d9642ab7b9a76b808c87eb8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b2316e90143a74ec76df9efa4d0f10c25926a8a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e8abfc2e8a5d2d2e2de8da455a781d145d5e6ff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ec480e5ff3ac4fe5d114614db566a4a1ee34265" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f841e9aecf0262b6c42f1091270834b041d8f26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/723e143c85a2faed2bd27d63fa4febe470846796" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78c20225f4698a216968361573534e6cbcf7efe6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c0754df9652d15a23a393844019d25efe96b74f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b870d3451b315d49976e1163873fa40c1a48668" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/904a281b1e1a2555d1fcee21fc2c2f849f5ff977" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/99bb1f39cbc64522b8fad000e0997a4ae12e2165" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d60554b4051c0e0f95214d6e79902d0b1668ae1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f198ed450f32e45b10ec3c2b1406e609b4a96cd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f198ed450f32e45b10ec3c2b1406e609b4a96cd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a04333bd1550dc01cd69b677021758fffc9fd043" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0ca333575c138379548d2f35818eea4055d51a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad5bbfb68c146c68bdbc702675025c1af088ca17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/f/afb10e8b3e6706988e9606f90d5d992912ccc0e0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1c089e89b7b33fd347caa11e1dac1c77af713a9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c474206adcee94c987ebd3c0c3d938d776782630" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5a935ff097c790f4d46612d4c46c70bccdbe6a9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3dcd639e718774244dd55cfe333d61003f4bfda" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d7c144502e0545cc6185579146c1dd0c50f1dca8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9c01dcb50811a163d58895503ed22ffbb211ae8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db3f101d95a32121f668c06aa2d6cc9233545667" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddd591f3e8902bfbef7c29511ad07b83f312a8ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e21e25b1dcf9f27f4fa71e77dd6141c690fce41a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4e1064beb1e9f829aeefde0fd2cf051098883e7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e7a93663aca682c923a49eb6edc140ee1735161c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb993fe549c22530cb3830df94bc4ca0df8ce2be" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb993fe549c22530cb3830df94bc4ca0df8ce2be" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/log4j_api_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/log4j-1.2-api-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/log4j-api-2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/log4j-core-2.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/FilmsRaiting_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/FilmsRaiting_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb25f7c9-5e77-46d0-a114-62f907da743c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb25f7c9-5e77-46d0-a114-62f907da743c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FilmsRaiting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilmsRaiting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/CommandProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/CommandType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/PagePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/impl/LoginCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/impl/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/command/impl/UserCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/AbstractEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/Actor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/Director.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/Film.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/FilmRaiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/GenreType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/Review.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/RoleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/StatusType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/UserRaiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/entity/exception/EntityException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/log4j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/FilmsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/GeneralFilmsRaitingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/PersonDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/RaitingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/ReviewDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/exception/DaoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/ActorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/DirectorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/FilmDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/FilmRaitingDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/ReviewDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/dao/impl/UserRaitingDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/model/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/pool/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/pool/ProxyConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/BATHCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/FilmRaitingMultipleResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/FilmsRaitingBlob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/FilmsRaitingConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/reader/SQLReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/reader/factory/SQLReaderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/reader/impl/SQLReaderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/servlet/AllParamServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/servlet/FirstPageServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/servlet/MultithreadingServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/servlet/MyServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/statement/FilmsRaitingCallableStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/statement/FilmsRaitingPrepareStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/statement/FilmsRaitingStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/test_example/statement/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/WEB-INF/classes/validator/UserValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/FilmsRaiting_war_exploded/jsp/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/CommandProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/CommandType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/PagePath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/impl/LoginCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/impl/LogoutCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/command/impl/UserCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/AbstractEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/Actor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/Director.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/Film.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/FilmRaiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/GenreType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/Review.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/RoleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/StatusType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/UserRaiting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/entity/exception/EntityException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/log4j2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/FilmsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/GeneralFilmsRaitingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/PersonDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/RaitingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/ReviewDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/exception/DaoException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/ActorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/DirectorDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/FilmDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/FilmRaitingDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/ReviewDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/dao/impl/UserRaitingDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/model/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/pool/ConnectionPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/pool/ProxyConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/BATHCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/FilmRaitingMultipleResults.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/FilmsRaitingBlob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/FilmsRaitingConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/reader/SQLReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/reader/factory/SQLReaderFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/reader/impl/SQLReaderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/servlet/AllParamServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/servlet/FirstPageServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/servlet/MultithreadingServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/servlet/MyServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/statement/FilmsRaitingCallableStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/statement/FilmsRaitingPrepareStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/statement/FilmsRaitingStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/test_example/statement/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/validator/UserValidator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/CommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/CommandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/PagePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/PagePath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/impl/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/impl/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/impl/LogoutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/impl/LogoutCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/command/impl/UserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/impl/UserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/AbstractEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/Director.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/FilmRaiting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/FilmRaiting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/GenreType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/GenreType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/RoleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/RoleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/StatusType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/StatusType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/UserRaiting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/entity/UserRaiting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/exception/EntityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/exception/EntityException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log4j2" beforeDir="false" afterPath="$PROJECT_DIR$/web/log4j2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/FilmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/FilmsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/GeneralFilmsRaitingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/PersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/RaitingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/RaitingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/ReviewDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/exception/DaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/exception/DaoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/factory/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/factory/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ActorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/ActorDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/DirectorDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/DirectorDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/FilmDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/FilmDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/FilmRaitingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/FilmRaitingDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/ReviewDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/ReviewDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/UserRaitingDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/UserRaitingDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pool/ProxyConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ProxyConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/BATHCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/FilmRaitingMultipleResults.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/FilmsRaitingBlob.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/FilmsRaitingConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/reader/SQLReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/reader/factory/SQLReaderFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/reader/impl/SQLReaderImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/servlet/AllParamServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/servlet/FirstPageServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/servlet/MultithreadingServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/servlet/MyServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/statement/FilmsRaitingCallableStatement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/statement/FilmsRaitingPrepareStatement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/statement/FilmsRaitingStatement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_example/statement/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/validator/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/META-INF/FilmsRaiting.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/CommandProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/CommandType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/CommandType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/PagePath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/PagePath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/LoginCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/LoginCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/LogoutCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/LogoutCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/UserCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/command/impl/UserCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/AbstractEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/AbstractEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Actor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Actor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Director.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Director.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/FilmRaiting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/FilmRaiting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/GenreType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/GenreType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/StatusType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/StatusType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/UserRaiting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/entity/UserRaiting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/exception/DaoException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/exception/DaoException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/exception/EntityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/exception/EntityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/factory/DaoFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/factory/DaoFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/BaseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/FilmsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/FilmsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/PersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/PersonDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/RaitingDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/RaitingDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/ReviewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/ActorDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/ActorDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/DirectorDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/DirectorDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/FilmDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/FilmDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/FilmRaitingDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/FilmRaitingDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/ReviewDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/ReviewDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/UserRaitingDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/dao/impl/UserRaitingDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/model/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/pool/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/pool/ConnectionPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/pool/ProxyConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/pool/ProxyConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FilmsRaiting/by/nareiko/films_raiting/validator/UserValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/command/CommandProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/nareiko/films_raiting/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ProxyConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ProxyConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,12 +89,15 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1ckh9IugpkHWl3t61tV8AzIv7an" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -277,11 +108,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/log4j-cassandra-2.13.3.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/log4j-core-2.5.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -300,8 +131,22 @@
       <recent name="D:\FilmsRaiting\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserServiceImpl">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.35">
+    <configuration name="UserDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.nareiko.films_raiting.model.dao.impl.UserDaoImpl" />
+      <module name="FilmsRaiting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.nareiko.films_raiting.model.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="MAIN_CLASS_NAME" value="by.nareiko.films_raiting.model.service.impl.UserServiceImpl" />
       <module name="FilmsRaiting" />
       <extension name="coverage">
@@ -313,9 +158,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/FilmsRaiting_war_exploded/index.jsp">
-      <method v="2" />
     </configuration>
     <configuration name="login.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/FilmsRaiting_war_exploded/jsp/login.jsp">
       <method v="2" />
@@ -536,19 +378,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.UserServiceImpl" />
-      <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="JavaScript Debug.login.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.35" />
       <item itemvalue="Tomcat Server.index.jsp" />
       <item itemvalue="Tomcat Server.test.jsp" />
+      <item itemvalue="Application.UserDaoImpl" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserDaoImpl" />
         <item itemvalue="Application.UserServiceImpl" />
         <item itemvalue="Tomcat Server.test.jsp" />
         <item itemvalue="Tomcat Server.index.jsp" />
         <item itemvalue="JavaScript Debug.login.jsp" />
-        <item itemvalue="JavaScript Debug.index.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -592,25 +434,33 @@
       <workItem from="1592199517993" duration="846000" />
       <workItem from="1592218244664" duration="5512000" />
       <workItem from="1592226210226" duration="65000" />
+      <workItem from="1592241743545" duration="13053000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592222487505">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1592243225569">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="138" y="6" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1592222487504" />
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.689@0.0.1280.689" timestamp="1592243225569" />
+    <state x="138" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592253780683">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="138" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1592253780683" />
     <state x="398" y="152" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592149818339">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="398" y="152" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1592149818339" />
-    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser" timestamp="1592158995121">
+    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser" timestamp="1592251527407">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1592158995121" />
+    <state x="446" y="38" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1592251527407" />
     <state x="371" y="125" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1592219509897">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -639,66 +489,82 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="371" y="94" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.689@0.0.1280.689" timestamp="1591523608629" />
-    <state x="327" y="88" key="FileChooserDialogImpl" timestamp="1592220479419">
+    <state x="327" y="88" key="FileChooserDialogImpl" timestamp="1592241959957">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="327" y="88" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1592220479419" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1592224850726">
+    <state x="327" y="88" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1592241959957" />
+    <state width="1237" height="207" key="GridCell.Tab.0.bottom" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592224850726" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1592224850726">
+    <state width="1237" height="207" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.0.center" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1592224850726" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1592224850726">
+    <state width="1237" height="207" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.0.left" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1592224850726" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1592224850726">
+    <state width="1237" height="207" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.0.right" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1592224850726" />
-    <state width="845" height="166" key="GridCell.Tab.1.bottom" timestamp="1592224850710">
+    <state width="1237" height="207" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.1.bottom" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.1.center" timestamp="1592224850710">
+    <state width="1237" height="207" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.1.center" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.1.left" timestamp="1592224850709">
+    <state width="1237" height="207" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.1.left" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1592224850709" />
-    <state width="845" height="166" key="GridCell.Tab.1.right" timestamp="1592224850710">
+    <state width="1237" height="207" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="1237" height="207" key="GridCell.Tab.1.right" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.2.bottom" timestamp="1592224850710">
+    <state width="1237" height="207" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="845" height="166" key="GridCell.Tab.2.bottom" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.2.center" timestamp="1592224850710">
+    <state width="845" height="166" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="845" height="166" key="GridCell.Tab.2.center" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.2.left" timestamp="1592224850710">
+    <state width="845" height="166" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="845" height="166" key="GridCell.Tab.2.left" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
-    <state width="845" height="166" key="GridCell.Tab.2.right" timestamp="1592224850710">
+    <state width="845" height="166" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="845" height="166" key="GridCell.Tab.2.right" timestamp="1592255278606">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="845" height="166" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1592224850710" />
+    <state width="845" height="166" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1592255278606" />
+    <state width="845" height="166" key="GridCell.Tab.3.bottom" timestamp="1592254333737">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="845" height="166" key="GridCell.Tab.3.bottom/0.0.1280.689@0.0.1280.689" timestamp="1592254333737" />
+    <state width="845" height="166" key="GridCell.Tab.3.center" timestamp="1592254333737">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="845" height="166" key="GridCell.Tab.3.center/0.0.1280.689@0.0.1280.689" timestamp="1592254333737" />
+    <state width="845" height="166" key="GridCell.Tab.3.left" timestamp="1592254333736">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="845" height="166" key="GridCell.Tab.3.left/0.0.1280.689@0.0.1280.689" timestamp="1592254333736" />
+    <state width="845" height="166" key="GridCell.Tab.3.right" timestamp="1592254333737">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="845" height="166" key="GridCell.Tab.3.right/0.0.1280.689@0.0.1280.689" timestamp="1592254333737" />
     <state width="209" height="499" key="HiddenNamespacesPopup" timestamp="1591513855783">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="209" height="499" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1591513855783" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1592223818827">
+    <state x="242" y="0" key="SettingsEditor" timestamp="1592243588450">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1592223818827" />
+    <state x="242" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1592243588450" />
     <state x="221" y="3" key="com.intellij.database.dbimport.ImportDialog" timestamp="1591883899549">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -732,14 +598,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/nareiko/films_raiting/command/impl/LoginCommand.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/nareiko/films_raiting/model/dao/impl/UserDaoImpl.java</url>
-          <line>234</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/by/nareiko/films_raiting/pool/ConnectionPool.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

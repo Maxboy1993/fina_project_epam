@@ -1,34 +1,27 @@
 
-R	java:S125ê"<This block of commented-out lines of code should be removed.(ùğ¦€
-]
-java:S2095:"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
 ]
 java:S2095J"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-§
-java:S1192"‹Define a constant instead of duplicating this literal "SELECT User.userId, User.name, User.birthday, User.roleId, UserRole.role, " 4 times.(”¸³ûÿÿÿÿ
-]
-java:S2095v"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-V	java:S125X"<This block of commented-out lines of code should be removed.(šÊ»Ùûÿÿÿÿ
-W	java:S125l"<This block of commented-out lines of code should be removed.(•Âß.8ï²Ü¾«.
-L
-java:S1068,"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ
-Q	java:S125["<This block of commented-out lines of code should be removed.(¡Õ±š
-H
-java:S1068*"-Remove this unused "USER_ROLE" private field.(ºÕ¶øÿÿÿÿ
-O	java:S106ñ"9Replace this use of System.out or System.err by a logger.(á³ÅÂ
-m
-java:S2159»"VRemove this call to "equals"; comparisons between unrelated types always return false.(òŞÑş
 P
 java:S1854ï"9Remove this useless assignment to local variable "user1".(²Ô­ü
-]	java:S125`"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8¢Ü¾«.
-^	java:S125Á"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8¨¡İ¾«.
-]	java:S125&"<This block of commented-out lines of code should be removed.(íçùÕşÿÿÿÿ8ô¦Û¾«.
-W	java:S125O"<This block of commented-out lines of code should be removed.(•Âß.8øÛ¾«.
-È
-java:S1192"²Define a constant instead of duplicating this literal "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " 4 times.(°Ç
-^	java:S125"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8³íÜ¾«.
+§
+java:S1192"‹Define a constant instead of duplicating this literal "SELECT User.userId, User.name, User.birthday, User.roleId, UserRole.role, " 4 times.(”¸³ûÿÿÿÿ
+O	java:S106ñ"9Replace this use of System.out or System.err by a logger.(á³ÅÂ
 J
 java:S1068$"/Remove this unused "UPDATE_USER" private field.(õ²„Àÿÿÿÿÿ
-W	java:S125?"<This block of commented-out lines of code should be removed.(•Âß.8ˆÛÛ¾«.
-W	java:S125{"<This block of commented-out lines of code should be removed.(•Âß.8óĞÜ¾«.
-^	java:S125¦"<This block of commented-out lines of code should be removed.(åç¥ıüÿÿÿÿ8Ê‡İ¾«.
+m
+java:S2159»"VRemove this call to "equals"; comparisons between unrelated types always return false.(òŞÑş
+R	java:S125ê"<This block of commented-out lines of code should be removed.(ùğ¦€
+l
+java:S1192`"ODefine a constant instead of duplicating this literal "SQLException: " 4 times.(‡¯áı8½³ØÈ«.
+Q	java:S125["<This block of commented-out lines of code should be removed.(¡Õ±š
+]
+java:S2095v"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+L
+java:S1068,"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ
+]
+java:S2095:"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+H
+java:S1068*"-Remove this unused "USER_ROLE" private field.(ºÕ¶øÿÿÿÿ
+V	java:S125X"<This block of commented-out lines of code should be removed.(šÊ»Ùûÿÿÿÿ
+È
+java:S1192"²Define a constant instead of duplicating this literal "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " 4 times.(°Ç

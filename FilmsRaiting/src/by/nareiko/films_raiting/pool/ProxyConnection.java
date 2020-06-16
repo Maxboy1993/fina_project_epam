@@ -11,7 +11,7 @@ import java.util.concurrent.Executor;
 
 public class ProxyConnection implements Connection {
     private Connection connection;
-//    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
     ProxyConnection(Connection connection) {
         this.connection = connection;
@@ -62,7 +62,7 @@ public class ProxyConnection implements Connection {
         try {
             ConnectionPool.getInstance().releaseConnection(this);
         } catch (DaoException e) {
-//            LOGGER.error("Connection wasn't released");
+            LOGGER.error("Connection wasn't released");
         }
     }
 
@@ -70,7 +70,7 @@ public class ProxyConnection implements Connection {
         try {
             connection.close();
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: ", e);
         }
     }
 
