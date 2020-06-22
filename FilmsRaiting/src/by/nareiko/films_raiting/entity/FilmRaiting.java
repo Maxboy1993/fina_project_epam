@@ -1,23 +1,13 @@
 package by.nareiko.films_raiting.entity;
 
 public class FilmRaiting extends AbstractEntity {
-    private int filmId;
     private double raiting;
 
     public FilmRaiting() {
     }
 
-    public FilmRaiting(int filmId, double raiting) {
-        this.filmId = filmId;
+    public FilmRaiting(double raiting) {
         this.raiting = raiting;
-    }
-
-    public int getFilmId() {
-        return filmId;
-    }
-
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
     }
 
     public double getRaiting() {
@@ -33,15 +23,13 @@ public class FilmRaiting extends AbstractEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         FilmRaiting that = (FilmRaiting) o;
-        return filmId == that.getFilmId() &&
-                raiting == that.getRaiting();
+        return raiting == that.getRaiting();
     }
 
     @Override
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + filmId;
         result += prime*result + (int) raiting;
         return result;
     }
@@ -50,7 +38,6 @@ public class FilmRaiting extends AbstractEntity {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(getClass().getName())
-                .append("filmId=" + filmId)
                 .append(", raiting=" + raiting);
         return builder.toString();
     }

@@ -15,9 +15,9 @@ public interface BaseDao<T extends AbstractEntity> {
 //    static final Logger LOGGER = LogManager.getLogger();
 
     List<T> findAll();
-    T findById(int id);
-    T delete(T t);
-    T delete(int id);
+//    T findById(int id);
+    T delete(T t) throws DaoException;
+//    T delete(int id);
     boolean create(T t);
     T update(T t);
 

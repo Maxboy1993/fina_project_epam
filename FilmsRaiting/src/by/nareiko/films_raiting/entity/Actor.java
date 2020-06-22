@@ -3,33 +3,34 @@ package by.nareiko.films_raiting.entity;
 import java.util.Calendar;
 
 public class Actor extends AbstractEntity {
-    private int actorId;
-    private String name;
+    private String firstName;
+    private String lastName;
     private Calendar birthday;
 
     public Actor() {
     }
 
-    public Actor(int actorId, String name, Calendar birthday) {
-        this.actorId = actorId;
-        this.name = name;
+    public Actor(String firstName, String lastName, Calendar birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthday = birthday;
     }
 
-    public int getActorId() {
-        return actorId;
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setActorId(int actorId) {
-        this.actorId = actorId;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Calendar getBirthday() {
@@ -45,8 +46,8 @@ public class Actor extends AbstractEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
-        return actorId == actor.getActorId() &&
-                name.equals(actor.getName()) &&
+        return firstName.equals(actor.getFirstName()) &&
+                lastName.equals(actor.getLastName()) &&
                 birthday.equals(actor.getBirthday());
     }
 
@@ -54,8 +55,8 @@ public class Actor extends AbstractEntity {
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + actorId;
-        result += prime*result + name.hashCode();
+        result += prime*result + firstName.hashCode();
+        result += prime*result + lastName.hashCode();
         result += prime*result + birthday.hashCode();
         return result;
     }
@@ -64,8 +65,8 @@ public class Actor extends AbstractEntity {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(getClass().getName())
-                .append("actorId=" + actorId)
-                .append(", name='" + name)
+                .append(", firstName='" + firstName)
+                .append(", lastName='" + lastName)
                 .append(", birthday=" + birthday);
         return builder.toString();
     }

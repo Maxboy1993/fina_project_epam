@@ -3,33 +3,33 @@ package by.nareiko.films_raiting.entity;
 import java.util.Calendar;
 
 public class Director extends AbstractEntity {
-    private int directorId;
-    private String name;
+    private String firstName;
+    private String lastName;
     private Calendar birthday;
 
     public Director() {
     }
 
-    public Director(int directorId, String name, Calendar birthday) {
-        this.directorId = directorId;
-        this.name = name;
+    public Director(String firstName, String lastName, Calendar birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthday = birthday;
     }
 
-    public int getDirectorId() {
-        return directorId;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setDirectorId(int directorId) {
-        this.directorId = directorId;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Calendar getBirthday() {
@@ -45,8 +45,8 @@ public class Director extends AbstractEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Director director = (Director) o;
-        return directorId == director.getDirectorId() &&
-                name.equals(director.getName()) &&
+        return firstName.equals(director.getFirstName()) &&
+                lastName.equals(director.getLastName()) &&
                 birthday.equals(director.getBirthday());
     }
 
@@ -54,8 +54,8 @@ public class Director extends AbstractEntity {
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + directorId;
-        result += prime*result + name.hashCode();
+        result += prime*result + firstName.hashCode();
+        result += prime*result + lastName.hashCode();
         result += prime*result + birthday.hashCode();
         return result;
     }
@@ -64,9 +64,9 @@ public class Director extends AbstractEntity {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(getClass().getName())
-                .append("directorId=" + directorId)
-                .append(", name='" + name)
-                .append(", birthday=" + birthday);
+                .append(", firstName = " + firstName)
+                .append(", lastName = " + lastName)
+                .append(", birthday = " + birthday);
         return builder.toString();
     }
 }

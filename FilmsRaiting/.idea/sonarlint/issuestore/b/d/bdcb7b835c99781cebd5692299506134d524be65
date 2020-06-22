@@ -1,19 +1,16 @@
 
-N
-java:S1854°"7Remove this useless assignment to local variable "act".(Çè—î
-N
-java:S1854«"8Remove this useless assignment to local variable "list".(çžè
 O	java:S106®"9Replace this use of System.out or System.err by a logger.(ÁÏÂ¼
+^	java:S125¬"<This block of commented-out lines of code should be removed.(Õ¨¾×ùÿÿÿÿ8ÿšäÁ¬.
+^	java:S125°"<This block of commented-out lines of code should be removed.(šìèÇüÿÿÿÿ8–ôÄÁ¬.
+X	java:S125A"<This block of commented-out lines of code should be removed.(°Óþ±8ÊËÆ¬.
 ]
-java:S2095E"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-]	java:S125y"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8Î£É¾«.
-]
-java:S2095*"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-^	java:S125Š"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8îÁÉ¾«.
-]	java:S125j"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8ÿÈ¾«.
-]	java:S125J"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8 µÈ¾«.
-T	java:S106²"9Replace this use of System.out or System.err by a logger.(‰©Îøøÿÿÿÿ
-]	java:S125"<This block of commented-out lines of code should be removed.(íçùÕþÿÿÿÿ8†­Æ¾«.
-]	java:S125/"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8îŸÖ¾«.
-]	java:S125W"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8ÃÜÈ¾«.
-]	java:S125;"<This block of commented-out lines of code should be removed.(åç¥ýüÿÿÿÿ8¶Ö¾«.
+java:S2095)"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+U
+java:S1854ª"8Remove this useless assignment to local variable "list".(çžè8ÚÿãÁ¬.
+V
+java:S1068"4Remove this unused "FIND_ACTOR_BY_ID" private field.(éãÊßúÿÿÿÿ8ÊËÆ¬.
+X
+java:S1068"6Remove this unused "DELETE_ACTOR_BY_ID" private field.(ÿŸéÝüÿÿÿÿ8©õËÆ¬.
+l
+java:S1192/"ODefine a constant instead of duplicating this literal "SQLException: " 5 times.(‡¯áý8Ù‰õ¿¬.
+]	java:S125c"<This block of commented-out lines of code should be removed.(Å³šÕùÿÿÿÿ8©õËÆ¬.

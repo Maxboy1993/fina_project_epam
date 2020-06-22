@@ -23,6 +23,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ConnectionPool {
     private static ConnectionPool pool;
+    private static final String PROPERTIES_PATH = "D:/fina_project_epam/FilmsRaiting/resourses/data/database.properties";
     private static final String DRIVER_CLASS = "MYSQLJDBC.driver";
     private static final String URL = "MYSQLJDBC.url";
     private static final String USER_NAME = "MYSQLJDBC.username";
@@ -47,7 +48,7 @@ public class ConnectionPool {
         return pool;
     }
 
-    private ConnectionPool() {
+    private ConnectionPool( ) {
         freeConnections = new LinkedBlockingDeque<>();
         givenAwayConnections = new ArrayDeque<>();
         initConnection();
@@ -59,7 +60,7 @@ public class ConnectionPool {
         try {
 //            properties.load(classLoader.getResourceAsStream("data\\database.properties"));
             Properties properties = new Properties();
-            InputStream inputStream = Files.newInputStream(Paths.get("resourses","data","database.properties"));
+            InputStream inputStream = Files.newInputStream(Paths.get(PROPERTIES_PATH));
             properties.load(inputStream);
             String driverClass = properties.getProperty(DRIVER_CLASS);
             String url = properties.getProperty(URL);

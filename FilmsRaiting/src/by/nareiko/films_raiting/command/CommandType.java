@@ -1,14 +1,11 @@
 package by.nareiko.films_raiting.command;
 
 import by.nareiko.films_raiting.command.impl.LoginCommand;
-import by.nareiko.films_raiting.command.impl.LogoutCommand;
-import by.nareiko.films_raiting.command.impl.UserCommand;
-import by.nareiko.films_raiting.model.service.impl.UserServiceImpl;
+import by.nareiko.films_raiting.command.impl.SignUpCommand;
 
 public enum CommandType {
-    LOGIN(new LoginCommand(new UserServiceImpl())),
-    LOGOUT(new LogoutCommand()),
-    ALL_USERS(new UserCommand());
+    LOGIN(new LoginCommand()),
+    SIGN_UP(new SignUpCommand());
 
     private Command command;
 

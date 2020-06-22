@@ -14,9 +14,11 @@
     <title>TestJsp</title>
 </head>
 <body>
-<p>
-    <% String name  =request.getParameter("name");%>
-    <%=name%>
-</p>
+<form method="POST", action="controller">
+    <h1>
+        ${enterenceCounter}
+    </h1>
+</form>
+
 </body>
 </html>

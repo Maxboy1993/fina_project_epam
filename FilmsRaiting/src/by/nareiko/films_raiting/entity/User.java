@@ -2,9 +2,9 @@ package by.nareiko.films_raiting.entity;
 
 import java.util.Calendar;
 
-public class User  extends AbstractEntity {
-    private int userId;
-    private String name;
+public class User extends AbstractEntity {
+    private String firstName;
+    private String lastName;
     private Calendar birthday;
     private RoleType role;
     private String login;
@@ -14,9 +14,9 @@ public class User  extends AbstractEntity {
     public User() {
     }
 
-    public User(int userId, String name, Calendar birthday, RoleType role, String login, String password, StatusType status) {
-        this.userId = userId;
-        this.name = name;
+    public User(String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthday = birthday;
         this.role = role;
         this.login = login;
@@ -24,20 +24,20 @@ public class User  extends AbstractEntity {
         this.status = status;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getName() {
-        return name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Calendar getBirthday() {
@@ -85,8 +85,8 @@ public class User  extends AbstractEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return userId == user.getUserId() &&
-                name.equals(user.getName()) &&
+        return firstName.equals(user.getFirstName()) &&
+                lastName.equals(user.getLastName()) &&
                 birthday.equals(user.getBirthday()) &&
                 role == user.getRoleType() &&
                 login.equals(user.getLogin()) &&
@@ -98,13 +98,13 @@ public class User  extends AbstractEntity {
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + userId;
-        result += prime*result + name.hashCode();
-        result += prime*result + birthday.hashCode();
-        result += prime*result + role.hashCode();
-        result += prime*result + login.hashCode();
-        result += prime*result + password.hashCode();
-        result += prime*result + status.hashCode();
+        result += prime * result + firstName.hashCode();
+        result += prime * result + lastName.hashCode();
+        result += prime * result + birthday.hashCode();
+        result += prime * result + role.hashCode();
+        result += prime * result + login.hashCode();
+        result += prime * result + password.hashCode();
+        result += prime * result + status.hashCode();
         return result;
     }
 
@@ -112,13 +112,13 @@ public class User  extends AbstractEntity {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(getClass().getName())
-                .append("userId=" + userId)
-                .append(", name='" + name)
-                .append(", birthday=" + birthday)
-                .append(", role=" + role)
-                .append(", login='" + login)
-                .append(", password='" + password)
-                .append(", status=" + status);
+                .append(", firstName = " + firstName)
+                .append(", lastName = " + lastName)
+                .append(", birthday = " + birthday)
+                .append(", role = " + role)
+                .append(", login = " + login)
+                .append(", password = " + password)
+                .append(", status = " + status);
         return builder.toString();
     }
 }

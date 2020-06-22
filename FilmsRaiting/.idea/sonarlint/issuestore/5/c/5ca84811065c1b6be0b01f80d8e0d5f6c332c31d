@@ -1,4 +1,12 @@
 
+w
+java:S3008"URename this field "YEAR_INDEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉñË—ûÿÿÿÿ8šÆ¬.
+v
+java:S3008"TRename this field "DAY_INDEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’šĞÏıÿÿÿÿ8šÆ¬.
+H
+java:S1172""&Remove these unused method parameters.(Î¯¸èúÿÿÿÿ8ÛÙÅÅ¬.
+x
+java:S3008"VRename this field "MONTH_INDEX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è ¬Îÿÿÿÿÿ8šÆ¬.
 ~
-java:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(¿ğ™—ùÿÿÿÿ8û“İ¿«.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(†àğòùÿÿÿÿ8åéØ¿«.
+java:S1488-"\Immediately return this expression instead of assigning it to the temporary variable "user".(¿ğ™—ùÿÿÿÿ8û“İ¿«.
+U	java:S106G"9Replace this use of System.out or System.err by a logger.(´Œ€Û8åéØ¿«.

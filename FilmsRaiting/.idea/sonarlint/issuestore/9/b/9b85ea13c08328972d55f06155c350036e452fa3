@@ -1,13 +1,15 @@
 
-X	java:S125<"<This block of commented-out lines of code should be removed.(ˆ‹î8¯¦ºÍ«.
-B
-java:S3457i"%String contains no format specifiers.(–¹ˆ£8ìÒ„Í«.
-]	java:S1259"<This block of commented-out lines of code should be removed.(ı±É»úÿÿÿÿ8»‡ºÍ«.
-K
-java:S1905r")Remove this unnecessary cast to "Driver".(»ÓŒíûÿÿÿÿ8ìÒ„Í«.
-T
-java:S2589("7Remove this expression which always evaluates to "true"(·¦Æ˜8¸îÂî¨.
+]	java:S125:"<This block of commented-out lines of code should be removed.(ı±É»úÿÿÿÿ8¢˜¾ñ«.
 j
-java:S2095F"HUse try-with-resources or close this "Connection" in a "finally" clause.(  ´Ôıÿÿÿÿ8ıûäÍ«.
+java:S2095G"HUse try-with-resources or close this "Connection" in a "finally" clause.(  ´Ôıÿÿÿÿ8ıûäÍ«.
+T
+java:S2589)"7Remove this expression which always evaluates to "true"(·¦Æ˜8¸îÂî¨.
 c
-java:S2142h"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ìÒ„Í«.
+java:S2142i"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¢˜¾ñ«.
+X	java:S125="<This block of commented-out lines of code should be removed.(ˆ‹î8¢˜¾ñ«.
+^
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(Ğƒ¶8‚§¿ñ«.
+B
+java:S3457j"%String contains no format specifiers.(–¹ˆ£8¢˜¾ñ«.
+K
+java:S1905s")Remove this unnecessary cast to "Driver".(»ÓŒíûÿÿÿÿ8¢˜¾ñ«.

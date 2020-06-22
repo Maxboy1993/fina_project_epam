@@ -103,40 +103,40 @@ public class FilmDaoImpl implements FilmsDao<Film> {
         return films;
     }
 
-    @Override
-    public Film findById(int id) {
-        try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(FIND_FILM_BY_ID)) {
-            statement.setInt(1, id);
-            ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
-                film = initFilm(resultSet);
-            }
-        } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
-        }
-        return film;
-    }
+//    @Override
+//    public Film findById(int id) {
+//        try (Connection connection = ConnectionPool.getInstance().getConnection();
+//             PreparedStatement statement = connection.prepareStatement(FIND_FILM_BY_ID)) {
+//            statement.setInt(1, id);
+//            ResultSet resultSet = statement.executeQuery();
+//            if (resultSet.next()) {
+//                film = initFilm(resultSet);
+//            }
+//        } catch (SQLException | EntityException e) {
+////            LOGGER.error(e);
+//        }
+//        return film;
+//    }
 
     @Override
     public Film delete(Film film) {
-       delete(film.getFilmId());
+       delete(film.getName());
         return film;
     }
 
-    @Override
-    public Film delete(int id) {
-        try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(DELETE_FILM_BY_ID)) {
-            statement.setInt(1, id);
-            statement.executeUpdate();
-            film = findById(id);  //?????????????????????????????????????
-            //протеститть
-        } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
-        }
-        return film;
-    }
+//    @Override
+//    public Film delete(int id) {
+//        try (Connection connection = ConnectionPool.getInstance().getConnection();
+//             PreparedStatement statement = connection.prepareStatement(DELETE_FILM_BY_ID)) {
+//            statement.setInt(1, id);
+//            statement.executeUpdate();
+//            film = findById(id);  //?????????????????????????????????????
+//            //протеститть
+//        } catch (SQLException e) {
+////            LOGGER.error("SQLException: ", e);
+//        }
+//        return film;
+//    }
 
     @Override
     public boolean create(Film film) {
@@ -164,8 +164,6 @@ public class FilmDaoImpl implements FilmsDao<Film> {
 
     private Film initFilm(ResultSet resultSet) throws SQLException, EntityException {
         film = new Film();
-        int id = resultSet.getInt(1);
-        film.setFilmId(id);
         String name = resultSet.getString(2);
         film.setName(name);
         GenreType genreType = GenreType.getGenreTypeByValue(resultSet.getString(4));
@@ -174,15 +172,13 @@ public class FilmDaoImpl implements FilmsDao<Film> {
         Calendar releaseDate = getDateFromLong(longReleaseDate);
         film.setReleaseDate(releaseDate);
         Actor actor = new Actor();
-        actor.setActorId(resultSet.getInt(6));
-        actor.setName(resultSet.getString(7));
+        actor.setFirstName(resultSet.getString(7)); //!!!!!!!!!!!!!!!!!!! add LastName
         long longActorBirthday = resultSet.getLong(8);
         Calendar actorBirthday = getDateFromLong(longReleaseDate);
         actor.setBirthday(actorBirthday);
         film.setActor(actor);
         Director director = new Director();
-        director.setDirectorId(resultSet.getInt(9));
-        director.setName(resultSet.getString(10));
+        director.setFirstName(resultSet.getString(10)); // add lastName
         long longDirectorBirthday = resultSet.getLong(11);
         Calendar directorBirthday = getDateFromLong(longDirectorBirthday);
         director.setBirthday(directorBirthday);
@@ -193,7 +189,7 @@ public class FilmDaoImpl implements FilmsDao<Film> {
     }
 
     public static void main(String[] args) {
-        FilmsDao dao = new FilmDaoImpl();
-        dao.delete(1);
+//        FilmsDao dao = new FilmDaoImpl();
+//        dao.delete(1);
     }
 }

@@ -3,33 +3,24 @@ package by.nareiko.films_raiting.entity;
 import java.util.Calendar;
 
 public class Film extends AbstractEntity {
-    private int filmId;
     private String name;
     private GenreType genreType;
     private Calendar releaseDate;
     private Actor actor;
     private Director director;
     private StatusType statusType;
+    //double raiting
 
     public Film() {
     }
 
-    public Film(int filmId, String name, GenreType genreType, Calendar releaseDate, Actor actor, Director director, StatusType statusType) {
-        this.filmId = filmId;
+    public Film(String name, GenreType genreType, Calendar releaseDate, Actor actor, Director director, StatusType statusType) {
         this.name = name;
         this.genreType = genreType;
         this.releaseDate = releaseDate;
         this.actor = actor;
         this.director = director;
         this.statusType = statusType;
-    }
-
-    public int getFilmId() {
-        return filmId;
-    }
-
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
     }
 
     public String getName() {
@@ -85,8 +76,7 @@ public class Film extends AbstractEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Film film = (Film) o;
-        return filmId == film.getFilmId() &&
-                name.equals(film.getName()) &&
+        return name.equals(film.getName()) &&
                 genreType == film.getGenreType() &&
                 releaseDate.equals(film.getReleaseDate()) &&
                 actor.equals(film.getActor()) &&
@@ -98,7 +88,6 @@ public class Film extends AbstractEntity {
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + filmId;
         result += prime*result + genreType.hashCode();
         result += prime*result + releaseDate.hashCode();
         result += prime*result + actor.hashCode();
@@ -111,7 +100,6 @@ public class Film extends AbstractEntity {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(getClass().getName())
-                .append("filmId=" + filmId)
                 .append(", name='" + name)
                 .append(", genreType=" + genreType)
                 .append(", releaseDate=" + releaseDate)

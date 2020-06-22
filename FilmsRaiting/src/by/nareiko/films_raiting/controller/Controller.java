@@ -10,7 +10,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Optional;
 
 @WebServlet("/controller")
@@ -28,23 +30,20 @@ public class Controller extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-//        super.init();
         ConnectionPool.getInstance();
     }
 
     @Override
     public void destroy() {
-
         ConnectionPool.getInstance().destroyPool();
     }
 
-    private void processServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        request.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-        Optional<Command> optionalCommand = CommandProvider.defineCommand(request.getParameter("command"));
-        Command command = optionalCommand.orElseThrow(IllegalArgumentException::new);
+    private void processServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        Optional<Command> optionalCommand = CommandProvider.defineCommand(request.getParameter("command")); // сделать как константу
+        Command command = optionalCommand.orElseThrow(IllegalArgumentException::new); // создать свое исключение CommandNotFoundException
         String page = command.execute(request);
-            RequestDispatcher dispatcher = request.getRequestDispatcher(page);
-            dispatcher.forward(request, response);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(page);
+        dispatcher.forward(request, response);
     }
 }
