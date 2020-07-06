@@ -1,0 +1,30 @@
+
+P
+java:S1068*"5Remove this unused "DELETE_USER_BY_ID" private field.(™ÃÔÀşÿÿÿÿ
+L
+java:S1068"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ
+O	java:S106‰"9Replace this use of System.out or System.err by a logger.(¬æ÷õ
+]
+java:S2095M"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+e
+java:S1192c"ODefine a constant instead of duplicating this literal "SQLException: " 3 times.(‡¯áı
+W	java:S125ú"<This block of commented-out lines of code should be removed.(àºÌáûÿÿÿÿ
+N
+java:S1068'"3Remove this unused "FIND_USER_BY_ID" private field.(¼åæŸùÿÿÿÿ
+J
+java:S1068."/Remove this unused "UPDATE_USER" private field.(Ü€šÇúÿÿÿÿ
+H
+java:S1068"-Remove this unused "USER_ROLE" private field.(ºÕ¶øÿÿÿÿ
+Q	java:S125^"<This block of commented-out lines of code should be removed.(¡Õ±š
+t
+java:S2159Ì"VRemove this call to "equals"; comparisons between unrelated types always return false.(„šØ8â˜„¯.
+V	java:S125["<This block of commented-out lines of code should be removed.(šÊ»Ùûÿÿÿÿ
+V	java:S125z"<This block of commented-out lines of code should be removed.(’çìûşÿÿÿÿ
+]
+java:S2095<"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+¶
+java:S1192"ŸDefine a constant instead of duplicating this literal "SELECT User.userId, User.firstName, User.lastName, User.birthday, User.roleId, UserRole.role, " 4 times.(’ÒøÉ
+W	java:S125”"<This block of commented-out lines of code should be removed.(ğîÖÎùÿÿÿÿ
+Q	java:S125™"<This block of commented-out lines of code should be removed.(µ£•}
+È
+java:S1192"²Define a constant instead of duplicating this literal "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " 4 times.(°Ç

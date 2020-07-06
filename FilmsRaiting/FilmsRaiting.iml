@@ -18,7 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.35" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="mysql-connector-java-8.0.20" level="project" />
     <orderEntry type="module-library" exported="">
@@ -39,8 +39,9 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="logs" level="project" />
     <orderEntry type="library" exported="" name="log4j-api-2.5" level="project" />
-    <orderEntry type="library" exported="" name="log4j-api-2.13.3" level="project" />
+    <orderEntry type="library" exported="" name="javax.servlet.jsp.jstl-1.2.1" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.14" level="project" />
+    <orderEntry type="library" exported="" name="log4j-core-2.13.3" level="project" />
   </component>
 </module>

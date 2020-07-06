@@ -1,0 +1,19 @@
+
+]
+java:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+d
+java:S2095Y"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ê³ªÊ°.
+
+java:S1192"|Define a constant instead of duplicating this literal "SELECT personId, profession, firstName, lastName, birthday " 3 times.(µùÿÿÿÿ8ºëÆÊ°.
+Q
+java:S2695="/This "PreparedStatement" only has 1 parameters.(Âµ°ùÿÿÿÿ8à•ÎÊ°.
+d
+java:S2095>"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8òùÉÊ°.
+^	java:S125Ç"<This block of commented-out lines of code should be removed.(°±‚‡úÿÿÿÿ8şÀÇÊ°.
+U	java:S106à"9Replace this use of System.out or System.err by a logger.(Â¿„48Û­·Ç±.
+m
+java:S1068"KRemove this unused "FIND_ACTORS_BY_LAST_NAME_AND_FIRST_NAME" private field.(îµ—ûÿÿÿÿ8şÀÇÊ°.
+e
+java:S11923"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(‡¯áı
+V	java:S106ß"9Replace this use of System.out or System.err by a logger.(ú·Ş“8ÂÖ¶Ç±.
+^	java:S125Ò"<This block of commented-out lines of code should be removed.(Ñ¢¿Íÿÿÿÿÿ8ù×°Ç±.

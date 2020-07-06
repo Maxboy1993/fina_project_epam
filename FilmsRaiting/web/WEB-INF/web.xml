@@ -4,26 +4,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-<!--    <servlet>-->
-<!--        <servlet-name>Login</servlet-name>-->
-<!--        <jsp-file>jsp/login.jsp</jsp-file>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Login</servlet-name>-->
-<!--        <url-pattern>/login</url-pattern>-->
-<!--    </servlet-mapping>-->
-    <filter>
-        <filter-name>EncodingRequestAndResponse</filter-name>
-        <filter-class>by.nareiko.films_raiting.filter.EncodingFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>EncodingRequestAndResponse</filter-name>
-        <url-pattern>/</url-pattern>
-    </filter-mapping>
-
-    <display-name>Welcome page</display-name>
+    <display-name>Films Raiting</display-name>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+<!--        <welcome-file>index.jsp</welcome-file>-->
+        <welcome-file>jsp/test.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>
