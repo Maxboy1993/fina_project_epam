@@ -4,6 +4,8 @@ import by.nareiko.fr.entity.*;
 import by.nareiko.fr.exception.EntityException;
 import by.nareiko.fr.model.dao.UserDao;
 import by.nareiko.fr.exception.DaoException;
+import by.nareiko.fr.model.dao.request.UserRequest;
+import by.nareiko.fr.util.PasswordHasher;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,24 +29,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     private static final int ACTIVE_STATUS_ID = 1;
     private static final String INACTIVE_STATUS = "inactive";
     private static final int INACTIVE_STATUS_ID = 2;
-    private static final String FIND_ALL_USERS = "SELECT User.userId, User.firstName, User.lastName, User.birthday, User.roleId, UserRole.role, " +
-            "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " +
-            "JOIN UserRole ON User.roleId = UserRole.roleId";
-    private static final String FIND_USER_BY_LOGIN = "SELECT User.userId, User.firstName, User.lastName, User.birthday, User.roleId, UserRole.role, " +
-            "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " +
-            "JOIN UserRole ON User.roleId = UserRole.roleId WHERE User.login = ?";
-    private static final String FIND_USER_BY_LOGIN_AND_PASSWORD = "SELECT User.userId, User.firstName, User.lastName, User.birthday, User.roleId, UserRole.role, " +
-            "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " +
-            "JOIN UserRole ON User.roleId = UserRole.roleId WHERE User.login = ? AND User.password = ?";
-    private static final String FIND_USER_BY_ID = "SELECT User.userId, User.firstName, User.lastName, User.birthday, User.roleId, UserRole.role, " +
-            "User.login, User.password, User.statusId, Status.status FROM User JOIN Status ON User.statusId = Status.statusId " +
-            "JOIN UserRole ON User.roleId = UserRole.roleId WHERE User.userId = ?";
-    private static final String DELETE_USER_BY_ID = "UPDATE user SET statusId = 2 WHERE userId = ?";
-    private static final String DELETE_USER_BY_LOGIN = "UPDATE user SET statusId = 2 WHERE login = ?";
-    private static final String CREATE_USER = "INSERT INTO user (firstName, lastName, birthday, roleId, " +
-            "login, password, statusId) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    private static final String UPDATE_USER = "UPDATE user SET firstNmae = ?, lastName = ?, birthday = ?" +
-            "roleId = ?, login = ?, password = ?, statusId = ? WHERE userId = ?";
+
     private static final Logger LOGGER = LogManager.getLogger();
     boolean isCreated;
 
@@ -55,7 +40,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     @Override
     public User findByLogin(String login) {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(FIND_USER_BY_LOGIN)) {
+             PreparedStatement statement = connection.prepareStatement(UserRequest.FIND_USER_BY_LOGIN)) {
             statement.setString(1, login);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -70,9 +55,9 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     @Override
     public User findByLoginAndPassword(String login, String password) {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(FIND_USER_BY_LOGIN_AND_PASSWORD)) {
+             PreparedStatement statement = connection.prepareStatement(UserRequest.FIND_USER_BY_LOGIN_AND_PASSWORD)) {
             statement.setString(1, login);
-            String md5HexPassword = DigestUtils.md5Hex(password);
+            String md5HexPassword = PasswordHasher.hashPassword(password);
             statement.setString(2, md5HexPassword);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -87,14 +72,10 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     @Override
     public User delete(String login) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(DELETE_USER_BY_LOGIN)) {
-            // if (user.getStatusType().equals("active")){                вынести проверку в сервис
+             PreparedStatement statement = connection.prepareStatement(UserRequest.DELETE_USER_BY_LOGIN)) {
             statement.setString(1, login);
-            statement.executeUpdate();
-//            }else {
-//                throw new DaoException("User with login: " + login + ", is alredy deleted");
-//            }
             user = findByLogin(login);
+            statement.executeUpdate();
         } catch (SQLException e) {
             LOGGER.error("SQLException: ", e);
         }
@@ -105,7 +86,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     public List<User> findAll() {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(FIND_ALL_USERS);
+            ResultSet resultSet = statement.executeQuery(UserRequest.FIND_ALL_USERS);
             users = initUsers(resultSet);
         } catch (SQLException | EntityException e) {
             LOGGER.error(e);
@@ -115,55 +96,44 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
 
     @Override
     public User findById(int id) {
-        return null;
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(UserRequest.FIND_USER_BY_ID)) {
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                user = initUser(resultSet);
+            }
+        } catch (SQLException | EntityException e) {
+            LOGGER.error(e);
+        }
+        return user;
     }
-
-//    @Override
-//    public User findById(int id) {
-//        try (Connection connection = ConnectionPool.getInstance().getConnection();
-//             PreparedStatement statement = connection.prepareStatement(FIND_USER_BY_ID)) {
-//            statement.setInt(1, id);
-//            ResultSet resultSet = statement.executeQuery();
-//            if (resultSet.next()) {
-//                user = initUser(resultSet);
-//            }
-//        } catch (SQLException | EntityException e) {
-//            LOGGER.error(e);
-//        }
-//        return user;
-//    }
 
     @Override
     public User delete(User user) throws DaoException {
-        delete(user.getLogin());
+       delete(user.getLogin());
         return user;
     }
 
     @Override
     public User delete(int id) {
-        return null;
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(UserRequest.DELETE_USER_BY_ID)) {
+            user = findById(id);
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            LOGGER.error("SQLException: ", e);
+        }
+        return user;
     }
-
-//    @Override
-//    public User delete(int id) {
-//        try (Connection connection = ConnectionPool.getInstance().getConnection();
-//             PreparedStatement statement = connection.prepareStatement(DELETE_USER_BY_ID)) {
-//            user = findById(id); //?????????????????????
-//            // протестить
-//            statement.setInt(1, id);
-//            statement.executeUpdate();
-//        } catch (SQLException e) {
-//            LOGGER.error("SQLException: ", e);
-//        }
-//        return user;
-//    }
 
 
 // add id autoincremented
     @Override
     public boolean create(User user) {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(CREATE_USER)) {
+             PreparedStatement statement = connection.prepareStatement(UserRequest.CREATE_USER)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             long birtgday = user.getBirthday().getTimeInMillis();
@@ -177,6 +147,11 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             statement.setString(6, user.getPassword());
             statement.setInt(7, ACTIVE_STATUS_ID);
             statement.executeUpdate();
+            ResultSet resultSet = statement.getGeneratedKeys();
+            if (resultSet.next()){
+                int id = resultSet.getInt(1);
+                user.setId(id);
+            }
             isCreated = true;
         } catch (SQLException | EntityException e) {
             LOGGER.error("SQLException: ", e);
@@ -188,7 +163,7 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
     public User update(User user) {
         User user1 = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(CREATE_USER)) {
+             PreparedStatement statement = connection.prepareStatement(UserRequest.UPDATE_USER)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             long birtgday = user.getBirthday().getTimeInMillis();
@@ -200,16 +175,17 @@ public class UserDaoImpl extends AbstractEntity implements UserDao<User> {
             statement.setInt(4, roleId);
             statement.setString(5, user.getLogin());
             statement.setString(6, user.getPassword());
-            int statusId = ACTIVE_STATUS_ID;
-            if (user.getStatusType().equals(RoleType.getRoleTypeByValue(INACTIVE_STATUS))){
-                statusId = INACTIVE_STATUS_ID;
-            }
-            statement.setInt(7, statusId);
-            user1 = findByLogin(user.getLogin());       // так правильно при update???
+            statement.setInt(7, user.getId());
+            //delete if unusful
+//            int statusId = ACTIVE_STATUS_ID;
+//            if (user.getStatusType().equals(RoleType.getRoleTypeByValue(INACTIVE_STATUS))){
+//                statusId = INACTIVE_STATUS_ID;
+//            }
+//            statement.setInt(7, statusId);
         } catch (SQLException | EntityException e) {
             LOGGER.error("SQLException: ", e);
         }
-        return user1;
+        return user;
     }
 
     private Calendar getDateFromLong(long dateMillis) {

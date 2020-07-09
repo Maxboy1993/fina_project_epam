@@ -1,5 +1,6 @@
 package by.nareiko.fr.entity;
 
+import java.sql.Blob;
 import java.util.Calendar;
 
 public class User extends AbstractEntity {
@@ -11,11 +12,12 @@ public class User extends AbstractEntity {
     private String login;
     private String password;
     private StatusType status;
+    private Blob poster;
 
     public User() {
     }
 
-    public User(int id, String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status) {
+    public User(int id, String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status, Blob poster) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,6 +26,7 @@ public class User extends AbstractEntity {
         this.login = login;
         this.password = password;
         this.status = status;
+        this.poster = poster;
     }
 
     public int getId() {
@@ -88,6 +91,14 @@ public class User extends AbstractEntity {
 
     public void setStatusType(StatusType status) {
         this.status = status;
+    }
+
+    public Blob getPoster() {
+        return poster;
+    }
+
+    public void setPoster(Blob poster) {
+        this.poster = poster;
     }
 
     @Override

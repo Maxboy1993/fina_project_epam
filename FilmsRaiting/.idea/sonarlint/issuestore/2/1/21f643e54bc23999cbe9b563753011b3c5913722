@@ -1,0 +1,13 @@
+
+Y
+java:S1128"<Remove this unused import 'by.nareiko.fr.model.dao.BaseDao'.(³ Íä8ÌæÚç².
+d
+java:S2095="GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¨Ûæç².
+l
+java:S1192&"ODefine a constant instead of duplicating this literal "SQLException: " 6 times.(‡¯áı8¨Ûæç².
+_
+java:S1128"=Remove this unused import 'by.nareiko.fr.entity.FilmRaiting'.(äÀî¤ûÿÿÿÿ8­ı¶ç².
+k
+java:S1128	"ORemove this unused import 'by.nareiko.fr.model.dao.request.FilmRaitingRequest'.(ÌÙºE8ºªè².
+]
+java:S1128"@Remove this unused import 'by.nareiko.fr.entity.AbstractEntity'.(„ó‡ñ8ÆŸ¼Ò².

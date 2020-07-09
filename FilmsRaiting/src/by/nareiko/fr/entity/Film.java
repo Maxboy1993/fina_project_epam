@@ -10,12 +10,12 @@ public class Film extends AbstractEntity {
     private Actor actor;
     private Director director;
     private StatusType statusType;
-    //double raiting
+    private double raiting;
 
     public Film() {
     }
 
-    public Film(int id, String name, GenreType genreType, Calendar releaseDate, Actor actor, Director director, StatusType statusType) {
+    public Film(int id, String name, GenreType genreType, Calendar releaseDate, Actor actor, Director director, StatusType statusType, double raiting) {
         this.id = id;
         this.name = name;
         this.genreType = genreType;
@@ -23,6 +23,7 @@ public class Film extends AbstractEntity {
         this.actor = actor;
         this.director = director;
         this.statusType = statusType;
+        this.raiting = raiting;
     }
 
     public int getId() {
@@ -81,6 +82,14 @@ public class Film extends AbstractEntity {
         this.statusType = statusType;
     }
 
+    public double getRaiting() {
+        return raiting;
+    }
+
+    public void setRaiting(double raiting) {
+        this.raiting = raiting;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -92,7 +101,8 @@ public class Film extends AbstractEntity {
                 releaseDate.equals(film.getReleaseDate()) &&
                 actor.equals(film.getActor()) &&
                 director.equals(film.getDirector()) &&
-                statusType == film.getStatusType();
+                statusType == film.getStatusType() &&
+                raiting == film.getRaiting();
     }
 
     @Override
@@ -105,6 +115,7 @@ public class Film extends AbstractEntity {
         result += prime*result + actor.hashCode();
         result += prime*result + director.hashCode();
         result += prime*result + statusType.hashCode();
+        result += prime*result + raiting;
         return result;
     }
 
@@ -118,7 +129,8 @@ public class Film extends AbstractEntity {
                 .append(", releaseDate=" + releaseDate)
                 .append(", actor=" + actor)
                 .append(", director=" + director)
-                .append(", statusType=" + statusType);
+                .append(", statusType=" + statusType)
+                .append(", raiting=" + raiting);
         return builder.toString();
     }
 }

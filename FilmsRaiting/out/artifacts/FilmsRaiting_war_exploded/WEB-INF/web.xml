@@ -6,8 +6,16 @@
 
     <display-name>Films Raiting</display-name>
     <welcome-file-list>
-<!--        <welcome-file>index.jsp</welcome-file>-->
-        <welcome-file>jsp/test.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <filter-mapping>
+        <filter-name>Localefilter</filter-name>
+        <url-pattern>/encodingfilter/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>Encodingfilter</filter-name>
+        <url-pattern>/localefilter/*</url-pattern>
+    </filter-mapping>
 
 </web-app>

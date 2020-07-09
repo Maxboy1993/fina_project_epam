@@ -28,7 +28,7 @@ public interface BaseDao<T extends AbstractEntity> {
                 statement.close();
             }
         } catch (SQLException e) {
-//            LOGGER.error("SQLException: " + e.getMessage() + ", SQLException state: " + e.getSQLState() + ", SQLException code: " + e.getErrorCode() );
+            LOGGER.error("SQLException: " + e.getMessage() + ", SQLException state: " + e.getSQLState() + ", SQLException code: " + e.getErrorCode() );
         }
     }
 

@@ -1,38 +1,35 @@
 
-H
-java:S1068 "3Remove this unused "FIND_FILM_BY_ID" private field.(‡Ù‹	
-W	java:S125•"<This block of commented-out lines of code should be removed.(¤Î–éûÿÿÿÿ
-V	java:S106Ô"9Replace this use of System.out or System.err by a logger.(Á£®ƒ8§ºï±.
-J
-java:S1068'"/Remove this unused "UPDATE_FILM" private field.(ÞèÐØþÿÿÿÿ
-K
-java:S1068#"5Remove this unused "DELETE_FILM_BY_ID" private field.(ù¸Â®
-\
-java:S1854À"ERemove this useless assignment to local variable "longActorBirthday".(©ÃÐ¼
-‚
-java:S1192"æDefine a constant instead of duplicating this literal "Actor.name, Actor.birthday, Film.directorId, Director.name, Director.birthday, Film.statusId, Status.status FROM Film JOIN Status ON Film.statusId = Status.statusId " 3 times.(—ÿñ™8ã½ÜÈ±.
-W	java:S125Ž"<This block of commented-out lines of code should be removed.(·±èÿùÿÿÿÿ
-µ
-java:S1192"›Define a constant instead of duplicating this literal "SELECT Film.filmId, Film.name, Film.genreId, Genre.genre, Film.releaseDate, Film.actorId, " 3 times.(ˆ´ë¸üÿÿÿÿ
-L
-java:S1068+"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ
-^	java:S125Ñ"<This block of commented-out lines of code should be removed.(öÛïÓùÿÿÿÿ8ÀÌµï±.
-J
-java:S1068,"4Remove this unused "ACTIVE_STATUS_ID" private field.(‡ûöÝ
-N
-java:S1068-"3Remove this unused "INACTIVE_STATUS" private field.(—Ðéûÿÿÿÿ
+v
+java:S1450"YRemove the "raitingDao" field and declare it as a local variable in the relevant methods.(çüŒÖ8óÎñ².
+Q
+java:S1068"4Remove this unused "ACTIVE_STATUS_ID" private field.(‡ûöÝ8ìÏéñ².
+{
+java:S1450"YRemove the "daoFactory" field and declare it as a local variable in the relevant methods.(¨»Þüüÿÿÿÿ8óÎñ².
+d
+java:S2095N"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¾›øÌ².
+d
+java:S2095&"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¬È÷Ì².
+l
+java:S1192B"ODefine a constant instead of duplicating this literal "SQLException: " 4 times.(‡¯áý8£þ™ò².
+S
+java:S1068"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ8ìÏéñ².
+`
+java:S3518Â"=Make sure "counter" can't be zero before doing this division.(æÀö€øÿÿÿÿ8ñ¶Úò².
 M
-java:S3740Ð"/Provide the parametrized type for this generic.(›ç³¯8ÀÌµï±.
-]
-java:S20959"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-Q	java:S125Y"<This block of commented-out lines of code should be removed.(¡Õ±š
-]
-java:S2095H"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-M
-java:S1481À"6Remove this unused "longActorBirthday" local variable.(©ÃÐ¼
-V	java:S125V"<This block of commented-out lines of code should be removed.(è©è•úÿÿÿÿ
-L
-java:S1068."6Remove this unused "INACTIVE_STATUS_ID" private field.(éÄšý
-Q	java:S125t"<This block of commented-out lines of code should be removed.(˜±¿ã
-J
-java:S1068%"/Remove this unused "CREATE_FILM" private field.(›ßòïýÿÿÿÿ
+java:S3740¯"/Provide the parametrized type for this generic.(Çµí‘8ñ¶Úò².
+e
+java:S2184Â"BCast one of the operands of this division operation to a "double".(æÀö€øÿÿÿÿ8ñ¶Úò².
+‡
+java:S1488Â"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(æÀö€øÿÿÿÿ8ñ¶Úò².
+=
+java:S3626z"Remove this redundant jump.(æÀö€øÿÿÿÿ8ñ¶Úò².
+c
+java:S1854"ERemove this useless assignment to local variable "longActorBirthday".(úçøµ8ñ¶Úò².
+V	java:S106³"9Replace this use of System.out or System.err by a logger.(Òö“¢8ñ¶Úò².
+_
+java:S1854º"<Remove this useless assignment to local variable "raitings".(¬ïùòúÿÿÿÿ8ñ¶Úò².
+R
+java:S1481t"0Remove this unused "CREATE_FILM" local variable.(µáÎüÿÿÿÿ8ñ¶Úò².
+T
+java:S1481"6Remove this unused "longActorBirthday" local variable.(úçøµ8ñ¶Úò².
+Y	java:S125°"<This block of commented-out lines of code should be removed.(›ç³¯8ñ¶Úò².

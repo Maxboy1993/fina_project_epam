@@ -23,7 +23,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ConnectionPool {
     private static ConnectionPool pool;
-    private static final String PROPERTIES_PATH = "D:/fina_project_epam/FilmsRaiting/resourses/data/database.properties";
+    private static final String PROPERTIES_PATH = "src\\resource\\database.properties";
     private static final String DRIVER_CLASS = "MYSQLJDBC.driver";
     private static final String URL = "MYSQLJDBC.url";
     private static final String USER_NAME = "MYSQLJDBC.username";

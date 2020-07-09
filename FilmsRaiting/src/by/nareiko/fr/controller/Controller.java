@@ -40,12 +40,10 @@ public class Controller extends HttpServlet {
     }
 
     private void processServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getSession(true).setAttribute("local", request.getParameter("local"));
-//        Optional<Command> optionalCommand = CommandProvider.defineCommand(request.getParameter("command")); // сделать как константу
-//        Command command = optionalCommand.orElseThrow(IllegalArgumentException::new); // создать свое исключение CommandNotFoundException
-//        String page = command.execute(request);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher(page);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/test.jsp");
+        Optional<Command> optionalCommand = CommandProvider.defineCommand(request.getParameter("command")); // сделать как константу
+        Command command = optionalCommand.orElseThrow(IllegalArgumentException::new); // создать свое исключение CommandNotFoundException
+        String page = command.execute(request);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(page);
         dispatcher.forward(request, response);
     }
 }

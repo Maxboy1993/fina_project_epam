@@ -1,19 +1,14 @@
 
 ]
-java:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+java:S2095!"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+K
+java:S1481¼"-Remove this unused "actorDao" local variable.(Ñ”ò†8üœäÌ².
+Y	java:S125¿"<This block of commented-out lines of code should be removed.(êƒ°ä8ï½ãÌ².
+Z
+java:S1854¼"<Remove this useless assignment to local variable "actorDao".(Ñ”ò†8üœäÌ².
 d
-java:S2095Y"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ê³ªÊ°.
-
-java:S1192"|Define a constant instead of duplicating this literal "SELECT personId, profession, firstName, lastName, birthday " 3 times.(µùÿÿÿÿ8ºëÆÊ°.
-Q
-java:S2695="/This "PreparedStatement" only has 1 parameters.(Âµ°ùÿÿÿÿ8à•ÎÊ°.
-d
-java:S2095>"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8òùÉÊ°.
-^	java:S125Ç"<This block of commented-out lines of code should be removed.(°±‚‡úÿÿÿÿ8şÀÇÊ°.
-U	java:S106à"9Replace this use of System.out or System.err by a logger.(Â¿„48Û­·Ç±.
-m
-java:S1068"KRemove this unused "FIND_ACTORS_BY_LAST_NAME_AND_FIRST_NAME" private field.(îµ—ûÿÿÿÿ8şÀÇÊ°.
+java:S2095M"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ê³ªÊ°.
 e
-java:S11923"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(‡¯áı
-V	java:S106ß"9Replace this use of System.out or System.err by a logger.(ú·Ş“8ÂÖ¶Ç±.
-^	java:S125Ò"<This block of commented-out lines of code should be removed.(Ñ¢¿Íÿÿÿÿÿ8ù×°Ç±.
+java:S1192'"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(‡¯áı
+d
+java:S20952"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8òùÉÊ°.

@@ -1,16 +1,14 @@
 
-d
-java:S2095U"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8€ë°À∞.
-^	java:S125 "<This block of commented-out lines of code should be removed.(†öÇ¸˝ˇˇˇˇ8ø–éÀ∞.
-]
-java:S2095)"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ
-e
-java:S1192/"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(áØ·˝
-^	java:S125∆"<This block of commented-out lines of code should be removed.(¸†ƒˇ¯ˇˇˇˇ8ø–éÀ∞.
 U
-java:S1854ƒ"8Remove this useless assignment to local variable "list".(ﬁ≥68ø–éÀ∞.
+java:S1854∫"8Remove this useless assignment to local variable "list".(ﬁ≥68ø–éÀ∞.
+e
+java:S1192%"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(áØ·˝
 d
-java:S2095:"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8ïÂ§À∞.
-ô
-java:S1192"|Define a constant instead of duplicating this literal "SELECT personId, profession, firstName, lastName, birthday " 3 times.(÷ àÍ8∫ÑéÀ∞.
-[	java:S106»"9Replace this use of System.out or System.err by a logger.(É¨˜ú˘ˇˇˇˇ8ø–éÀ∞.
+java:S20950"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8ïÂ§À∞.
+^	java:S125¿"<This block of commented-out lines of code should be removed.(†öÇ¸˝ˇˇˇˇ8ø–éÀ∞.
+^	java:S125º"<This block of commented-out lines of code should be removed.(¸†ƒˇ¯ˇˇˇˇ8ø–éÀ∞.
+d
+java:S2095K"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8€ë°À∞.
+[	java:S106æ"9Replace this use of System.out or System.err by a logger.(É¨˜ú˘ˇˇˇˇ8ø–éÀ∞.
+]
+java:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ
