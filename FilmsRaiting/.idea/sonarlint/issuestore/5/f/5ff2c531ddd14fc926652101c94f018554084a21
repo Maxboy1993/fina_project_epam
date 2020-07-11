@@ -1,2 +1,5 @@
 
-b	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(æºŸ•øÿÿÿÿ8ïÄâÊ².
+K
+java:S1172@".Remove this unused method parameter "actorsr".(‹¡”ô8Ö±œÇ³.
+
+java:S4165A"dRemove this useless assignment; "actors" already holds the assigned value along all execution paths.(î³ÒÖ8õœÇ³.

@@ -1,0 +1,10 @@
+
+]
+java:S20958"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ
+^
+java:S1128
+"<Remove this unused import 'org.apache.logging.log4j.Logger'.(êêªØ¯ˇˇˇˇ8∫–ÎÁ≥.
+]
+java:S1128	"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(ÀîÀÈ8∫–ÎÁ≥.
+£
+java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(®ìÜÔ˙ˇˇˇˇ8∫–ÎÁ≥.

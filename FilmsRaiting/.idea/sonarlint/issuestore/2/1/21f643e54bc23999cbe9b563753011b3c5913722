@@ -1,13 +1,10 @@
 
-Y
-java:S1128"<Remove this unused import 'by.nareiko.fr.model.dao.BaseDao'.(³ Íä8ÌæÚç².
 d
-java:S2095="GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¨Ûæç².
-l
-java:S1192&"ODefine a constant instead of duplicating this literal "SQLException: " 6 times.(‡¯áı8¨Ûæç².
-_
-java:S1128"=Remove this unused import 'by.nareiko.fr.entity.FilmRaiting'.(äÀî¤ûÿÿÿÿ8­ı¶ç².
-k
-java:S1128	"ORemove this unused import 'by.nareiko.fr.model.dao.request.FilmRaitingRequest'.(ÌÙºE8ºªè².
-]
-java:S1128"@Remove this unused import 'by.nareiko.fr.entity.AbstractEntity'.(„ó‡ñ8ÆŸ¼Ò².
+java:S2095>"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ÚæÏ£³.
+]	java:S125"<This block of commented-out lines of code should be removed.(Î‚ˆîøÿÿÿÿ8ï´Ï£³.
+T
+java:S1135"2Complete the task associated to this TODO comment.(”õß‰ÿÿÿÿÿ8ãòÎ£³.
+W	java:S125"<This block of commented-out lines of code should be removed.(‡¢°D8ÚæÏ£³.
+X	java:S125"<This block of commented-out lines of code should be removed.(³ °™8ï–Ï£³.
+L
+java:S1068"*Remove this unused "LOGGER" private field.(¥ı‡–şÿÿÿÿ8Èûê¥³.

@@ -1,0 +1,23 @@
+
+W	java:S125æ"<This block of commented-out lines of code should be removed.(àºÌáûÿÿÿÿ
+]
+java:S2095c"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+A
+java:S1481£"*Remove this unused "user1" local variable.(²Ô­ü
+N
+java:S1135ä"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ
+]
+java:S2095&"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+^
+java:S1128"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8íËåå³.
+]
+java:S1128"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(Ë”Ëé8íËåå³.
+O	java:S106ô"9Replace this use of System.out or System.err by a logger.(¬æ÷õ
+a
+java:S1128"DRemove this unused import 'by.nareiko.fr.exception.EntityException'.(øÎí¸8‚İçå³.
+]
+java:S20958"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(äÙ¬8«âå³.
+]
+java:S1128"@Remove this unused import 'by.nareiko.fr.entity.AbstractEntity'.(„ó‡ñ8Ë–¨ç³.

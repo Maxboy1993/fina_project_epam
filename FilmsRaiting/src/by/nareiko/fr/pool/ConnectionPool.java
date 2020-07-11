@@ -48,7 +48,7 @@ public class ConnectionPool {
         return pool;
     }
 
-    private ConnectionPool( ) {
+    private ConnectionPool() {
         freeConnections = new LinkedBlockingDeque<>();
         givenAwayConnections = new ArrayDeque<>();
         initConnection();
@@ -91,8 +91,8 @@ public class ConnectionPool {
     }
 
     public void releaseConnection(Connection connection) throws DaoException {
-        if (connection.getClass() != ProxyConnection.class){
-            throw  new DaoException("Invalid connection");
+        if (connection.getClass() != ProxyConnection.class) {
+            throw new DaoException("Invalid connection");
         }
         givenAwayConnections.remove(connection);
         // очитстить конекшин, потом вернуть в пул (транзакции)

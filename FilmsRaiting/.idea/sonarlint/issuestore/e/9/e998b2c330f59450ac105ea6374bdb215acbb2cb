@@ -1,10 +1,0 @@
-
-’
-java:S1192"pDefine a constant instead of duplicating this literal "JOIN status ON film.statusId = status.statusId " 3 times.(όλι‘ύÿÿÿÿ8•”’Μ².
-
-java:S1192"lDefine a constant instead of duplicating this literal "JOIN genre ON film.genreId = genre.genreId " 3 times.(‘«θύÿÿÿÿ8•”’Μ².
-m
-java:S1192
-"KDefine a constant instead of duplicating this literal "FROM film " 3 times.(ρ Αωÿÿÿÿ8•”’Μ².
-’
-java:S1192"pDefine a constant instead of duplicating this literal "JOIN filminfo ON film.filmId = filminfo.filmId " 3 times.(Μ–¶ύύÿÿÿÿ8•”’Μ².

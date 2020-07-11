@@ -1,14 +1,19 @@
 
-]
-java:S2095!"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ
+]	java:S125"<This block of commented-out lines of code should be removed.(ŒÇàÓ¯ˇˇˇˇ8™óèü≥.
+Y	java:S125–"<This block of commented-out lines of code should be removed.(ÍÉ∞‰8ÔΩ„Ã≤.
+X	java:S125"<This block of commented-out lines of code should be removed.(¶…¯«8üØ¢ü≥.
+U
+java:S1135 "2Complete the task associated to this TODO comment.(ÒÆØ¯˘ˇˇˇˇ8î‡†ü≥.
 K
-java:S1481º"-Remove this unused "actorDao" local variable.(—îÚÜ8¸ú‰Ã≤.
-Y	java:S125ø"<This block of commented-out lines of code should be removed.(ÍÉ∞‰8ÔΩ„Ã≤.
+java:S1481Õ"-Remove this unused "actorDao" local variable.(—îÚÜ8¸ú‰Ã≤.
+d
+java:S2095Q"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8Í≥™ ∞.
 Z
-java:S1854º"<Remove this useless assignment to local variable "actorDao".(—îÚÜ8¸ú‰Ã≤.
+java:S1854Õ"<Remove this useless assignment to local variable "actorDao".(—îÚÜ8¸ú‰Ã≤.
+T
+java:S1135"2Complete the task associated to this TODO comment.(îıﬂâˇˇˇˇˇ8‰¢ûü≥.
 d
-java:S2095M"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8Í≥™ ∞.
-e
-java:S1192'"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(áØ·˝
-d
-java:S20952"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8Ú˘… ∞.
+java:S20954"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(êÑáñ8Ú˘… ∞.
+L
+java:S1068"*Remove this unused "LOGGER" private field.(•˝áñ˛ˇˇˇˇ8Å«ç†≥.
+]	java:S125"<This block of commented-out lines of code should be removed.(Æ©çâ˘ˇˇˇˇ8â™èü≥.

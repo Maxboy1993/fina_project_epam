@@ -1,35 +1,23 @@
 
-v
-java:S1450"YRemove the "raitingDao" field and declare it as a local variable in the relevant methods.(çüŒÖ8óÎñ².
-Q
-java:S1068"4Remove this unused "ACTIVE_STATUS_ID" private field.(‡ûöİ8ìÏéñ².
-{
-java:S1450"YRemove the "daoFactory" field and declare it as a local variable in the relevant methods.(¨»Şüüÿÿÿÿ8óÎñ².
-d
-java:S2095N"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¾›øÌ².
 d
 java:S2095&"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¬È÷Ì².
-l
-java:S1192B"ODefine a constant instead of duplicating this literal "SQLException: " 4 times.(‡¯áı8£ş™ò².
+`
+java:S3518Ç"=Make sure "counter" can't be zero before doing this division.(¾Óß×ùÿÿÿÿ8ÿ©´È³.
+U
+java:S1135¥"2Complete the task associated to this TODO comment.(üÁŞüÿÿÿÿ8ïé¡Ë³.
 S
 java:S1068"1Remove this unused "ACTIVE_STATUS" private field.(‹è—§úÿÿÿÿ8ìÏéñ².
-`
-java:S3518Â"=Make sure "counter" can't be zero before doing this division.(æÀö€øÿÿÿÿ8ñ¶Úò².
-M
-java:S3740¯"/Provide the parametrized type for this generic.(Çµí‘8ñ¶Úò².
-e
-java:S2184Â"BCast one of the operands of this division operation to a "double".(æÀö€øÿÿÿÿ8ñ¶Úò².
-‡
-java:S1488Â"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(æÀö€øÿÿÿÿ8ñ¶Úò².
-=
-java:S3626z"Remove this redundant jump.(æÀö€øÿÿÿÿ8ñ¶Úò².
-c
-java:S1854"ERemove this useless assignment to local variable "longActorBirthday".(úçøµ8ñ¶Úò².
-V	java:S106³"9Replace this use of System.out or System.err by a logger.(Òö“¢8ñ¶Úò².
+d
+java:S2095O"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¾›øÌ².
 _
-java:S1854º"<Remove this useless assignment to local variable "raitings".(¬ïùòúÿÿÿÿ8ñ¶Úò².
-R
-java:S1481t"0Remove this unused "CREATE_FILM" local variable.(µáÎüÿÿÿÿ8ñ¶Úò².
-T
-java:S1481"6Remove this unused "longActorBirthday" local variable.(úçøµ8ñ¶Úò².
-Y	java:S125°"<This block of commented-out lines of code should be removed.(›ç³¯8ñ¶Úò².
+java:S1854¿"<Remove this useless assignment to local variable "raitings".(¡ÈÕùÿÿÿÿ8ÿ©´È³.
+O
+java:S1135}"2Complete the task associated to this TODO comment.(ºñÀ»8æì¶Ë³.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ìË×´øÿÿÿÿ8ÿ©´È³.
+‡
+java:S1488Ç"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(¾Óß×ùÿÿÿÿ8ÿ©´È³.
+L
+java:S1068"*Remove this unused "LOGGER" private field.(¥ı‡–şÿÿÿÿ8×¥ÏÈ³.
+e
+java:S2184Ç"BCast one of the operands of this division operation to a "double".(¾Óß×ùÿÿÿÿ8ÿ©´È³.

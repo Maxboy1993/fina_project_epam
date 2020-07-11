@@ -1,7 +1,10 @@
 
-l
-java:S1192!"ODefine a constant instead of duplicating this literal "SQLException: " 6 times.(‡¯áý8¶¢õÔ².
+L
+java:S1068"*Remove this unused "LOGGER" private field.(¥ý‡–þÿÿÿÿ8ž®Æ£³.
+]	java:S125"<This block of commented-out lines of code should be removed.(Î‚ˆîøÿÿÿÿ8ÕØ¬£³.
 d
-java:S20958"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¶¢õÔ².
-]
-java:S1128"@Remove this unused import 'by.nareiko.fr.entity.AbstractEntity'.(„ó‡ñ8µŒÖ².
+java:S2095<"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¶¢õÔ².
+X	java:S125"<This block of commented-out lines of code should be removed.(Í…¢ï8ÃÅ¬£³.
+T
+java:S1135"2Complete the task associated to this TODO comment.(”õß‰ÿÿÿÿÿ8‚«£³.
+X	java:S125"<This block of commented-out lines of code should be removed.(«˜ËÏ8ïƒ­£³.

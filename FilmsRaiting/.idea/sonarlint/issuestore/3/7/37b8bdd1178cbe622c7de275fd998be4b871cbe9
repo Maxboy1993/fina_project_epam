@@ -1,14 +1,15 @@
 
+d
+java:S2095P"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ëÅğ¢³.
+T
+java:S1135"2Complete the task associated to this TODO comment.(”õß‰ÿÿÿÿÿ8Ã³ğ¢³.
+L
+java:S1068"*Remove this unused "LOGGER" private field.(¥ı‡–şÿÿÿÿ8…¶˜£³.
+]	java:S125"<This block of commented-out lines of code should be removed.(Î‚ˆîøÿÿÿÿ8ëñ¢³.
 U
-java:S1854º"8Remove this useless assignment to local variable "list".(Ş³ğ68¿ĞË°.
-e
-java:S1192%"ODefine a constant instead of duplicating this literal "SQLException: " 8 times.(‡¯áı
+java:S1135È"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ8ò £³.
+]	java:S125"<This block of commented-out lines of code should be removed.(Û”¾úùÿÿÿÿ8•Íñ¢³.
 d
-java:S20950"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8•å¤Ë°.
-^	java:S125À"<This block of commented-out lines of code should be removed.( š‚üıÿÿÿÿ8¿ĞË°.
-^	java:S125¼"<This block of commented-out lines of code should be removed.(ü Äÿøÿÿÿÿ8¿ĞË°.
-d
-java:S2095K"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8Û‘¡Ë°.
-[	java:S106¾"9Replace this use of System.out or System.err by a logger.(ƒ¬÷œùÿÿÿÿ8¿ĞË°.
-]
-java:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+java:S20953"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ëÅğ¢³.
+Y	java:S125Ê"<This block of commented-out lines of code should be removed.(¤£ï™8ò £³.
+X	java:S125"<This block of commented-out lines of code should be removed.(ËÊ»ˆ8Êìğ¢³.

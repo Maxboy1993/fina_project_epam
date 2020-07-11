@@ -1,10 +1,14 @@
 package by.nareiko.fr.entity;
 
 import by.nareiko.fr.exception.EntityException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public enum  RoleType  {
+public enum RoleType {
     ADMIN("admin"),
     USER("user");
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private String roleType;
 
@@ -12,17 +16,18 @@ public enum  RoleType  {
         this.roleType = roleType;
     }
 
-    public String getRoleType(){
+    public String getRoleType() {
         return roleType;
     }
 
-    public static RoleType getRoleTypeByValue(String value) throws EntityException {
+    public static RoleType getRoleTypeByValue(String value) {
         RoleType[] roleTypes = RoleType.values();
         for (RoleType role : roleTypes) {
-            if (role.getRoleType().equals(value)){
+            if (role.getRoleType().equals(value)) {
                 return role;
             }
         }
-        throw new EntityException("Illegal argument");
+        LOGGER.error("Illegal argument, required role doesn't exist. Returned defualt role - user.");
+        return USER;
     }
 }

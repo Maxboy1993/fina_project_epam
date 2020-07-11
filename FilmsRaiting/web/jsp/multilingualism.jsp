@@ -13,8 +13,10 @@
     <fmt:message bundle="${pc}" key="label.language"/>
 </h2>
 <ul>
-    <li><a href="${pageContext.request.contextPath}/jsp/login.jsp?lang=en"><fmt:message bundle="${pc}" key="label.en"/></a></li>
-    <li><a href="${pageContext.request.contextPath}/jsp/login.jsp?lang=ru"><fmt:message bundle="${pc}" key="label.ru"/></a></li>
+    <li><a href="${pageContext.request.contextPath}/jsp/login.jsp?lang=en"><fmt:message bundle="${pc}"
+                                                                                        key="label.en"/></a></li>
+    <li><a href="${pageContext.request.contextPath}/jsp/login.jsp?lang=ru"><fmt:message bundle="${pc}"
+                                                                                        key="label.ru"/></a></li>
 </ul>
 </body>
 </html>

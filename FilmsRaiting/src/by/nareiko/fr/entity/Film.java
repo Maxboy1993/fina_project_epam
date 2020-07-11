@@ -1,28 +1,27 @@
 package by.nareiko.fr.entity;
 
 import java.util.Calendar;
+import java.util.List;
 
 public class Film extends AbstractEntity {
     private int id;
     private String name;
     private GenreType genreType;
     private Calendar releaseDate;
-    private Actor actor;
+    private List<Actor> actors;
     private Director director;
-    private StatusType statusType;
     private double raiting;
 
     public Film() {
     }
 
-    public Film(int id, String name, GenreType genreType, Calendar releaseDate, Actor actor, Director director, StatusType statusType, double raiting) {
+    public Film(int id, String name, GenreType genreType, Calendar releaseDate, List<Actor> actors, Director director, double raiting) {
         this.id = id;
         this.name = name;
         this.genreType = genreType;
         this.releaseDate = releaseDate;
-        this.actor = actor;
+        this.actors = actors;
         this.director = director;
-        this.statusType = statusType;
         this.raiting = raiting;
     }
 
@@ -58,12 +57,12 @@ public class Film extends AbstractEntity {
         this.releaseDate = releaseDate;
     }
 
-    public Actor getActor() {
-        return actor;
+    public List<Actor> getActors() {
+        return actors;
     }
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
+    public void setActors(List<Actor> actorsr) {
+        this.actors = actors;
     }
 
     public Director getDirector() {
@@ -72,14 +71,6 @@ public class Film extends AbstractEntity {
 
     public void setDirector(Director director) {
         this.director = director;
-    }
-
-    public StatusType getStatusType() {
-        return statusType;
-    }
-
-    public void setStatusType(StatusType statusType) {
-        this.statusType = statusType;
     }
 
     public double getRaiting() {
@@ -99,9 +90,8 @@ public class Film extends AbstractEntity {
                 name.equals(film.getName()) &&
                 genreType == film.getGenreType() &&
                 releaseDate.equals(film.getReleaseDate()) &&
-                actor.equals(film.getActor()) &&
+                actors.equals(film.getActors()) &&
                 director.equals(film.getDirector()) &&
-                statusType == film.getStatusType() &&
                 raiting == film.getRaiting();
     }
 
@@ -109,13 +99,12 @@ public class Film extends AbstractEntity {
     public int hashCode() {
         int prime = 31;
         int result = 1;
-        result += prime*result + id;
-        result += prime*result + genreType.hashCode();
-        result += prime*result + releaseDate.hashCode();
-        result += prime*result + actor.hashCode();
-        result += prime*result + director.hashCode();
-        result += prime*result + statusType.hashCode();
-        result += prime*result + raiting;
+        result += prime * result + id;
+        result += prime * result + genreType.hashCode();
+        result += prime * result + releaseDate.hashCode();
+        result += prime * result + actors.hashCode();
+        result += prime * result + director.hashCode();
+        result += prime * result + raiting;
         return result;
     }
 
@@ -127,9 +116,8 @@ public class Film extends AbstractEntity {
                 .append(", name='" + name)
                 .append(", genreType=" + genreType)
                 .append(", releaseDate=" + releaseDate)
-                .append(", actor=" + actor)
+                .append(", actor=" + actors)
                 .append(", director=" + director)
-                .append(", statusType=" + statusType)
                 .append(", raiting=" + raiting);
         return builder.toString();
     }

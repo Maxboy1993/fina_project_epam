@@ -1,0 +1,19 @@
+
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(äççúşÿÿÿÿ8èæç³.
+R	java:S125Ó"<This block of commented-out lines of code should be removed.(¤£ï™
+Y
+java:S1128"7Remove this unused import 'by.nareiko.fr.entity.Actor'.(Õ®“¿ıÿÿÿÿ8ïĞÚç³.
+N
+java:S1135Ñ"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ
+d
+java:S2095Y"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¨™Üç³.
+]
+java:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+]
+java:S2095J"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+^
+java:S1128"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8Ûçç³.
+]
+java:S1128
+"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(Ë”Ëé8Ûçç³.

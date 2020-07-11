@@ -1,10 +1,12 @@
 package by.nareiko.fr.entity;
 
 import by.nareiko.fr.exception.EntityException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public enum  GenreType {
+public enum GenreType {
     ACTION("Action"),
-    ADVENTURE ("Adventure"),
+    ADVENTURE("Adventure"),
     COMEDY("Comedy"),
     CRIME("Crime"),
     DRAMA("Drama"),
@@ -20,25 +22,29 @@ public enum  GenreType {
     SATIRE("Satire"),
     SCIENCE_FICTION("Science fiction"),
     THRILLER("Thriller"),
-    WESTERN("Western");
+    WESTERN("Western"),
+    UNKNOWN_GENRE("Uknown");
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private String genreType;
 
-    GenreType(String genreType){
+    GenreType(String genreType) {
         this.genreType = genreType;
     }
 
-    public String getGenreType(){
+    public String getGenreType() {
         return genreType;
     }
 
-    public static GenreType getGenreTypeByValue(String value) throws EntityException {
+    public static GenreType getGenreTypeByValue(String value) {
         GenreType[] genreTypes = GenreType.values();
         for (GenreType genre : genreTypes) {
-            if (genre.getGenreType().equals(value)){
+            if (genre.getGenreType().equals(value)) {
                 return genre;
             }
         }
-        throw new EntityException("Illegal argument");
+        LOGGER.error("Illegal argument, required genre doesn't exist. Returned defualt genre - uknown. Fix in MYSQL.");
+        return UNKNOWN_GENRE;
     }
 }
