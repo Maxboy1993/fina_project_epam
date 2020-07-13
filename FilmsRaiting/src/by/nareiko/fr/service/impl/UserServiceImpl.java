@@ -17,6 +17,13 @@ public class UserServiceImpl implements UserService {
     private static int YEAR_INDEX = 0;
     private static int MONTH_INDEX = 1;
     private static int DAY_INDEX = 2;
+    private static  final UserService INSTANCE = new UserServiceImpl();
+
+    private UserServiceImpl(){}
+
+    public static UserService getInstance(){
+        return INSTANCE;
+    }
 
     @Override
     public boolean checkUser(String login, String password) {

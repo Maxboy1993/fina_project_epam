@@ -1,10 +1,10 @@
 package by.nareiko.fr.dao.impl;
 
 import by.nareiko.fr.dao.*;
+import by.nareiko.fr.entity.Director;
 import by.nareiko.fr.entity.Film;
 import by.nareiko.fr.entity.FilmRaiting;
 import by.nareiko.fr.entity.GenreType;
-import by.nareiko.fr.entity.StatusType;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
 
@@ -14,24 +14,31 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Film> {
+public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film> {
     private static final String ACTIVE_STATUS = "active";
+    private static final FilmDao INSTANCE = new FilmDaoImpl();
 
-    public FilmDaoImpl() {
+    private FilmDaoImpl() {
+    }
+
+    public static FilmDao getInstance() {
+        return INSTANCE;
     }
 
     @Override
-    public List<Film> findByName(String name) throws DaoException {
-        List<Film> films = new ArrayList<>();
+    public Film findByName(String name) throws DaoException {
+        Film film = new Film();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_FILM_BY_NAME)) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
-            films = initItems(resultSet);
+            if (resultSet.next()){
+                film = initItem(resultSet);
+            }
         } catch (SQLException e) {
             throw new DaoException("Films aren't found by name: ", e);
         }
-        return films;
+        return film;
     }
 
     @Override
@@ -90,7 +97,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Fil
             film = findById(id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException("Films isn't deleted by id: ", e);
+            throw new DaoException("Film isn't deleted by id: ", e);
         }
         return film;
     }
@@ -98,6 +105,12 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Fil
     @Override
     public boolean create(Film film) throws DaoException {
         boolean isCreated;
+
+        Film checkFilm = findByName(film.getName());
+        if (!checkFilm.getName().equalsIgnoreCase(film.getName())){
+            throw new DaoException("Film, " + film.getName() + ", already exists");
+        }
+
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_FILM, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, film.getName());
@@ -140,7 +153,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Fil
         return date;
     }
 
-    List<Film> initItems(ResultSet resultSet) throws DaoException {
+    protected List<Film> initItems(ResultSet resultSet) throws DaoException {
         List<Film> films = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -153,7 +166,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Fil
         return films;
     }
 
-    Film initItem(ResultSet resultSet) throws DaoException {
+    protected Film initItem(ResultSet resultSet) throws DaoException {
         Film film = new Film();
         try {
             int id = resultSet.getInt(ColumnName.FILM_ID);
@@ -173,7 +186,9 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmsDao<Fil
         return film;
     }
 
-    private double countfinalFilmRaiting(int filmId) throws DaoException {
+    //TODO возмоно надо убрать отсюда метод countfinalFilmRaiting, а оставить только в FullFilmInfoDaoImpl
+    // так как там собирается полный фильм
+     double countfinalFilmRaiting(int filmId) throws DaoException {
         DaoFactory daoFactory = DaoFactory.getInstance();
         FilmRaitingDao raitingDao = daoFactory.getFilmRaitingDao();
         List<FilmRaiting> raitings = new ArrayList<>();

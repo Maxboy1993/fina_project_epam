@@ -1,19 +1,12 @@
 
-S
-java:S1854Ó"<Remove this useless assignment to local variable "actorDao".(Ñ”ò†
-R	java:S125Ö"<This block of commented-out lines of code should be removed.(êƒ°ä
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(êæÌ¦8ĞãŠç³.
 ]
 java:S2095J"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-D
-java:S1481Ó"-Remove this unused "actorDao" local variable.(Ñ”ò†
+S
+java:S1854Ó"<Remove this useless assignment to local variable "actorDao".(Ñ”ò†
 N
 java:S1135Ğ"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ
+D
+java:S1481Ó"-Remove this unused "actorDao" local variable.(Ñ”ò†
 ]
 java:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-^
-java:S1128
-"<Remove this unused import 'org.apache.logging.log4j.Logger'.(»¯øÿÿÿÿ8²‡êç³.
-]
-java:S1128	"@Remove this unused import 'org.apache.logging.log4j.LogManager'.(Ë”Ëé8²‡êç³.
+R	java:S125Ö"<This block of commented-out lines of code should be removed.(êƒ°ä

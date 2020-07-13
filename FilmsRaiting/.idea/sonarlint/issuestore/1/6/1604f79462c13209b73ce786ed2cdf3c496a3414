@@ -1,15 +1,17 @@
 
-€
-java:S1488»"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(¾Óß×ùÿÿÿÿ
-X
-java:S1854³"<Remove this useless assignment to local variable "raitings".(¡ÈÕùÿÿÿÿ
-^
-java:S2184»"BCast one of the operands of this division operation to a "double".(¾Óß×ùÿÿÿÿ
+e
+java:S2184Ê"BCast one of the operands of this division operation to a "double".(¾Óß×ùÿÿÿÿ8Úƒçð³.
+P
+java:S1135½"2Complete the task associated to this TODO comment.(¹±„ï8£Áäð³.
 ]
-java:S2095D"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-Y
-java:S3518»"=Make sure "counter" can't be zero before doing this division.(¾Óß×ùÿÿÿÿ
-Y
-java:S1128"<Remove this unused import 'by.nareiko.fr.entity.StatusType'.(õü‹ï8Ë´è³.
-œ
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ìË×´øÿÿÿÿ
+java:S2095K"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+d
+java:S2095""GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8©ý¶´.
+_
+java:S1854Â"<Remove this useless assignment to local variable "raitings".(¡ÈÕùÿÿÿÿ8Úƒçð³.
+‡
+java:S1488Ê"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(¾Óß×ùÿÿÿÿ8Úƒçð³.
+`
+java:S3518Ê"=Make sure "counter" can't be zero before doing this division.(¾Óß×ùÿÿÿÿ8Úƒçð³.
+\
+java:S1128":Remove this unused import 'by.nareiko.fr.entity.Director'.(ÈÁËÝÿÿÿÿÿ8Ó°Û´.

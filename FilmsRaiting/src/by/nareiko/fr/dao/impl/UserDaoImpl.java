@@ -1,19 +1,16 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.entity.AbstractEntity;
+import by.nareiko.fr.dao.ColumnName;
+import by.nareiko.fr.dao.EntityInitializer;
+import by.nareiko.fr.dao.SQLQuery;
+import by.nareiko.fr.dao.UserDao;
 import by.nareiko.fr.entity.RoleType;
 import by.nareiko.fr.entity.StatusType;
 import by.nareiko.fr.entity.User;
 import by.nareiko.fr.exception.DaoException;
-import by.nareiko.fr.exception.EntityException;
-import by.nareiko.fr.dao.ColumnName;
-import by.nareiko.fr.dao.SQLQuery;
-import by.nareiko.fr.dao.UserDao;
 import by.nareiko.fr.pool.ConnectionPool;
 import by.nareiko.fr.util.PasswordHasher;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -23,10 +20,15 @@ import java.util.List;
 
 public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User> {
     private static final String ADMIN_ROLE = "admin";
-        private static final String USER_ROLE = "user";
-        private static final String ACTIVE_STATUS = "active";
+    private static final String USER_ROLE = "user";
+    private static final String ACTIVE_STATUS = "active";
+    private static final UserDao INSTANCE = new UserDaoImpl();
 
-    public UserDaoImpl() {
+    private UserDaoImpl() {
+    }
+
+    public static UserDao getInstance() {
+        return INSTANCE;
     }
 
     @Override
@@ -188,7 +190,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
         return date;
     }
 
-     List<User> initItems(ResultSet resultSet) throws DaoException {
+    protected List<User> initItems(ResultSet resultSet) throws DaoException {
         List<User> users = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -201,7 +203,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
         return users;
     }
 
-     User initItem(ResultSet resultSet) throws DaoException {
+    protected User initItem(ResultSet resultSet) throws DaoException {
         User user = new User();
         try {
             String firstName = resultSet.getString(ColumnName.FIRST_NAME);

@@ -1,13 +1,9 @@
 package by.nareiko.fr.dao.impl;
 
+import by.nareiko.fr.dao.*;
 import by.nareiko.fr.entity.Review;
 import by.nareiko.fr.exception.DaoException;
-import by.nareiko.fr.dao.ColumnName;
-import by.nareiko.fr.dao.ReviewDao;
-import by.nareiko.fr.dao.SQLQuery;
 import by.nareiko.fr.pool.ConnectionPool;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,8 +12,12 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDao<Review> {
+    private static final ReviewDao INSTANCE = new ReviewDaoImpl();
 
-    public ReviewDaoImpl() {
+    private ReviewDaoImpl(){}
+
+    public static ReviewDao getInstance(){
+        return INSTANCE;
     }
 
     @Override
@@ -127,7 +127,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
         return date;
     }
 
-     List<Review> initItems(ResultSet resultSet) throws DaoException {
+    protected List<Review> initItems(ResultSet resultSet) throws DaoException {
         List<Review> reviews = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -140,7 +140,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
         return reviews;
     }
 
-     Review initItem(ResultSet resultSet) throws DaoException {
+    protected Review initItem(ResultSet resultSet) throws DaoException {
         Review review = new Review();
         try {
             int reviewId = resultSet.getInt(ColumnName.REVIEW_ID);

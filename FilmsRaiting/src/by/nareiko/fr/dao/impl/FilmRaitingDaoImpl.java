@@ -1,21 +1,24 @@
 package by.nareiko.fr.dao.impl;
 
+import by.nareiko.fr.dao.EntityInitializer;
 import by.nareiko.fr.entity.FilmRaiting;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.dao.ColumnName;
 import by.nareiko.fr.dao.FilmRaitingDao;
 import by.nareiko.fr.dao.SQLQuery;
 import by.nareiko.fr.pool.ConnectionPool;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implements FilmRaitingDao<FilmRaiting> {
+    private static final FilmRaitingDao INSTANCE = new FilmRaitingDaoImpl();
 
-    public FilmRaitingDaoImpl() {
+    private FilmRaitingDaoImpl(){}
+
+    public static FilmRaitingDao getInstance(){
+        return INSTANCE;
     }
 
     @Override
@@ -115,7 +118,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
         return filmRaiting;
     }
 
-     List<FilmRaiting> initItems(ResultSet resultSet) throws DaoException {
+     protected List<FilmRaiting> initItems(ResultSet resultSet) throws DaoException {
         List<FilmRaiting> filmRaitings = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -128,7 +131,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
         return filmRaitings;
     }
 
-     FilmRaiting initItem(ResultSet resultSet) throws DaoException {
+     protected FilmRaiting initItem(ResultSet resultSet) throws DaoException {
         FilmRaiting filmRaiting = new FilmRaiting();
         try {
             int raitingId = resultSet.getInt(ColumnName.RAITING_ID);

@@ -1,13 +1,9 @@
 package by.nareiko.fr.dao.impl;
 
+import by.nareiko.fr.dao.*;
 import by.nareiko.fr.entity.Actor;
 import by.nareiko.fr.exception.DaoException;
-import by.nareiko.fr.dao.ColumnName;
-import by.nareiko.fr.dao.PersonDao;
-import by.nareiko.fr.dao.SQLQuery;
 import by.nareiko.fr.pool.ConnectionPool;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,8 +13,12 @@ import java.util.List;
 
 
 public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<Actor> {
+    private static final PersonDao INSTANCE = new ActorDaoImpl();
 
-    public ActorDaoImpl() {
+    private ActorDaoImpl(){}
+
+    public static PersonDao getInstance(){
+        return INSTANCE;
     }
 
     @Override
@@ -174,7 +174,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
         return date;
     }
 
-     List<Actor> initItems(ResultSet resultSet) throws DaoException {
+    protected List<Actor> initItems(ResultSet resultSet) throws DaoException {
         List<Actor> actors = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -187,7 +187,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
         return actors;
     }
 
-     Actor initItem(ResultSet resultSet) throws DaoException {
+    protected Actor initItem(ResultSet resultSet) throws DaoException {
         Actor actor = new Actor();
         try {
             int id = resultSet.getInt(ColumnName.PERSON_ID);

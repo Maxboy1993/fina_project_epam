@@ -1,0 +1,47 @@
+
+_
+java:S1854Ï"<Remove this useless assignment to local variable "raitings".(¡ÈÕùÿÿÿÿ8Œ·½´.
+‡
+java:S1488×"dImmediately return this expression instead of assigning it to the temporary variable "finalRaiting".(¾Óß×ùÿÿÿÿ8Œ·½´.
+T
+java:S1135,"2Complete the task associated to this TODO comment.(ºŞ»×ıÿÿÿÿ8Œ·½´.
+d
+java:S2095–"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(úÁ£}8Œ·½´.
+`
+java:S3518×"=Make sure "counter" can't be zero before doing this division.(¾Óß×ùÿÿÿÿ8Œ·½´.
+U
+java:S1135 "2Complete the task associated to this TODO comment.(ºŞ»×ıÿÿÿÿ8Œ·½´.
+i
+java:S2095w"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Å¥Íóÿÿÿÿÿ8Œ·½´.
+j
+java:S2095¸"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(İ˜ãÆşÿÿÿÿ8Ï©˜‘´.
+j
+java:S2095„"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(—šö–ÿÿÿÿÿ8¡åö´.
+T
+java:S1135g"2Complete the task associated to this TODO comment.(ºŞ»×ıÿÿÿÿ8Œ·½´.
+i
+java:S2095""GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(ƒßÛùÿÿÿÿ8ÙÔñ³.
+j
+java:S2095’"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(ë¿ÓÌÿÿÿÿÿ8é½ş´.
+j
+java:S2095¡"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(¶¸·œıÿÿÿÿ8Œ·½´.
+j
+java:S2095›"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ê¥¶îüÿÿÿÿ8Œ·½´.
+j
+java:S2095ã"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(Ú›ëğúÿÿÿÿ8Œ·½´.
+e
+java:S2095Ã"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(±ü•8Ï©˜‘´.
+i
+java:S2095'"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ê¥¶îüÿÿÿÿ8Œ·½´.
+e
+java:S2184×"BCast one of the operands of this division operation to a "double".(¾Óß×ùÿÿÿÿ8Œ·½´.
+i
+java:S2095-"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(¶¸·œıÿÿÿÿ8Œ·½´.
+O
+java:S1135˜"2Complete the task associated to this TODO comment.(ÎéÊ'8¡ÿ´.
+j
+java:S2095ó"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(…¼Òœúÿÿÿÿ8Œ·½´.
+d
+java:S2095h"GUse try-with-resources or close this "!Unknown!" in a "finally" clause.(‘ûêÌ8Œ·½´.
+P
+java:S1144­"2Remove this unused private "initDirectors" method.(°ƒÕ8Œ·½´.

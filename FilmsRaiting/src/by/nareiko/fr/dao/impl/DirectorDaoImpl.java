@@ -1,14 +1,13 @@
 package by.nareiko.fr.dao.impl;
 
 import by.nareiko.fr.dao.ColumnName;
+import by.nareiko.fr.dao.EntityInitializer;
 import by.nareiko.fr.dao.PersonDao;
 import by.nareiko.fr.dao.SQLQuery;
 import by.nareiko.fr.entity.Actor;
 import by.nareiko.fr.entity.Director;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,8 +16,12 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 public class DirectorDaoImpl extends EntityInitializer<Director> implements PersonDao<Director> {
+    private static final PersonDao INSTANCE = new DirectorDaoImpl();
 
-    public DirectorDaoImpl() {
+    private DirectorDaoImpl(){}
+
+    public static PersonDao getInstance(){
+        return INSTANCE;
     }
 
     @Override
@@ -175,7 +178,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
         return date;
     }
 
-    List<Director> initItems(ResultSet resultSet) throws DaoException {
+    protected List<Director> initItems(ResultSet resultSet) throws DaoException {
         List<Director> directors = new ArrayList<>();
         try {
             while (resultSet.next()) {
@@ -188,7 +191,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
         return directors;
     }
 
-    Director initItem(ResultSet resultSet) throws DaoException {
+    protected Director initItem(ResultSet resultSet) throws DaoException {
         Director director = new Director();
         try {
             int id = resultSet.getInt(ColumnName.PERSON_ID);

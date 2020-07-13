@@ -3,22 +3,17 @@ package by.nareiko.fr.service;
 import by.nareiko.fr.service.impl.UserServiceImpl;
 
 public final class ServiceFactory {
-    private static ServiceFactory serviceFactory;
+    private static final ServiceFactory INSTANCE = new ServiceFactory();
     private UserService userService;
 
     private ServiceFactory(){}
 
     public static ServiceFactory getInstance() {
-        if (serviceFactory == null) {
-            serviceFactory = new ServiceFactory();
-        }
-        return serviceFactory;
+        return INSTANCE;
     }
 
     public UserService getUserService() {
-        if (userService == null) {
-            userService = new UserServiceImpl();
-        }
+            userService = UserServiceImpl.getInstance();
         return userService;
     }
 }

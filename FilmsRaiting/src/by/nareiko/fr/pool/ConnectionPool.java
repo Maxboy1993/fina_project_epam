@@ -95,6 +95,7 @@ public class ConnectionPool {
             throw new DaoException("Invalid connection");
         }
         givenAwayConnections.remove(connection);
+        //TODO
         // очитстить конекшин, потом вернуть в пул (транзакции)
         freeConnections.add((ProxyConnection) connection);
     }

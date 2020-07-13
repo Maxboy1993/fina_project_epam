@@ -78,4 +78,5 @@ public class SQLQuery {
     public static final String CREATE_FILM = "INSERT INTO Film (filmName, releaseDate, genre, status) VALUES (?, ?, ?, ?)";
     public static final String UPDATE_FILM = "UPDATE Film SET filmName = ?, " +
             "releaseDate = ?, genre = ? WHERE filmId = ?";
+    public static final String MAPPING_FILM_WITH_PERSON = "INSERT INTO Characters (filmId, characterId) VALUES (?, ?)";
 }

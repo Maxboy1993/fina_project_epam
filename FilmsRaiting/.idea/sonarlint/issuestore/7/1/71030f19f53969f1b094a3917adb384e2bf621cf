@@ -1,0 +1,16 @@
+
+x
+java:S1450"VRemove the "userDao" field and declare it as a local variable in the relevant methods.(­¶úÿÿÿÿ8è¿åï³.
+w
+java:S1450	"ZRemove the "directorDao" field and declare it as a local variable in the relevant methods.(şæº—8ıíÉï³.
+x
+java:S1450
+"VRemove the "filmDao" field and declare it as a local variable in the relevant methods.(ä•Ìºşÿÿÿÿ8è¿åï³.
+z
+java:S1450"XRemove the "reviewDao" field and declare it as a local variable in the relevant methods.(Æº£Óÿÿÿÿÿ8è¿åï³.
+z
+java:S1450"]Remove the "filmRaitingDao" field and declare it as a local variable in the relevant methods.(ø•’Ä8è¿åï³.
+t
+java:S1450"WRemove the "actorDao" field and declare it as a local variable in the relevant methods.(éÜ›µ8Ù¢Éï³.
+€
+java:S1450"^Remove the "fullFilmInfoDao" field and declare it as a local variable in the relevant methods.(ÿ¬Şíøÿÿÿÿ8ÀˆËï³.

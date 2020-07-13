@@ -27,6 +27,14 @@ public interface BaseDao<T extends AbstractEntity> {
 
     T update(T t) throws DaoException;
 
+    default void close(Connection connection) throws DaoException {
+        if (connection != null) {
+            ConnectionPool pool = ConnectionPool.getInstance();
+            pool.releaseConnection(connection);
+        }
+    }
+
+
     default void close(Statement statement) {
         try {
             if (statement != null) {
@@ -37,10 +45,14 @@ public interface BaseDao<T extends AbstractEntity> {
         }
     }
 
-    default void close(Connection connection) throws DaoException {
-        if (connection != null) {
-            ConnectionPool pool = ConnectionPool.getInstance();
-            pool.releaseConnection(connection);
+
+    default void close(ResultSet resultSet) {
+        try {
+            if (resultSet != null) {
+                resultSet.close();
+            }
+        } catch (SQLException e) {
+            LOGGER.error("SQLException: ", e);
         }
     }
 }
