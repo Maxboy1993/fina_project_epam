@@ -1,7 +1,7 @@
 package by.nareiko.fr.dao;
 
-public class SQLQuery {
-    private SQLQuery() {
+public class SqlQuery {
+    private SqlQuery() {
     }
 
     //actor queries

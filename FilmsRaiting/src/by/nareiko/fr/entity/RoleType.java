@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public enum RoleType {
+    GUEST("guest"),
     ADMIN("admin"),
     USER("user");
 

@@ -31,9 +31,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
         EntityTransaction transaction = new EntityTransaction();
         try {
             connection = ConnectionPool.getInstance().getConnection();
-            statement = connection.prepareStatement(SQLQuery.FIND_FILM_BY_NAME);
-
-            transaction.beginTransaction(connection);
+            statement = connection.prepareStatement(SqlQuery.FIND_FILM_BY_NAME);
 
             statement.setString(1, name);
             resultSet = statement.executeQuery();
@@ -42,14 +40,14 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
             }
 
             //TODO возможно в цикл?
-            statement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_FILM_ID);
+            statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID);
 
             statement.setInt(1, film.getId());
             resultSet = statement.executeQuery();
             List<Actor> actors = initActors(resultSet);
             film.setActors(actors);
 
-            statement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_FILM_ID);
+            statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_FILM_ID);
 
             statement.setInt(1, film.getId());
             resultSet = statement.executeQuery();
@@ -57,14 +55,9 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 Director director = initDirector(resultSet);
                 film.setDirector(director);
             }
-
-            transaction.commit(connection);
-
         } catch (SQLException e) {
-            transaction.rollback(connection);
             throw new DaoException("Films aren't found by name: ", e);
         } finally {
-            transaction.endTransaction(connection);
             close(resultSet);
             close(statement);
             close(connection);
@@ -95,13 +88,10 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
             connection = ConnectionPool.getInstance().getConnection();
             statement = connection.createStatement();
 
-            transaction.beginTransaction(connection);
-
-            resultSet = statement.executeQuery(SQLQuery.FIND_ALL_FILMS);
+            resultSet = statement.executeQuery(SqlQuery.FIND_ALL_FILMS);
             films = initFilms(resultSet);
 
-            //TODO возможно в цикл?
-            preparedStatement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_FILM_ID);
+            preparedStatement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID);
 
             for (int i = 0; i < films.size(); i++) {
                 Film film = films.get(i);
@@ -111,7 +101,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 film.setActors(actors);
             }
 
-            preparedStatement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_FILM_ID);
+            preparedStatement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_FILM_ID);
 
             for (int i = 0; i < films.size(); i++) {
                 Film film = films.get(i);
@@ -122,14 +112,9 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                     film.setDirector(director);
                 }
             }
-
-            transaction.commit(connection);
-
         } catch (SQLException e) {
-            transaction.rollback(connection);
             throw new DaoException("Films aren't found: ", e);
         } finally {
-            transaction.endTransaction(connection);
             close(resultSet);
             close(statement);
             close(preparedStatement);
@@ -147,9 +132,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
         EntityTransaction transaction = new EntityTransaction();
         try {
             connection = ConnectionPool.getInstance().getConnection();
-            statement = connection.prepareStatement(SQLQuery.FIND_FILM_BY_ID);
-
-            transaction.beginTransaction(connection);
+            statement = connection.prepareStatement(SqlQuery.FIND_FILM_BY_ID);
 
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
@@ -157,8 +140,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 film = initFilm(resultSet);
             }
 
-            //TODO возможно в цикл?
-            statement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_FILM_ID);
+            statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID);
 
             statement.setInt(1, film.getId());
             resultSet = statement.executeQuery();
@@ -166,7 +148,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
             film.setActors(actors);
 
 
-            statement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_FILM_ID);
+            statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_FILM_ID);
 
             statement.setInt(1, film.getId());
             resultSet = statement.executeQuery();
@@ -174,14 +156,9 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 Director director = initDirector(resultSet);
                 film.setDirector(director);
             }
-
-            transaction.commit(connection);
-
         } catch (SQLException e) {
-            transaction.rollback(connection);
             throw new DaoException("Film isn't found by id: ", e);
         } finally {
-            transaction.endTransaction(connection);
             close(resultSet);
             close(statement);
             close(connection);
@@ -199,7 +176,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
     public Film delete(int id) throws DaoException {
         Film film;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_FILM_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_FILM_BY_ID)) {
             statement.setInt(1, id);
             film = findById(id);
             statement.executeUpdate();
@@ -224,7 +201,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
 
         try {
             connection = ConnectionPool.getInstance().getConnection();
-            statement = connection.prepareStatement(SQLQuery.CREATE_FILM, Statement.RETURN_GENERATED_KEYS);
+            statement = connection.prepareStatement(SqlQuery.CREATE_FILM, Statement.RETURN_GENERATED_KEYS);
 
             transaction.beginTransaction(connection);
 
@@ -240,7 +217,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 film.setId(id);
             }
 
-            statement = connection.prepareStatement(SQLQuery.CREATE_ACTOR, Statement.RETURN_GENERATED_KEYS);
+            statement = connection.prepareStatement(SqlQuery.CREATE_ACTOR, Statement.RETURN_GENERATED_KEYS);
 
             List<Actor> actors = film.getActors();
             for (int i = 0; i < actors.size(); i++) {
@@ -257,7 +234,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 }
             }
 
-            statement = connection.prepareStatement(SQLQuery.CREATE_DIRECTOR, Statement.RETURN_GENERATED_KEYS);
+            statement = connection.prepareStatement(SqlQuery.CREATE_DIRECTOR, Statement.RETURN_GENERATED_KEYS);
 
             Director director = film.getDirector();
             statement.setString(1, director.getFirstName());
@@ -271,14 +248,11 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 director.setId(id);
             }
 
-            statement = connection.prepareStatement(SQLQuery.MAPPING_FILM_WITH_PERSON);
+            statement = connection.prepareStatement(SqlQuery.MAPPING_FILM_WITH_PERSON);
 
             statement.setInt(1, film.getId());
             statement.setInt(2, director.getId());
             statement.executeUpdate();
-
-            //TODO is necessary duplicate?
-            statement = connection.prepareStatement(SQLQuery.MAPPING_FILM_WITH_PERSON);
 
             for (int i = 0; i < actors.size(); i++) {
                 statement.setInt(1, film.getId());
@@ -309,7 +283,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
 
         try {
             connection = ConnectionPool.getInstance().getConnection();
-            statement = connection.prepareStatement(SQLQuery.UPDATE_FILM);
+            statement = connection.prepareStatement(SqlQuery.UPDATE_FILM);
 
             transaction.beginTransaction(connection);
 
@@ -320,7 +294,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
             statement.setInt(4, film.getId());
             statement.executeUpdate();
 
-            statement = connection.prepareStatement(SQLQuery.UPDATE_ACTOR);
+            statement = connection.prepareStatement(SqlQuery.UPDATE_ACTOR);
 
             List<Actor> actors = film.getActors();
             for (int i = 0; i < actors.size(); i++) {
@@ -333,7 +307,7 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
                 statement.executeUpdate();
             }
 
-            statement = connection.prepareStatement(SQLQuery.UPDATE_DIRECTOR);
+            statement = connection.prepareStatement(SqlQuery.UPDATE_DIRECTOR);
 
             Director director = film.getDirector();
             statement.setString(1, director.getFirstName());

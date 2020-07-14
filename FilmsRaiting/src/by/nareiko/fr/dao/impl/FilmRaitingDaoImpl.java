@@ -5,7 +5,7 @@ import by.nareiko.fr.entity.FilmRaiting;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.dao.ColumnName;
 import by.nareiko.fr.dao.FilmRaitingDao;
-import by.nareiko.fr.dao.SQLQuery;
+import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.pool.ConnectionPool;
 
 import java.sql.*;
@@ -26,7 +26,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
         List<FilmRaiting> filmRaitings = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_FILMS_RAITING);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_FILMS_RAITING);
             filmRaitings = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Film's raitings aren't found: ", e);
@@ -38,7 +38,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
     public List<FilmRaiting> findByFilmId(int filmId) throws DaoException {
         List<FilmRaiting> filmRaitings = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_RAITING_BY_ID_FILM)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_RAITING_BY_ID_FILM)) {
             statement.setInt(1, filmId);
             ResultSet resultSet = statement.executeQuery();
             filmRaitings = initItems(resultSet);
@@ -52,7 +52,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
     public FilmRaiting findById(int id) throws DaoException {
         FilmRaiting filmRaiting = new FilmRaiting();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_RAITING_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_RAITING_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -74,7 +74,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
     public FilmRaiting delete(int id) throws DaoException {
         FilmRaiting filmRaiting = new FilmRaiting();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_RAITING_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_RAITING_BY_ID)) {
             statement.setInt(1, id);
             filmRaiting = findById(id);
             statement.executeUpdate();
@@ -88,7 +88,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
     public boolean create(FilmRaiting filmRaiting) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_RAITING)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_RAITING)) {
             statement.setInt(1, filmRaiting.getFilmId());
             statement.setInt(2, filmRaiting.getUserId());
             statement.setInt(3, filmRaiting.getRaiting());
@@ -108,7 +108,7 @@ public class FilmRaitingDaoImpl extends EntityInitializer<FilmRaiting> implement
     @Override
     public FilmRaiting update(FilmRaiting filmRaiting) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_RAITING)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_RAITING)) {
             statement.setInt(1, filmRaiting.getRaiting());
             statement.setInt(2, filmRaiting.getId());
             statement.executeUpdate();

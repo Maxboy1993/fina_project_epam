@@ -12,17 +12,17 @@ public class EntityTransaction {
 
     public void beginTransaction(Connection connection) {
         try {
-            connection.setAutoCommit(true);
+            connection.setAutoCommit(false);
         } catch (SQLException e) {
-            LOGGER.error("Auto commit isn't seted as true: ", e);
+            LOGGER.error("Auto commit isn't seted as false: ", e);
         }
     }
 
     public void endTransaction(Connection connection) {
         try {
-            connection.setAutoCommit(false);
+            connection.setAutoCommit(true);
         } catch (SQLException e) {
-            LOGGER.error("Auto commit isn't seted as false: ", e);
+            LOGGER.error("Auto commit isn't seted as true: ", e);
         }
     }
 

@@ -25,7 +25,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
         List<Review> reviews = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_REVIEWS);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_REVIEWS);
             reviews = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Reviews aren't found: ", e);
@@ -37,7 +37,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     public List<Review> findByFilmId(int filmId) throws DaoException {
         List<Review> reviews = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_REVIEW_BY_ID_FILM)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_REVIEW_BY_ID_FILM)) {
             statement.setInt(1, filmId);
             ResultSet resultSet = statement.executeQuery();
             reviews = initItems(resultSet);
@@ -51,7 +51,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     public Review findById(int id) throws DaoException {
         Review review = new Review();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_REVIEW_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_REVIEW_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -73,7 +73,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     public Review delete(int id) throws DaoException {
         Review review = new Review();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_REVIEW_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_REVIEW_BY_ID)) {
             statement.setInt(1, id);
             review = findById(id);
             statement.executeUpdate();
@@ -87,7 +87,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     public boolean create(Review review) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_REVIEW)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_REVIEW)) {
             statement.setInt(1, review.getFilmId());
             statement.setInt(2, review.getUserId());
             statement.setString(3, review.getReview());
@@ -109,7 +109,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     @Override
     public Review update(Review review) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_REVIEW)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_REVIEW)) {
             statement.setString(1, review.getReview());
             long reviewDate = review.getReviewDate().getTimeInMillis();
             statement.setLong(2, reviewDate);

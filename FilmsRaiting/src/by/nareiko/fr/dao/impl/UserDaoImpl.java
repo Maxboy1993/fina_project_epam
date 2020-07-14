@@ -2,7 +2,7 @@ package by.nareiko.fr.dao.impl;
 
 import by.nareiko.fr.dao.ColumnName;
 import by.nareiko.fr.dao.EntityInitializer;
-import by.nareiko.fr.dao.SQLQuery;
+import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.dao.UserDao;
 import by.nareiko.fr.entity.RoleType;
 import by.nareiko.fr.entity.StatusType;
@@ -35,7 +35,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User findByLogin(String login) throws DaoException {
         User user = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_USER_BY_LOGIN)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_USER_BY_LOGIN)) {
             statement.setString(1, login);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -51,7 +51,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User findByLoginAndPassword(String login, String password) throws DaoException {
         User user = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_USER_BY_LOGIN_AND_PASSWORD)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_USER_BY_LOGIN_AND_PASSWORD)) {
             statement.setString(1, login);
             String md5HexPassword = PasswordHasher.hashPassword(password);
             statement.setString(2, md5HexPassword);
@@ -69,7 +69,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User delete(String login) throws DaoException {
         User user = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_USER_BY_LOGIN)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_USER_BY_LOGIN)) {
             statement.setString(1, login);
             user = findByLogin(login);
             statement.executeUpdate();
@@ -84,7 +84,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
         List<User> users = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_USERS);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_USERS);
             users = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Users aren't found:  ", e);
@@ -96,7 +96,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User findById(int id) throws DaoException {
         User user = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_USER_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_USER_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -118,7 +118,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User delete(int id) throws DaoException {
         User user = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_USER_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_USER_BY_ID)) {
             user = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
@@ -134,7 +134,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public boolean create(User user) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_USER)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_USER)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             long birtgday = user.getBirthday().getTimeInMillis();
@@ -164,7 +164,7 @@ public class UserDaoImpl extends EntityInitializer<User> implements UserDao<User
     public User update(User user) throws DaoException {
         User user1 = new User();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_USER)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_USER)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             long birtgday = user.getBirthday().getTimeInMillis();

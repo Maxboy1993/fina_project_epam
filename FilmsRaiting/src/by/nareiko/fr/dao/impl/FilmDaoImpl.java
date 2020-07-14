@@ -1,7 +1,6 @@
 package by.nareiko.fr.dao.impl;
 
 import by.nareiko.fr.dao.*;
-import by.nareiko.fr.entity.Director;
 import by.nareiko.fr.entity.Film;
 import by.nareiko.fr.entity.FilmRaiting;
 import by.nareiko.fr.entity.GenreType;
@@ -29,7 +28,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
     public Film findByName(String name) throws DaoException {
         Film film = new Film();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_FILM_BY_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_FILM_BY_NAME)) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()){
@@ -57,7 +56,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
         List<Film> films = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_FILMS);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_FILMS);
             films = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Films aren't found: ", e);
@@ -70,7 +69,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
     public Film findById(int id) throws DaoException {
         Film film = new Film();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_FILM_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_FILM_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -92,7 +91,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
     public Film delete(int id) throws DaoException {
         Film film = new Film();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_FILM_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_FILM_BY_ID)) {
             statement.setInt(1, id);
             film = findById(id);
             statement.executeUpdate();
@@ -112,7 +111,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
         }
 
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_FILM, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_FILM, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, film.getName());
             long releaseDate = film.getReleaseDate().getTimeInMillis();
             statement.setLong(2, releaseDate);
@@ -134,7 +133,7 @@ public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film
     @Override
     public Film update(Film film) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_FILM)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_FILM)) {
             statement.setString(1, film.getName());
             long releaseDate = film.getReleaseDate().getTimeInMillis();
             statement.setLong(2, releaseDate);

@@ -90,14 +90,19 @@ public class ConnectionPool {
         return connection;
     }
 
-    public void releaseConnection(Connection connection) throws DaoException {
+    public void releaseConnection(Connection connection) throws DaoException, SQLException {
         if (connection.getClass() != ProxyConnection.class) {
             throw new DaoException("Invalid connection");
         }
-        givenAwayConnections.remove(connection);
-        //TODO
-        // очитстить конекшин, потом вернуть в пул (транзакции)
-        freeConnections.add((ProxyConnection) connection);
+        connection.setAutoCommit(true);
+        if (givenAwayConnections.contains(connection)){
+            givenAwayConnections.remove(connection);
+            //TODO
+            // очитстить конекшин, потом вернуть в пул (транзакции)
+            freeConnections.add((ProxyConnection) connection);
+        }else {
+            throw  new DaoException("Connection is off. It cannot be released!");
+        }
     }
 
     public void destroyPool() {

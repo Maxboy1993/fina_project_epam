@@ -25,7 +25,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public List<Actor> findByLastName(String lastName) throws DaoException {
         List<Actor> actors = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_LAST_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_LAST_NAME)) {
             statement.setString(1, lastName);
             ResultSet resultSet = statement.executeQuery();
             actors = initItems(resultSet);
@@ -39,7 +39,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public Actor findByLastNameAndFirstName(String lastName, String firstName) throws DaoException {
         Actor actor = new Actor();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_ACTOR_BY_LAST_NAME_AND_FIRST_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTOR_BY_LAST_NAME_AND_FIRST_NAME)) {
             statement.setString(1, lastName);
             statement.setString(2, firstName);
             ResultSet resultSet = statement.executeQuery();
@@ -57,7 +57,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
         List<Actor> actors = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_ACTORS);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_ACTORS);
             actors = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Actors aren't found: ", e);
@@ -69,7 +69,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public Actor findById(int id) throws DaoException {
         Actor actor = new Actor();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_ACTOR_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTOR_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -84,7 +84,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public List<Actor> findByFilmId(int id) throws DaoException {
         List<Actor> actors = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_FILM_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
                 actors = initItems(resultSet);
@@ -98,7 +98,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public Actor delete(String lastName, String firstName) throws DaoException {
         Actor actor = new Actor();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_ACTOR_BY_LAST_NAME_AND_FIRST_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_ACTOR_BY_LAST_NAME_AND_FIRST_NAME)) {
             actor = findByLastNameAndFirstName(lastName, firstName);
             statement.setString(1, lastName);
             statement.setString(2, firstName);
@@ -119,7 +119,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public Actor delete(int id) throws DaoException {
         Actor actor = new Actor();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_ACTOR_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_ACTOR_BY_ID)) {
             actor = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
@@ -133,7 +133,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     public boolean create(Actor actor) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_ACTOR, Statement.RETURN_GENERATED_KEYS)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_ACTOR, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, actor.getFirstName());
             statement.setString(2, actor.getLastName());
             long birthday = actor.getBirthday().getTimeInMillis();
@@ -154,7 +154,7 @@ public class ActorDaoImpl extends EntityInitializer<Actor> implements PersonDao<
     @Override
     public Actor update(Actor actor) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_ACTOR)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_ACTOR)) {
             statement.setString(1, actor.getFirstName());
             statement.setString(2, actor.getLastName());
             long birtgday = actor.getBirthday().getTimeInMillis();

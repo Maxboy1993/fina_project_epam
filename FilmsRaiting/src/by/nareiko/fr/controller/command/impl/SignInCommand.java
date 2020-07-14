@@ -8,16 +8,16 @@ import by.nareiko.fr.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class LoginCommand implements Command {
+public class SignInCommand implements Command {
     private static final String PARAM_LOGIN = "login";
     private static final String PARAM_PASSWORD = "password";
 
-    public LoginCommand() {
+    public SignInCommand() {
     }
 
     @Override
     public String execute(HttpServletRequest request) {
-        String page = PagePath.LOGIN;
+        String page = PagePath.SIGN_IN;
         String loginValue = request.getParameter(PARAM_LOGIN);
         String passwordValue = request.getParameter(PARAM_PASSWORD);
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
@@ -29,6 +29,7 @@ public class LoginCommand implements Command {
             request.setAttribute("user", user.getFirstName());
             page = PagePath.MAIN;
         } else if (user == null) {
+            //TODO strings to constants in out class
             request.setAttribute("errorLoginPassMessage", "Wrong login or password");
         }
         return page;

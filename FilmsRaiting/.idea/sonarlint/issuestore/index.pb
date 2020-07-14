@@ -25,8 +25,6 @@ T
 $src/by/nareiko/fr/entity/Review.java,3\e\3e43c3b900b090bd246d3851c1d9cb8a5092a0ac
 R
 "src/by/nareiko/fr/entity/User.java,c\2\c205be9a4c765a82159a0ab3ba1560a4446272b4
-D
-web/jsp/mybundle.jsp,a\e\aee8f9b9fbeb8b22331e780dd3ad461d864dce48
 @
 web/jsp/main.jsp,4\2\424f0417d864cd60ae04163bbf1f81b5620e59c5
 B
@@ -99,3 +97,13 @@ a
 1src/by/nareiko/fr/dao/impl/EntityTransaction.java,2\3\23560bd1df06d1324d7aa78bce6e36f1953326ff
 c
 3src/by/nareiko/fr/dao/impl/FullFilmInfoDaoImpl.java,4\0\40b7972b7406154f901798419d793099e3c32bce
+s
+Csrc/by/nareiko/fr/controller/filter/PageRedirectSecurityFilter.java,a\5\a5dc9fcb857a1cc6f2250d24d1f1b3181fb2c17e
+b
+2src/by/nareiko/fr/controller/command/PagePath.java,e\b\eb39902f5190728b586b8ebbe7736511f90e81ab
+l
+<src/by/nareiko/fr/controller/command/impl/SignInCommand.java,5\0\50cc18c21c2b998d19564a9df46d12e78f757ec3
+n
+>src/by/nareiko/fr/controller/filter/ServletSecurityFilter.java,3\6\36ebe911478b9cbbe62428bc78dabcb806392c5d
+B
+web/jsp/signIn.jsp,6\9\69732ee0989fb9a7fac5e279533cc42cd36b20da

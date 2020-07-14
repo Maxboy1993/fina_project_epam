@@ -3,8 +3,7 @@ package by.nareiko.fr.dao.impl;
 import by.nareiko.fr.dao.ColumnName;
 import by.nareiko.fr.dao.EntityInitializer;
 import by.nareiko.fr.dao.PersonDao;
-import by.nareiko.fr.dao.SQLQuery;
-import by.nareiko.fr.entity.Actor;
+import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.entity.Director;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
@@ -28,7 +27,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public List<Director> findByLastName(String name) throws DaoException {
         List<Director> directors = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_LAST_NAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_LAST_NAME)) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
             directors = initItems(resultSet);
@@ -42,7 +41,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public Director findByLastNameAndFirstName(String lastName, String firstName) throws DaoException {
         Director director = new Director();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
             statement.setString(1, lastName);
             statement.setString(2, firstName);
             ResultSet resultSet = statement.executeQuery();
@@ -60,7 +59,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
         List<Director> directors = new ArrayList<>();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(SQLQuery.FIND_ALL_DIRECTORS);
+            ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_DIRECTORS);
             directors = initItems(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Directors aren't found: ", e);
@@ -72,7 +71,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public Director findById(int id) throws DaoException {
         Director director = new Director();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_DIRECTOR_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -87,7 +86,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public Director findByFilmId(int id) throws DaoException {
        Director director = new Director();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.FIND_ACTORS_BY_FILM_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()){
@@ -103,7 +102,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public Director delete(String lastName, String firstName) throws DaoException {
         Director director = new Director();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
             director = findByLastNameAndFirstName(lastName, firstName);
             statement.setString(1, lastName);
             statement.setString(2, firstName);
@@ -124,7 +123,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public Director delete(int id) throws DaoException {
         Director director = new Director();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.DELETE_DIRECTOR_BY_ID)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_DIRECTOR_BY_ID)) {
             director = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
@@ -138,7 +137,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     public boolean create(Director director) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.CREATE_DIRECTOR)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_DIRECTOR)) {
             statement.setString(1, director.getFirstName());
             statement.setString(2, director.getLastName());
             long birtgday = director.getBirthday().getTimeInMillis();
@@ -159,7 +158,7 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
     @Override
     public Director update(Director director) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQLQuery.UPDATE_DIRECTOR)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_DIRECTOR)) {
             statement.setString(1, director.getFirstName());
             statement.setString(2, director.getLastName());
             long birtgday = director.getBirthday().getTimeInMillis();
