@@ -11,26 +11,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.Optional;
 
 public interface BaseDao<T extends AbstractEntity> {
     static final Logger LOGGER = LogManager.getLogger();
 
     List<T> findAll() throws DaoException;
 
-    T findById(int id) throws DaoException;
+    Optional<T> findById(int id) throws DaoException;
 
-    T delete(T t) throws DaoException;
+    Optional<T> delete(T t) throws DaoException;
 
-    T delete(int id) throws DaoException;
+    Optional<T> delete(int id) throws DaoException;
 
     boolean create(T t) throws DaoException;
 
-    T update(T t) throws DaoException;
+    Optional<T> update(T t) throws DaoException;
 
     default void close(Connection connection) throws DaoException {
-        if (connection != null) {
-            ConnectionPool pool = ConnectionPool.getInstance();
-            pool.releaseConnection(connection);
+        try {
+            if (connection != null) {
+                ConnectionPool pool = ConnectionPool.getInstance();
+                pool.releaseConnection(connection);
+            }
+        } catch (SQLException e) {
+            LOGGER.error("SQLException: Error while closing statement", e);
         }
     }
 
@@ -41,7 +46,7 @@ public interface BaseDao<T extends AbstractEntity> {
                 statement.close();
             }
         } catch (SQLException e) {
-            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: Error while closing statement", e);
         }
     }
 
@@ -52,7 +57,7 @@ public interface BaseDao<T extends AbstractEntity> {
                 resultSet.close();
             }
         } catch (SQLException e) {
-            LOGGER.error("SQLException: ", e);
+            LOGGER.error("SQLException: Error while closing result set", e);
         }
     }
 }

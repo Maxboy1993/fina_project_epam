@@ -6,18 +6,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter("/*")
+@WebFilter("*.jsp")
 public class SessionLocaleFilter implements Filter {
     private static final String ENGLISH_LOCALE = "en";
+    private static final String LANGUAGE_PARAM = "language";
+
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpSession session = req.getSession(true);
         //TODO get instead set and add else block
-        String languageLocale = req.getParameter("lang");
+        String languageLocale = req.getParameter(LANGUAGE_PARAM);
         if (languageLocale != null) {
-            session.setAttribute("lang", request.getParameter("lang"));
-        }else{
-            session.setAttribute("lang", ENGLISH_LOCALE);
+            session.setAttribute(LANGUAGE_PARAM, languageLocale);
+        } else {
+            session.setAttribute(LANGUAGE_PARAM, ENGLISH_LOCALE);
         }
         chain.doFilter(request, response);
     }

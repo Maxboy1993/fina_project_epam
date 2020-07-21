@@ -7,7 +7,7 @@ public final class DaoFactory {
 
     private PersonDao actorDao;
     private PersonDao directorDao;
-    private FilmDao filmDao;
+//    private FilmDao filmDao;
     private FilmDao fullFilmInfoDao;
     private FilmRaitingDao filmRaitingDao;
     private ReviewDao reviewDao;
@@ -30,10 +30,10 @@ public final class DaoFactory {
         return directorDao;
     }
 
-    public FilmDao getFilmDao() {
-        filmDao = FilmDaoImpl.getInstance();
-        return filmDao;
-    }
+//    public FilmDao getFilmDao() {
+//        filmDao = FilmDaoImpl.getInstance();
+//        return filmDao;
+//    }
 
     public FilmDao getFullFilmInfoDao() {
         fullFilmInfoDao = FullFilmInfoDaoImpl.getInstance();

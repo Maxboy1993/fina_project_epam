@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
@@ -9,13 +9,7 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
-    <filter-mapping>
-        <filter-name>Localefilter</filter-name>
-        <url-pattern>/encodingfilter/*</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>Encodingfilter</filter-name>
-        <url-pattern>/localefilter/*</url-pattern>
-    </filter-mapping>
-
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
 </web-app>

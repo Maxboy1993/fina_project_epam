@@ -1,106 +1,108 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.dao.ColumnName;
-import by.nareiko.fr.dao.EntityInitializer;
 import by.nareiko.fr.dao.PersonDao;
 import by.nareiko.fr.dao.SqlQuery;
+import by.nareiko.fr.dao.impl.entittymapper.DirectorMapper;
 import by.nareiko.fr.entity.Director;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
-public class DirectorDaoImpl extends EntityInitializer<Director> implements PersonDao<Director> {
+public class DirectorDaoImpl implements PersonDao<Director> {
     private static final PersonDao INSTANCE = new DirectorDaoImpl();
 
-    private DirectorDaoImpl(){}
+    private DirectorDaoImpl() {
+    }
 
-    public static PersonDao getInstance(){
+    public static PersonDao getInstance() {
         return INSTANCE;
     }
 
     @Override
     public List<Director> findByLastName(String name) throws DaoException {
-        List<Director> directors = new ArrayList<>();
+        List<Director> directors;
+        DirectorMapper directorMapper = new DirectorMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_LAST_NAME)) {
             statement.setString(1, name);
             ResultSet resultSet = statement.executeQuery();
-            directors = initItems(resultSet);
+            directors = directorMapper.initEntities(resultSet);
         } catch (SQLException e) {
-            throw new DaoException("Directors aren't found by last name: ", e);
+            throw new DaoException("Error while searching director by last name: ", e);
         }
         return directors;
     }
 
     @Override
-    public Director findByLastNameAndFirstName(String lastName, String firstName) throws DaoException {
-        Director director = new Director();
+    public Optional<Director> findByLastNameAndFirstName(String lastName, String firstName) throws DaoException {
+        Director director = null;
+        DirectorMapper directorMapper = new DirectorMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
             statement.setString(1, lastName);
             statement.setString(2, firstName);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                director = initItem(resultSet);
+                director = directorMapper.initEntity(resultSet);
             }
         } catch (SQLException e) {
-            throw new DaoException("Director isn't found by last name and first name: ", e);
+            throw new DaoException("Error while searching director by last name and first name: ", e);
         }
-        return director;
+        return Optional.ofNullable(director);
     }
 
     @Override
     public List<Director> findAll() throws DaoException {
-        List<Director> directors = new ArrayList<>();
+        List<Director> directors;
+        DirectorMapper directorMapper = new DirectorMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_DIRECTORS);
-            directors = initItems(resultSet);
+            directors = directorMapper.initEntities(resultSet);
         } catch (SQLException e) {
-            throw new DaoException("Directors aren't found: ", e);
+            throw new DaoException("Error while searching all directors: ", e);
         }
         return directors;
     }
 
     @Override
-    public Director findById(int id) throws DaoException {
-        Director director = new Director();
+    public Optional<Director> findById(int id) throws DaoException {
+        Director director = null;
+        DirectorMapper directorMapper = new DirectorMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_DIRECTOR_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                director = initItem(resultSet);
+                director = directorMapper.initEntity(resultSet);
             }
         } catch (SQLException e) {
-            throw new DaoException("Director isn't found by id: ", e);
+            throw new DaoException("Error while searching director by id: ", e);
         }
-        return director;
+        return Optional.ofNullable(director);
     }
 
-    public Director findByFilmId(int id) throws DaoException {
-       Director director = new Director();
+    public Optional<Director> findByFilmId(int id) throws DaoException {
+        Director director = null;
+        DirectorMapper directorMapper = new DirectorMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_ACTORS_BY_FILM_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()){
-                director = initItem(resultSet);
+            if (resultSet.next()) {
+                director = directorMapper.initEntity(resultSet);
             }
         } catch (SQLException e) {
-            throw new DaoException("Actor isn't found by id: ", e);
+            throw new DaoException("Error while searching director by film id: ", e);
         }
-        return director;
+        return Optional.ofNullable(director);
     }
 
     @Override
-    public Director delete(String lastName, String firstName) throws DaoException {
-        Director director = new Director();
+    public Optional<Director> delete(String lastName, String firstName) throws DaoException {
+        Optional<Director> director;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_DIRECTOR_BY_LAST_NAME_AND_FIRSTNAME)) {
             director = findByLastNameAndFirstName(lastName, firstName);
@@ -108,34 +110,34 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
             statement.setString(2, firstName);
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException("Director isn't deleted by last name and first name: ", e);
+            throw new DaoException("Error while deleting director by last name and first name: ", e);
         }
         return director;
     }
 
     @Override
-    public Director delete(Director director) throws DaoException {
-        delete(director.getId());
-        return director;
+    public Optional<Director> delete(Director director) throws DaoException {
+        Optional<Director> foundDirector = delete(director.getId());
+        return foundDirector;
     }
 
     @Override
-    public Director delete(int id) throws DaoException {
-        Director director = new Director();
+    public Optional<Director> delete(int id) throws DaoException {
+        Optional<Director> director;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_DIRECTOR_BY_ID)) {
             director = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException("Director isn't deleted by id: ", e);
+            throw new DaoException("Error while deleting director by id: ", e);
         }
         return director;
     }
 
     @Override
     public boolean create(Director director) throws DaoException {
-        boolean isCreated = false;
+        boolean isCreated;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_DIRECTOR)) {
             statement.setString(1, director.getFirstName());
@@ -150,13 +152,13 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
             }
             isCreated = true;
         } catch (SQLException e) {
-            throw new DaoException("Director isn't created: ", e);
+            throw new DaoException("Error while creating director: ", e);
         }
         return isCreated;
     }
 
     @Override
-    public Director update(Director director) throws DaoException {
+    public Optional<Director> update(Director director) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_DIRECTOR)) {
             statement.setString(1, director.getFirstName());
@@ -166,58 +168,8 @@ public class DirectorDaoImpl extends EntityInitializer<Director> implements Pers
             statement.setInt(4, director.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new DaoException("Director isn't uodated: ", e);
+            throw new DaoException("Error while updating director: ", e);
         }
-        return director;
-    }
-
-    private Calendar getDateFromLong(long dateMillis) {
-        Calendar date = new GregorianCalendar();
-        date.setTimeInMillis(dateMillis);
-        return date;
-    }
-
-    protected List<Director> initItems(ResultSet resultSet) throws DaoException {
-        List<Director> directors = new ArrayList<>();
-        try {
-            while (resultSet.next()) {
-                Director director = initItem(resultSet);
-                directors.add(director);
-            }
-        } catch (SQLException e) {
-            throw new DaoException("Directors aren't inizialized: ", e);
-        }
-        return directors;
-    }
-
-    protected Director initItem(ResultSet resultSet) throws DaoException {
-        Director director = new Director();
-        try {
-            int id = resultSet.getInt(ColumnName.PERSON_ID);
-            director.setId(id);
-            String firstName = resultSet.getString(ColumnName.FIRST_NAME);
-            director.setFirstName(firstName);
-            String lastName = resultSet.getString(ColumnName.LAST_NAME);
-            director.setLastName(lastName);
-            long longBirthday = resultSet.getLong(ColumnName.BIRTHDAY);
-            Calendar birthday = getDateFromLong(longBirthday);
-            director.setBirthday(birthday);
-        } catch (SQLException e) {
-            throw new DaoException("Director isn't inizialized: ", e);
-        }
-        return director;
-    }
-
-    //TODO delete main method
-    public static void main(String[] args) {
-//        DirectorDaoImpl dao = new DirectorDaoImpl();
-//        List<Director> list = new ArrayList<>();
-//        list = dao.findByLastName("McGinty");
-////        list = dao.findAll();
-//        for (Director director : list) {
-//            System.out.println(director.toString());
-//        }
-//        Director act = new Director();
-//        System.out.println(act.toString());
+        return Optional.ofNullable(director);
     }
 }

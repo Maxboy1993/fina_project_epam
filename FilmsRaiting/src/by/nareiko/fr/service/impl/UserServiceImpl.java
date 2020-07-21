@@ -1,27 +1,35 @@
 package by.nareiko.fr.service.impl;
 
+import by.nareiko.fr.dao.DaoFactory;
+import by.nareiko.fr.dao.UserDao;
 import by.nareiko.fr.entity.RoleType;
 import by.nareiko.fr.entity.StatusType;
 import by.nareiko.fr.entity.User;
-import by.nareiko.fr.dao.impl.UserDaoImpl;
+import by.nareiko.fr.exception.DaoException;
+import by.nareiko.fr.exception.ServiceException;
 import by.nareiko.fr.service.UserService;
 import by.nareiko.fr.util.PasswordHasher;
 import by.nareiko.fr.validator.UserValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Optional;
 
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService<User> {
     private static final RoleType DEFAULT_ROLE = RoleType.USER;
     private static final StatusType DEFAULT_STATUS = StatusType.ACTIVE;
+    private static final UserService INSTANCE = new UserServiceImpl();
+    private static final Logger LOGGER = LogManager.getLogger();
     private static int YEAR_INDEX = 0;
     private static int MONTH_INDEX = 1;
     private static int DAY_INDEX = 2;
-    private static  final UserService INSTANCE = new UserServiceImpl();
 
-    private UserServiceImpl(){}
+    private UserServiceImpl() {
+    }
 
-    public static UserService getInstance(){
+    public static UserService getInstance() {
         return INSTANCE;
     }
 
@@ -44,14 +52,20 @@ public class UserServiceImpl implements UserService {
         return isCorrectUser;
     }
 
-    public User findByLoginAndPassword(String login, String password) {
-        UserDaoImpl userDao = new UserDaoImpl(); // Change on factory
-        User user = userDao.findByLoginAndPassword(login, password);
+    public Optional<User> findByLoginAndPassword(String login, String password) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        Optional<User> user;
+        try {
+            user = userDao.findByLoginAndPassword(login, password);
+        } catch (DaoException e) {
+            LOGGER.error("Error while seaching by id: ", e);
+            throw new ServiceException("Error while seaching by id: ", e);
+        }
         return user;
     }
 
-    public User registrateUser(String firstName, String lastName, String login, String password, String[] birthday) {
-        UserDaoImpl userDao = new UserDaoImpl(); // Change on factory
+    public Optional<User> registrateUser(String firstName, String lastName, String login, String password, String[] birthday) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
         User user = new User();
         user.setFirstName(firstName);
         user.setLastName(lastName);
@@ -66,15 +80,12 @@ public class UserServiceImpl implements UserService {
         user.setPassword(md5HexPassword);
         user.setRoleType(DEFAULT_ROLE);
         user.setStatusType(DEFAULT_STATUS);
-        userDao.create(user);
-        return user;
-    }
-
-    public static void main(String[] args) {
-        UserServiceImpl service = new UserServiceImpl(); // Change on factory
-//        User user = service.registrateUser("max", "Bill","max@gmail.com", "20max20", new String[]{"11", "12", "2000"});
-        User user = service.findByLoginAndPassword("tom40@gmail.com", "40tom40");
-        System.out.println(user.getFirstName());
-        System.out.println(user.getPassword());
+        try {
+            userDao.create(user);
+        } catch (DaoException e) {
+            LOGGER.error("Error while creating user: ", e);
+            throw new ServiceException("Error while creating user: ", e);
+        }
+        return Optional.of(user);
     }
 }

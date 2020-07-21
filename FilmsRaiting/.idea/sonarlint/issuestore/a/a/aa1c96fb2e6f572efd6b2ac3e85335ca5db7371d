@@ -1,12 +1,11 @@
 
+Q
+java:S3740"/Provide the parametrized type for this generic.(åéûÿÿÿÿ8úÄÛí¶.
 ]
-java:S2095J"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-S
-java:S1854Ó"<Remove this useless assignment to local variable "actorDao".(Ñ”ò†
-N
-java:S1135Ğ"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ
-D
-java:S1481Ó"-Remove this unused "actorDao" local variable.(Ñ”ò†
+java:S2095N"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
 ]
-java:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-R	java:S125Ö"<This block of commented-out lines of code should be removed.(êƒ°ä
+java:S2095/"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+„
+java:S1488w"bImmediately return this expression instead of assigning it to the temporary variable "foundActor".(Í„äûÿÿÿÿ8ÈÎå¾µ.
+Q
+java:S3740"/Provide the parametrized type for this generic.(•æ÷øÿÿÿÿ8úÄÛí¶.

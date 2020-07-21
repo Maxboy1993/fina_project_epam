@@ -43,5 +43,6 @@
     <orderEntry type="library" exported="" name="javax.servlet.jsp.jstl-1.2.1" level="project" />
     <orderEntry type="library" exported="" name="commons-codec-1.14" level="project" />
     <orderEntry type="library" exported="" name="log4j-core-2.13.3" level="project" />
+    <orderEntry type="library" exported="" name="javax.mail" level="project" />
   </component>
 </module>

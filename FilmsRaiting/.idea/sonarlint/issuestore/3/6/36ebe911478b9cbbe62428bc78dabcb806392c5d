@@ -1,9 +1,26 @@
 
-W
-java:S1161":Add the "@Override" annotation above this method signature(Çì∂Ó8®—Ê ¥.
+X	java:S125$"<This block of commented-out lines of code should be removed.(˙ú™—8˛ÒæÌ∂.
+O
+java:S1135#"2Complete the task associated to this TODO comment.(úÖÏ‘8˙ôøÌ∂.
+j
+java:S1192."HDefine a constant instead of duplicating this literal "SIGN_IN" 3 times.(ÿ”ÀΩ¸ˇˇˇˇ8Ùˆ°Ì∂.
+j
+java:S1192."HDefine a constant instead of duplicating this literal "SIGN_UP" 3 times.(ÿ”ÀΩ¸ˇˇˇˇ8Ùˆ°Ì∂.
 \
-java:S1161)":Add the "@Override" annotation above this method signature(‡‰ô¥˝ˇˇˇˇ8®—Ê ¥.
+java:S1161,":Add the "@Override" annotation above this method signature(‡‰ô¥˝ˇˇˇˇ8°∫ãŸ∂.
+Z
+java:S3878/"8Remove this array creation and simply pass the elements.(∞á·÷˘ˇˇˇˇ8Ùˆ°Ì∂.
+Z
+java:S3878."8Remove this array creation and simply pass the elements.(ÿ”ÀΩ¸ˇˇˇˇ8Ùˆ°Ì∂.
+A
+java:S1640-"Convert this Map to an EnumMap.(˙Çÿ©˛ˇˇˇˇ8Ùˆ°Ì∂.
+q
+java:S1192."ODefine a constant instead of duplicating this literal "FIND_ALL_FILMS" 3 times.(ÿ”ÀΩ¸ˇˇˇˇ8Ùˆ°Ì∂.
+U
+java:S38780"8Remove this array creation and simply pass the elements.(±Ωèò8Ùˆ°Ì∂.
+r
+java:S1192."PDefine a constant instead of duplicating this literal "DEFAULT_COMMAND" 3 times.(ÿ”ÀΩ¸ˇˇˇˇ8Ùˆ°Ì∂.
 û
-java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çì∂Ó8®—Ê ¥.
-£
-java:S1186)"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‡‰ô¥˝ˇˇˇˇ8®—Ê ¥.
+java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çì∂Ó8°∫ãŸ∂.
+W
+java:S1161":Add the "@Override" annotation above this method signature(Çì∂Ó8°∫ãŸ∂.

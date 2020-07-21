@@ -1,12 +1,13 @@
 
 ]
-java:S2095M"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
-Y
-java:S1128"7Remove this unused import 'by.nareiko.fr.entity.Actor'.(Õ®“¿ıÿÿÿÿ8ĞÉô´.
-N
-java:S1135Ô"2Complete the task associated to this TODO comment.(ñ®¯øùÿÿÿÿ
+java:S2095]"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
 d
-java:S2095\"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¨™Üç³.
-R	java:S125Ö"<This block of commented-out lines of code should be removed.(¤£ï™
+java:S2095M"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8¨™Üç³.
+Q
+java:S3740"/Provide the parametrized type for this generic.(•æ÷øÿÿÿÿ8ßî¶.
+‡
+java:S1488x"eImmediately return this expression instead of assigning it to the temporary variable "foundDirector".(€şœˆıÿÿÿÿ8”¿µ.
+Q
+java:S3740"/Provide the parametrized type for this generic.(†Ò©ãşÿÿÿÿ8ßî¶.
 ]
-java:S20950"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+java:S2095."GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–

@@ -25,23 +25,9 @@
     <br>Password<br/>
     <%--    <input type="password" name="password" value=""/>--%>
     <input required type="password" name="password" placeholder="password"/>
-    <br>Birthday Day<br/>
-    <input required type="number" name="day" placeholder="day"/>
-    <br>Birthday Month<br/>
-    <input required type="number" name="month" placeholder="month"/>
-    <br>Birthday Year<br/>
-    <input required type="number" name="year" placeholder="year"/>
-    <%--    <input type="number" name="day" value=""/>--%>
-    <%--    <input type="number" name="month" value=""/>--%>
-    <%--    <input type="number" name="year" value=""/>--%>
-    <br>
+    <br>Birthday<br/>
+    <input required type="date" name="day" placeholder="day"/>
     ${errorLoginPassMessage}
-    <br/>
-    <br>
-    ${wrongAction}
-    <br/>
-    <br>
-    ${nullPage}
     <br/>
     <input type="submit" value="sign up"/>
 </form>

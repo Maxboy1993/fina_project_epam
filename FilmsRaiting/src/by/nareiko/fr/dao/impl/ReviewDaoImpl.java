@@ -1,32 +1,33 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.dao.*;
+import by.nareiko.fr.dao.ReviewDao;
+import by.nareiko.fr.dao.SqlQuery;
+import by.nareiko.fr.dao.impl.entittymapper.ReviewMapper;
 import by.nareiko.fr.entity.Review;
 import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
-public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDao<Review> {
+public class ReviewDaoImpl implements ReviewDao<Review> {
     private static final ReviewDao INSTANCE = new ReviewDaoImpl();
 
-    private ReviewDaoImpl(){}
+    private ReviewDaoImpl() {
+    }
 
-    public static ReviewDao getInstance(){
+    public static ReviewDao getInstance() {
         return INSTANCE;
     }
 
     @Override
     public List<Review> findAll() throws DaoException {
-        List<Review> reviews = new ArrayList<>();
+        List<Review> reviews;
+        ReviewMapper reviewMapper = new ReviewMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(SqlQuery.FIND_ALL_REVIEWS);
-            reviews = initItems(resultSet);
+            reviews = reviewMapper.initEntities(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Reviews aren't found: ", e);
         }
@@ -35,12 +36,13 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
 
     @Override
     public List<Review> findByFilmId(int filmId) throws DaoException {
-        List<Review> reviews = new ArrayList<>();
+        List<Review> reviews;
+        ReviewMapper reviewMapper = new ReviewMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_REVIEW_BY_ID_FILM)) {
             statement.setInt(1, filmId);
             ResultSet resultSet = statement.executeQuery();
-            reviews = initItems(resultSet);
+            reviews = reviewMapper.initEntities(resultSet);
         } catch (SQLException e) {
             throw new DaoException("Reviews aren't found by film id: ", e);
         }
@@ -48,30 +50,33 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     }
 
     @Override
-    public Review findById(int id) throws DaoException {
-        Review review = new Review();
+    public Optional<Review> findById(int id) throws DaoException {
+        Review review = null;
+        ReviewMapper reviewMapper = new ReviewMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_REVIEW_BY_ID)) {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                review = initItem(resultSet);
+                review = reviewMapper.initEntity(resultSet);
             }
         } catch (SQLException e) {
             throw new DaoException("Review isn't found by id: ", e);
         }
-        return review;
+        return Optional.ofNullable(review);
     }
 
     @Override
-    public Review delete(Review review) throws DaoException {
-        delete(review.getId());
-        return review;
+    public Optional<Review> delete(Review review) throws DaoException {
+        int id = review.getId();
+        Optional<Review> foundReview = findById(id);
+        delete(id);
+        return foundReview;
     }
 
     @Override
-    public Review delete(int id) throws DaoException {
-        Review review = new Review();
+    public Optional<Review> delete(int id) throws DaoException {
+        Optional<Review> review;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_REVIEW_BY_ID)) {
             statement.setInt(1, id);
@@ -85,7 +90,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
 
     @Override
     public boolean create(Review review) throws DaoException {
-        boolean isCreated = false;
+        boolean isCreated;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_REVIEW)) {
             statement.setInt(1, review.getFilmId());
@@ -107,7 +112,7 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
     }
 
     @Override
-    public Review update(Review review) throws DaoException {
+    public Optional<Review> update(Review review) throws DaoException {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_REVIEW)) {
             statement.setString(1, review.getReview());
@@ -118,45 +123,6 @@ public class ReviewDaoImpl extends EntityInitializer<Review> implements ReviewDa
         } catch (SQLException e) {
             throw new DaoException("Review isn't updated: ", e);
         }
-        return review;
-    }
-
-    private Calendar getDateFromLong(long dateMillis) {
-        Calendar date = new GregorianCalendar();
-        date.setTimeInMillis(dateMillis);
-        return date;
-    }
-
-    protected List<Review> initItems(ResultSet resultSet) throws DaoException {
-        List<Review> reviews = new ArrayList<>();
-        try {
-            while (resultSet.next()) {
-                Review review = initItem(resultSet);
-                reviews.add(review);
-            }
-        } catch (SQLException e) {
-            throw new DaoException("Reviews aren't inizialized: ", e);
-        }
-        return reviews;
-    }
-
-    protected Review initItem(ResultSet resultSet) throws DaoException {
-        Review review = new Review();
-        try {
-            int reviewId = resultSet.getInt(ColumnName.REVIEW_ID);
-            review.setId(reviewId);
-            int filmId = resultSet.getInt(ColumnName.FILM_ID);
-            review.setFilmId(filmId);
-            int userId = resultSet.getInt(ColumnName.USER_ID);
-            review.setUserId(userId);
-            String reviewText = resultSet.getString(ColumnName.REVIEW);
-            review.setReview(reviewText);
-            long reviewDate = resultSet.getLong(ColumnName.REVIEW_DATE);
-            Calendar date = getDateFromLong(reviewDate);
-            review.setReviewDate(date);
-        } catch (SQLException e) {
-            throw new DaoException("Review isn't inizialized: ", e);
-        }
-        return review;
+        return Optional.ofNullable(review);
     }
 }
