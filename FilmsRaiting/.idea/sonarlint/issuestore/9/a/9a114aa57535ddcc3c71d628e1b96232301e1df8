@@ -1,17 +1,8 @@
 
-T
-java:S11352"2Complete the task associated to this TODO comment.(è•²üÿÿÿÿ8¶É¹ç¶.
+c
+java:S1128"FRemove this unused import 'by.nareiko.fr.controller.command.PagePath'.(ÕÓÇç8ù¡¾·.
 Š
-java:S1989"hHandle the following exceptions that could be thrown by "processServlet": ServletException, IOException.(úëìúÿÿÿÿ8îŸıïµ.
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8’ÚÿÚ¶.
+java:S1989"hHandle the following exceptions that could be thrown by "processServlet": ServletException, IOException.(úëìúÿÿÿÿ8îŸıïµ.
 Š
-java:S1989#"hHandle the following exceptions that could be thrown by "processServlet": ServletException, IOException.(úëìúÿÿÿÿ8ÖŒıïµ.
-T
-java:S11359"2Complete the task associated to this TODO comment.(ßƒÁ•ÿÿÿÿÿ8å×üë¶.
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8’ÚÿÚ¶.
-f
-java:S1128"IRemove this unused import 'by.nareiko.fr.controller.command.CommandType'.(”‘š§8ùŸˆì¶.
-Z
-java:S1068"8Remove this unused "DEFAULT_COMMAND_NAME" private field.(ó˜èïøÿÿÿÿ8ï¿‰ì¶.
+java:S1989"hHandle the following exceptions that could be thrown by "processServlet": ServletException, IOException.(úëìúÿÿÿÿ8ÖŒıïµ.
+]	java:S125"<This block of commented-out lines of code should be removed.(íçùÕşÿÿÿÿ8ã‘¾·.

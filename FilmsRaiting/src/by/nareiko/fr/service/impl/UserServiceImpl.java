@@ -34,19 +34,19 @@ public class UserServiceImpl implements UserService<User> {
     }
 
     @Override
-    public boolean checkUser(String login, String password) {
+    public boolean checkUserByLoginAdPassword(String login, String password) {
         boolean isCorrectUser = false;
         UserValidator validator = new UserValidator();
-        if (validator.checkLoginData(login, password)) {
+        if (validator.validateLoginAndPassword(login, password)) {
             isCorrectUser = true;
         }
         return isCorrectUser;
     }
 
-    public boolean checkUserRegistrationData(String firstName, String lastName, String login, String password, String[] birthday) {
+    public boolean checkUserRegistrationData(String firstName, String lastName, String login, String password, String birthday) {
         boolean isCorrectUser = false;
         UserValidator validator = new UserValidator();
-        if (validator.checkRegistrationData(firstName, lastName, login, password, birthday)) {
+        if (validator.validateRegistrationData(firstName, lastName, login, password, birthday)) {
             isCorrectUser = true;
         }
         return isCorrectUser;
@@ -64,15 +64,16 @@ public class UserServiceImpl implements UserService<User> {
         return user;
     }
 
-    public Optional<User> registrateUser(String firstName, String lastName, String login, String password, String[] birthday) throws ServiceException {
+    public Optional<User> registrateUser(String firstName, String lastName, String login, String password, String birthday) throws ServiceException {
         UserDao userDao = DaoFactory.getInstance().getUserDao();
         User user = new User();
         user.setFirstName(firstName);
         user.setLastName(lastName);
         Calendar calendar = new GregorianCalendar();
-        int year = Integer.parseInt(birthday[YEAR_INDEX]);
-        int month = Integer.parseInt(birthday[MONTH_INDEX]) - 1;
-        int day = Integer.parseInt(birthday[DAY_INDEX]);
+        String[] birhtdaySeparator = birthday.split("-");
+        int year = Integer.parseInt(birhtdaySeparator[YEAR_INDEX]);
+        int month = Integer.parseInt(birhtdaySeparator[MONTH_INDEX]) - 1;
+        int day = Integer.parseInt(birhtdaySeparator[DAY_INDEX]);
         calendar.set(year, month, day);
         user.setBirthday(calendar);
         user.setLogin(login);
@@ -86,6 +87,18 @@ public class UserServiceImpl implements UserService<User> {
             LOGGER.error("Error while creating user: ", e);
             throw new ServiceException("Error while creating user: ", e);
         }
-        return Optional.of(user);
+        return Optional.ofNullable(user);
+    }
+
+    @Override
+    public void activateUser(String login) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        try {
+            userDao.verifyUser(login);
+        } catch (DaoException e) {
+            LOGGER.error("User isn't verified: ", e);
+            throw new ServiceException("Error while user verification", e);
+        }
+
     }
 }

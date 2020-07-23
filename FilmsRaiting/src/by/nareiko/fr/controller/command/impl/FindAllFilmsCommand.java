@@ -1,5 +1,7 @@
 package by.nareiko.fr.controller.command.impl;
 
+import by.nareiko.fr.controller.JspParameterName;
+import by.nareiko.fr.controller.Router;
 import by.nareiko.fr.controller.command.Command;
 import by.nareiko.fr.controller.command.PagePath;
 import by.nareiko.fr.entity.Film;
@@ -15,22 +17,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FindAllFilmsCommand implements Command {
-    private static final String FILMS_LIST_PARAM = "filmsList";
     private static final Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public String execute(HttpServletRequest request) throws ControllerException {
-        String page = PagePath.SIGN_IN;
+    public Router execute(HttpServletRequest request)  {
+        Router router = new Router();
+        router.setPage(PagePath.SIGN_IN);
         FilmService filmService = ServiceFactory.getInstance().getFilmService();
         List<Film> films;
         try {
             films = filmService.findAllFilms();
-            request.getServletContext().setAttribute(FILMS_LIST_PARAM, films);
+            request.getServletContext().setAttribute(JspParameterName.FILMS_LIST_PARAM, films);
         } catch (ServiceException e) {
             LOGGER.error("Error while searching films: ", e);
-            throw new ControllerException("Error while searching films: ", e);
+            //TODO send error
+//            throw new ControllerException("Error while searching films: ", e);
         }
-        return page;
+        return router;
     }
 }
 

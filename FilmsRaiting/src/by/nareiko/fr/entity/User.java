@@ -12,12 +12,13 @@ public class User extends AbstractEntity {
     private String login;
     private String password;
     private StatusType status;
+    private boolean isVerified;
     private Blob poster;
 
     public User() {
     }
 
-    public User(int id, String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status, Blob poster) {
+    public User(int id, String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status, boolean isVerified, Blob poster) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,6 +28,7 @@ public class User extends AbstractEntity {
         this.password = password;
         this.status = status;
         this.poster = poster;
+        this.isVerified = isVerified;
     }
 
     public int getId() {
@@ -93,6 +95,14 @@ public class User extends AbstractEntity {
         this.status = status;
     }
 
+    public boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(boolean verified) {
+        isVerified = verified;
+    }
+
     public Blob getPoster() {
         return poster;
     }
@@ -113,7 +123,8 @@ public class User extends AbstractEntity {
                 role == user.getRoleType() &&
                 login.equals(user.getLogin()) &&
                 password.equals(user.getPassword()) &&
-                status == user.getStatusType();
+                status == user.getStatusType() &&
+                isVerified == user.isVerified();
     }
 
     @Override
@@ -128,6 +139,7 @@ public class User extends AbstractEntity {
         result += prime * result + login.hashCode();
         result += prime * result + password.hashCode();
         result += prime * result + status.hashCode();
+        result += prime * result + (isVerified == true ? 1 : 0);
         return result;
     }
 
@@ -142,7 +154,8 @@ public class User extends AbstractEntity {
                 .append(", role = " + role)
                 .append(", login = " + login)
                 .append(", password = " + password)
-                .append(", status = " + status);
+                .append(", status = " + status)
+                .append(", isVerified" + isVerified);
         return builder.toString();
     }
 }

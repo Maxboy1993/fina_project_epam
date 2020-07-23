@@ -19,7 +19,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ConnectionPool {
-    private static final String PROPERTIES_PATH = "resource\\database.properties";
+    private static final String PROPERTIES_PATH = "database";
     private static final String DRIVER_CLASS = "MYSQLJDBC.driver";
     private static final String URL = "MYSQLJDBC.url";
     private static final String USER_NAME = "MYSQLJDBC.username";
@@ -52,25 +52,13 @@ public class ConnectionPool {
     }
 
     private void initConnection() {
-//        ClassLoader classLoader = this.getClass().getClassLoader();
-//        Properties properties = new Properties();
         try {
-//            properties.load(classLoader.getResourceAsStream("data\\database.properties"));
-//            Properties properties = new Properties();
-//            InputStream inputStream = Files.newInputStream(Paths.get(PROPERTIES_PATH));
-//            properties.load(inputStream);
-
-            ResourceBundle bundle = ResourceBundle.getBundle("resource.database");
+            ResourceBundle bundle = ResourceBundle.getBundle(PROPERTIES_PATH);
             String driverClass =  bundle.getString(DRIVER_CLASS);
             String url =  bundle.getString(URL);
             String userName =  bundle.getString(USER_NAME);
             String password =  bundle.getString(PASSWORD);
 
-
-//            String driverClass = properties.getProperty(DRIVER_CLASS);
-//            String url = properties.getProperty(URL);
-//            String userName = properties.getProperty(USER_NAME);
-//            String password = properties.getProperty(PASSWORD);
             Class.forName(driverClass);
             for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {
                 Connection connection = DriverManager.getConnection(url, userName, password);

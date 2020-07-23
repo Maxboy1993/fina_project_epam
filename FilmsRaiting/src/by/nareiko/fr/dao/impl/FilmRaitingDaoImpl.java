@@ -93,7 +93,7 @@ public class FilmRaitingDaoImpl implements FilmRaitingDao<FilmRaiting> {
     public boolean create(FilmRaiting filmRaiting) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_RAITING)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_RAITING, Statement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, filmRaiting.getFilmId());
             statement.setInt(2, filmRaiting.getUserId());
             statement.setInt(3, filmRaiting.getRaiting());

@@ -1,5 +1,6 @@
 package by.nareiko.fr.controller.command;
 
+import by.nareiko.fr.controller.command.impl.DefaultCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,17 +9,18 @@ import java.util.Optional;
 public class CommandProvider {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static Optional<Command> defineCommand(String commadName) {
-        Optional<Command> currentCommand;
+    public static Command defineCommand(String commadName) {
+        Command currentCommand;
+        Command defaultCommand = new DefaultCommand();
         if (commadName == null || commadName.isBlank()) {
-            return Optional.empty();
+            return defaultCommand;
         }
         try {
             CommandType commandType = CommandType.valueOf(commadName.toUpperCase());
-            currentCommand = Optional.of(commandType.getCommand());
+            currentCommand = commandType.getCommand();
         } catch (IllegalArgumentException e) {
             LOGGER.error("CommandType definition exception", e);
-            currentCommand = Optional.empty();
+            currentCommand = defaultCommand;
         }
         return currentCommand;
     }

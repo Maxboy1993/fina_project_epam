@@ -1,6 +1,6 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.dao.PersonDao;
+import by.nareiko.fr.dao.FilmPersonDao;
 import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.dao.impl.entittymapper.ActorMapper;
 import by.nareiko.fr.entity.Actor;
@@ -11,13 +11,13 @@ import java.sql.*;
 import java.util.*;
 
 
-public class ActorDaoImpl implements PersonDao<Actor> {
-    private static final PersonDao INSTANCE = new ActorDaoImpl();
+public class ActorDaoImpl implements FilmPersonDao<Actor> {
+    private static final FilmPersonDao INSTANCE = new ActorDaoImpl();
 
     private ActorDaoImpl() {
     }
 
-    public static PersonDao getInstance() {
+    public static FilmPersonDao getInstance() {
         return INSTANCE;
     }
 

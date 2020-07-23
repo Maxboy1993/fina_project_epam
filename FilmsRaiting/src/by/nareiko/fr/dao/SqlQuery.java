@@ -48,26 +48,21 @@ public class SqlQuery {
     public static final String DELETE_REVIEW_BY_ID = "DELETE FROM Review WHERE reviewId = ?";
     public static final String CREATE_REVIEW = "INSERT INTO Review (filmId, userId, review, reviewDate) VALUES (?, ?, ?, ?)";
     public static final String UPDATE_REVIEW = "UPDATE Review SET review = ?, reviewDate = ? WHERE reviewId = ?";
+    //user queries
+    private static final String INACTIVE_STATUS = "inactive";
     public static final String FIND_ALL_USERS = "SELECT userId, firstName, lastName, birthday, " +
-            "login, password, status, role FROM User";
+            "login, password, status, role, verification FROM User";
     public static final String FIND_USER_BY_LOGIN = "SELECT userId, firstName, lastName, birthday, " +
-            "login, password, status, role FROM User WHERE login = ?";
+            "login, password, status, role, verification FROM User WHERE login = ?";
     public static final String FIND_USER_BY_LOGIN_AND_PASSWORD = "SELECT userId, firstName, lastName, birthday, " +
-            "login, password, status, role FROM User WHERE login = ? AND password = ?";
+            "login, password, status, role, verification FROM User WHERE login = ? AND password = ?";
     public static final String FIND_USER_BY_ID = "SELECT userId, firstName, lastName, birthday, " +
-            "login, password, status, role FROM User WHERE userId = ?";
+            "login, password, status, role, verification FROM User WHERE userId = ?";
     public static final String CREATE_USER = "INSERT INTO user (firstName, lastName, birthday, " +
             "login, password, status, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
     public static final String UPDATE_USER = "UPDATE user SET firstNmae = ?, lastName = ?, birthday = ? " +
             "login = ?, password = ?, role = ? WHERE userId = ?";
-    public static final String FIND_FILM_BY_NAME = "SELECT filmId, filmName, releaseDate, genre, status FROM film " +
-            "WHERE filmName = ? ";
-    public static final String CREATE_FILM = "INSERT INTO Film (filmName, releaseDate, genre, status) VALUES (?, ?, ?, ?)";
-    public static final String UPDATE_FILM = "UPDATE Film SET filmName = ?, " +
-            "releaseDate = ?, genre = ? WHERE filmId = ?";
-    public static final String MAPPING_FILM_WITH_PERSON = "INSERT INTO Characters (filmId, characterId) VALUES (?, ?)";
-    //user queries
-    private static final String INACTIVE_STATUS = "inactive";
+    public static final String VERIFY_USER = "UPDATE user SET verification = ? WHERE login = ?";
     public static final String DELETE_USER_BY_ID = "UPDATE user SET status = " + INACTIVE_STATUS + " WHERE userId = ?";
     public static final String DELETE_USER_BY_LOGIN = "UPDATE user SET status = " + INACTIVE_STATUS + " WHERE login = ?";
     public static final String DELETE_FILM_BY_ID = "UPDATE Film SET status = " + INACTIVE_STATUS + " WHERE filmId = ?";
@@ -76,6 +71,13 @@ public class SqlQuery {
     public static final String FIND_ALL_FILMS = "SELECT filmId, filmName, releaseDate, genre, status FROM film WHERE status = 'active'";
     public static final String FIND_FILM_BY_ID = "SELECT filmId, filmName, releaseDate, genre, status FROM film" +
             "WHERE filmId = ? AND status = " + ACTIVE_STATUS;
+    public static final String FIND_FILM_BY_NAME = "SELECT filmId, filmName, releaseDate, genre, status FROM film " +
+            "WHERE filmName = ? ";
+    public static final String CREATE_FILM = "INSERT INTO Film (filmName, releaseDate, genre, status) VALUES (?, ?, ?, ?)";
+    public static final String UPDATE_FILM = "UPDATE Film SET filmName = ?, " +
+            "releaseDate = ?, genre = ? WHERE filmId = ?";
+    public static final String MAPPING_FILM_WITH_PERSON = "INSERT INTO Characters (filmId, characterId) VALUES (?, ?)";
+
     private SqlQuery() {
     }
 }

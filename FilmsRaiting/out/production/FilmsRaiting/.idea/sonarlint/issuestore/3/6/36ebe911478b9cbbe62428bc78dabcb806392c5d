@@ -1,0 +1,33 @@
+
+r
+java:S1192/"PDefine a constant instead of duplicating this literal "DEFAULT_COMMAND" 3 times.(ØÓË½üÿÿÿÿ8ôö¡í¶.
+\
+java:S1854"?Remove this useless assignment to local variable "commandName".(³×ìÔ8ò¯»·.
+U
+java:S38781"8Remove this array creation and simply pass the elements.(±½˜8ôö¡í¶.
+j
+java:S1192/"HDefine a constant instead of duplicating this literal "SIGN_UP" 3 times.(ØÓË½üÿÿÿÿ8ôö¡í¶.
+W
+java:S1161":Add the "@Override" annotation above this method signature(‚“¶î8¡º‹Ù¶.
+\
+java:S1161-":Add the "@Override" annotation above this method signature(àä™´ıÿÿÿÿ8¡º‹Ù¶.
+j
+java:S1192/"HDefine a constant instead of duplicating this literal "SIGN_IN" 3 times.(ØÓË½üÿÿÿÿ8ôö¡í¶.
+Z
+java:S3878/"8Remove this array creation and simply pass the elements.(ØÓË½üÿÿÿÿ8ôö¡í¶.
+q
+java:S1192/"ODefine a constant instead of duplicating this literal "FIND_ALL_FILMS" 3 times.(ØÓË½üÿÿÿÿ8ôö¡í¶.
+Z
+java:S38780"8Remove this array creation and simply pass the elements.(°‡áÖùÿÿÿÿ8ôö¡í¶.
+M
+java:S1481"0Remove this unused "commandName" local variable.(³×ìÔ8ò¯»·.
+X	java:S125%"<This block of commented-out lines of code should be removed.(úœªÑ8şñ¾í¶.
+†
+java:S1450"dRemove the "roleAndCommandMapping" field and declare it as a local variable in the relevant methods.(Ÿ©ÁÅşÿÿÿÿ8ò¯»·.
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8¡º‹Ù¶.
+O
+java:S1135$"2Complete the task associated to this TODO comment.(œ…ìÔ8ú™¿í¶.
+A
+java:S1640."Convert this Map to an EnumMap.(ú‚Ø©şÿÿÿÿ8ôö¡í¶.
+X	java:S125#"<This block of commented-out lines of code should be removed.(Ğšñı8ò¯»·.

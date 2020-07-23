@@ -4,6 +4,7 @@ public class SqlColumnName {
     public static final String PERSON_ID = "personId";
     public static final String FIRST_NAME = "firstName";
     public static final String LAST_NAME = "lastName";
+    public static final String VERIFICATION_NAME = "verification";
     public static final String BIRTHDAY = "birthday";
     public static final String RAITING_ID = "raitingId";
     public static final String FILM_ID = "filmId";

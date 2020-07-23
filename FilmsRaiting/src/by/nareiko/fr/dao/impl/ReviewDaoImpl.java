@@ -92,7 +92,7 @@ public class ReviewDaoImpl implements ReviewDao<Review> {
     public boolean create(Review review) throws DaoException {
         boolean isCreated;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_REVIEW)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_REVIEW, Statement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, review.getFilmId());
             statement.setInt(2, review.getUserId());
             statement.setString(3, review.getReview());

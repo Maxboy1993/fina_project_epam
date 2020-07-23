@@ -7,8 +7,6 @@ C
 web/WEB-INF/web.xml,c\d\cdcc12da5c4054f6995aab32914d7e0243194c05
 =
 web/index.jsp,9\f\9f198ed450f32e45b10ec3c2b1406e609b4a96cd
-@
-web/jsp/test.jsp,f\b\fb993fe549c22530cb3830df94bc4ca0df8ce2be
 \
 ,src/by/nareiko/fr/entity/AbstractEntity.java,1\2\1292b2449e6cbc9551047ccb3b3b74aba7c5a70b
 V
@@ -35,8 +33,6 @@ b
 2src/resource/pagecontent/pagecontent_ru.properties,a\f\afc18c700567d7b9a4cb9ca4dd061c40ccacfcef
 b
 2src/resource/pagecontent/pagecontent_en.properties,b\a\ba2cd34e719004c94ab831aba77dac65cb8c1938
-K
-web/jsp/multilingualism.jsp,4\a\4a3bf6796dd624200834bf6cbdff3e4d11d654f1
 Z
 *src/by/nareiko/fr/util/PasswordHasher.java,0\c\0c6470a6e542aa1191b643a214cd7100411b6792
 W
@@ -61,8 +57,6 @@ d
 4src/by/nareiko/fr/exception/ControllerException.java,0\f\0f315d1fb08428b8461f8c2ba59596e668952597
 e
 5src/by/nareiko/fr/controller/command/CommandType.java,9\d\9d820cae33841eac5ac414620f22b0697a5e3848
-T
-$src/by/nareiko/fr/dao/PersonDao.java,b\1\b1f0b9939b369ee43c959aeba4d66e881e28644d
 R
 "src/by/nareiko/fr/dao/BaseDao.java,3\c\3cb70a318e4760762de5b3867a89761a89a81266
 _
@@ -107,8 +101,6 @@ b
 2src/by/nareiko/fr/dao/impl/TransactionManager.java,e\8\e8483519a04d8cbfa4886151f91ff746d81fb047
 V
 &src/by/nareiko/fr/util/MailSender.java,2\5\250cffcc22fc133b9ff546bf9f1320665ddb4960
-L
-src/resource/mail.properties,5\8\58a742f754e58201c60d8c0f884ab0de69e3240f
 Z
 *src/by/nareiko/fr/service/UserService.java,6\8\68af13adf0ab0de7acc9117aa4b045f9a7a1cc37
 l
@@ -123,8 +115,6 @@ r
 Bsrc/by/nareiko/fr/controller/command/impl/FindAllFilmsCommand.java,b\9\b98fd79fe4fc6d0aac331b6a5594221870cf8a0f
 c
 3src/by/nareiko/fr/service/impl/FilmServiceImpl.java,d\4\d446c539fc1c83dbe11071282e3e907fc4dcbfff
-U
-%src/by/nareiko/fr/dao/ColumnName.java,f\c\fc670c475dcbad7bbba93f665c2849dc79e54926
 a
 1src/by/nareiko/fr/controller/command/Command.java,7\e\7e60f48a15153e6a0526855a79e2eb6b1186f7f8
 m
@@ -145,3 +135,22 @@ j
 :src/by/nareiko/fr/dao/impl/entittymapper/ReviewMapper.java,5\e\5e772bc5c8beb4eada012e96b19de92bad6cabf7
 h
 8src/by/nareiko/fr/dao/impl/entittymapper/UserMapper.java,f\4\f4e4f7fb091d9975cadf22b986a9de0d3e99f075
+X
+(src/by/nareiko/fr/controller/Router.java,8\9\8911fb72473c710c4f13258eff30d09f8dacd710
+t
+Dsrc/by/nareiko/fr/controller/command/impl/ChangeLanguageCommand.java,4\2\424728bd0321e308d16c6d98ede171c45791f0d5
+^
+.src/by/nareiko/fr/validator/UserValidator.java,a\3\a3434f5cafee7fc780c0aad09c0b03f1733d9e80
+r
+Bsrc/by/nareiko/fr/controller/command/impl/ConfirmEmailCommand.java,3\2\32ca0d96b2fd6938cb7bd08b8a147d69ca8dbb48
+B
+web/jsp/header.jsp,8\d\8d7b955531af43c07d384e5a0c05dfd5671e7b8e
+n
+>src/by/nareiko/fr/controller/command/impl/PassingToSignUp.java,f\a\faa7d741beeb1b67273022e338bb0df627af002f
+:
+
+web/log4j2,e\2\e26bdbe77803dda5fc8858506d36c2f7b8e4cc8e
+X
+(src/by/nareiko/fr/dao/SqlColumnName.java,8\b\8be34bb27fb14c476bc954659ae1d10a61d42e09
+b
+2src/by/nareiko/fr/controller/JspParameterName.java,1\0\10822d2b52f0f94a9fa05bc629e5044b23e3c236

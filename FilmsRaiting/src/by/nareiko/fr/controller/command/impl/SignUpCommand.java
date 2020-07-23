@@ -1,11 +1,14 @@
 package by.nareiko.fr.controller.command.impl;
 
+import by.nareiko.fr.controller.JspParameterName;
+import by.nareiko.fr.controller.Router;
 import by.nareiko.fr.controller.command.Command;
 import by.nareiko.fr.controller.command.PagePath;
 import by.nareiko.fr.entity.User;
 import by.nareiko.fr.exception.ServiceException;
 import by.nareiko.fr.service.ServiceFactory;
 import by.nareiko.fr.service.UserService;
+import by.nareiko.fr.util.MailSender;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,50 +16,40 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 public class SignUpCommand implements Command {
-    private static final String PARAM_FIRST_NAME = "firstName";
-    private static final String PARAM_LAST_NAME = "lastName";
-    private static final String PARAM_LOGIN = "login";
-    private static final String PARAM_PASSWORD = "password";
-    private static final String PARAM_DAY = "day";
-    private static final String PARAM_MONTH = "month";
-    private static final String PARAM_YEAR = "year";
     private static final Logger LOGGER = LogManager.getLogger();
 
     public SignUpCommand() {
     }
 
-
     @Override
-    public String execute(HttpServletRequest request) {
-        String page = PagePath.SIGN_UP;
-        String firstNameValue = request.getParameter(PARAM_FIRST_NAME);
-        String lastNameValue = request.getParameter(PARAM_LAST_NAME);
-        String loginValue = request.getParameter(PARAM_LOGIN);
-        String passwordValue = request.getParameter(PARAM_PASSWORD);
-        //TODO FIX
-        String dayValue = request.getParameter(PARAM_DAY);
-        String monthValue = request.getParameter(PARAM_MONTH);
-        String yearValue = request.getParameter(PARAM_YEAR);
-        String[] birthday = new String[3];
-        birthday[0] = yearValue;
-        birthday[1] = monthValue;
-        birthday[2] = dayValue;
+    public Router execute(HttpServletRequest request) {
+        String firstNameValue = request.getParameter(JspParameterName.FIRST_NAME_PARAM);
+        String lastNameValue = request.getParameter(JspParameterName.LAST_NAME_PARAM);
+        String loginValue = request.getParameter(JspParameterName.LOGIN_PARAM);
+        String passwordValue = request.getParameter(JspParameterName.PASSWORD_PARAM);
+        String birthday = request.getParameter(JspParameterName.BIRTHDAY_PARAM);
 
-        // должна быть двойная валидация html5 + java - добавить в валидатор
-
-        UserService userService = ServiceFactory.getInstance().getUserService();
-
+        Router router = new Router();
+        router.setRedirect();
         try {
+            UserService userService = ServiceFactory.getInstance().getUserService();
             if (userService.checkUserRegistrationData(firstNameValue, lastNameValue, loginValue, passwordValue, birthday)) {
                 Optional<User> user = userService.registrateUser(firstNameValue, lastNameValue, loginValue, passwordValue, birthday);
-                request.setAttribute("user", user.get().getFirstName() + "successful registered");
-                page = PagePath.MAIN;
+                request.getSession().setAttribute(JspParameterName.USER_PARAM, user.get());
+                request.getSession().setAttribute(JspParameterName.USER_ROLE_PARAM, user.get().getRoleType());
+                router.setPage(PagePath.SIGN_IN);
+                MailSender sender = new MailSender(loginValue);
+                sender.send();
+                request.setAttribute(JspParameterName.VERIFICATION_PARAM, "Dear " + user.get().getFirstName() + " ! " + "Letter was sent on your email adress. You can confirm your email by link.");
             } else {
-                request.setAttribute("errorRegistrationPassMessage", "Incorrect registration data");
+                //TODO add sort of error message
+                request.setAttribute(JspParameterName.ERROR_REGISTRATION_PARAM, "Incorrect registration data");
+                router.setPage(PagePath.SIGN_UP);
             }
         } catch (ServiceException e) {
             LOGGER.error("Registration error", e);
+            //TODO error page
         }
-        return page;
+        return router;
     }
 }

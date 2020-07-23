@@ -36,6 +36,8 @@ public class UserMapper extends EntityMapper<User> {
             user.setPassword(password);
             StatusType statusType = StatusType.getStatusTypeByValue(resultSet.getString(SqlColumnName.STATUS).trim());
             user.setStatusType(statusType);
+            boolean isVerified = resultSet.getBoolean(SqlColumnName.VERIFICATION_NAME);
+            user.setVerified(isVerified);
         } catch (SQLException e) {
             throw new DaoException("User isn't inizialized: ", e);
         }

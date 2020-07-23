@@ -1,5 +1,6 @@
 package by.nareiko.fr.controller.filter;
 
+import by.nareiko.fr.controller.JspParameterName;
 import by.nareiko.fr.controller.command.PagePath;
 import by.nareiko.fr.entity.RoleType;
 
@@ -22,32 +23,35 @@ public class ServletSecurityFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession();
-        RoleType roleType = (RoleType) session.getAttribute("userType");
-        String commandName = req.getParameter("command");
+        RoleType roleType = (RoleType) session.getAttribute(JspParameterName.USER_ROLE_PARAM);
+//        String commandName = req.getParameter(JspParameterName.COMMAND_PARAM);
         String page = PagePath.SIGN_IN;
         if (roleType == null) {
             roleType = RoleType.GUEST;
-            session.setAttribute("userType", roleType);
+        }
+        if (roleType == RoleType.GUEST){
+            session.setAttribute(JspParameterName.USER_ROLE_PARAM, roleType);
             RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(page);
             dispatcher.forward(req, resp);
-            return;
-        } else if (!roleAndCommandMapping.get(roleType).contains(req.getParameter(commandName))) {
-            //TODO edd error page
+        }
+
+//        else if (!roleAndCommandMapping.get(roleType).contains(req.getParameter(commandName))) {
+//            TODO edd error page
 //            page = errorPage;
 //            RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(page);
 //            dispatcher.forward(req, resp);
 //            return;
-        }
+//        }
         chain.doFilter(request, response);
     }
 
     public void init(FilterConfig fConfig) throws ServletException {
-        roleAndCommandMapping = new HashMap<>();
-        Set<String> adminCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
-        Set<String> userCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
-        Set<String> guestCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
-        roleAndCommandMapping.put(RoleType.ADMIN, adminCommandNames);
-        roleAndCommandMapping.put(RoleType.USER, userCommandNames);
-        roleAndCommandMapping.put(RoleType.GUEST, guestCommandNames);
+//        roleAndCommandMapping = new HashMap<>();
+//        Set<String> adminCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
+//        Set<String> userCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
+//        Set<String> guestCommandNames = new HashSet<>(Arrays.asList(new String[]{"SIGN_IN", "SIGN_UP", "DEFAULT_COMMAND", "FIND_ALL_FILMS"}));
+//        roleAndCommandMapping.put(RoleType.ADMIN, adminCommandNames);
+//        roleAndCommandMapping.put(RoleType.USER, userCommandNames);
+//        roleAndCommandMapping.put(RoleType.GUEST, guestCommandNames);
     }
 }

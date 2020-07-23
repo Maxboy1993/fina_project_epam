@@ -1,6 +1,5 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.dao.SqlColumnName;
 import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.dao.UserDao;
 import by.nareiko.fr.dao.impl.entittymapper.UserMapper;
@@ -11,12 +10,14 @@ import by.nareiko.fr.pool.ConnectionPool;
 import by.nareiko.fr.util.PasswordHasher;
 
 import java.sql.*;
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 public class UserDaoImpl implements UserDao<User> {
     private static final String ADMIN_ROLE = "admin";
     private static final String USER_ROLE = "user";
     private static final String ACTIVE_STATUS = "active";
+    private static final int VERIFIED_MARKER = 1;
     private static final UserDao INSTANCE = new UserDaoImpl();
 
     private UserDaoImpl() {
@@ -92,7 +93,7 @@ public class UserDaoImpl implements UserDao<User> {
 
     @Override
     public Optional<User> findById(int id) throws DaoException {
-        User user =null;
+        User user = null;
         UserMapper userMapper = new UserMapper();
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.FIND_USER_BY_ID)) {
@@ -134,7 +135,7 @@ public class UserDaoImpl implements UserDao<User> {
     public boolean create(User user) throws DaoException {
         boolean isCreated = false;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_USER)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_USER, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
             long birtgday = user.getBirthday().getTimeInMillis();
@@ -181,6 +182,18 @@ public class UserDaoImpl implements UserDao<User> {
             throw new DaoException("User isn't updated: ", e);
         }
         return Optional.ofNullable(user);
+    }
+
+    @Override
+    public void verifyUser(String login) throws DaoException {
+        try (Connection connection = ConnectionPool.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.VERIFY_USER)) {
+            statement.setInt(1, VERIFIED_MARKER);
+            statement.setString(2, login);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new DaoException("User isn't verified: ", e);
+        }
     }
 }
 

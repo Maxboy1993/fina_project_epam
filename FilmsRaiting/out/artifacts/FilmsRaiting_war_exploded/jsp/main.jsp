@@ -1,6 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
+<fmt:setLocale value="${sessionScope.language}"/>
+<fmt:setBundle basename="pagecontent.pagecontent" var="pc"/>
 
 <html>
 <head>
@@ -11,10 +14,11 @@
 <hr>
 ${user.firstName}, hello!"
 </hr>
-<form name="login" method="POST" action="controller"/>
-<input type="hidden" name="command" value="logout">
+
+<form name="logOut" method="GET" action="controller"/>
+<input type="hidden" name="command" value="log_out">
 <br/>
-<input type="submit" value="logout">
+<input type="submit" value="<fmt:message bundle="${pc}" key="label.logOut_btn"/>">
 </form>
 
 <table>

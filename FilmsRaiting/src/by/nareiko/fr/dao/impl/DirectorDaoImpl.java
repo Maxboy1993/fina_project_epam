@@ -1,6 +1,6 @@
 package by.nareiko.fr.dao.impl;
 
-import by.nareiko.fr.dao.PersonDao;
+import by.nareiko.fr.dao.FilmPersonDao;
 import by.nareiko.fr.dao.SqlQuery;
 import by.nareiko.fr.dao.impl.entittymapper.DirectorMapper;
 import by.nareiko.fr.entity.Director;
@@ -10,13 +10,13 @@ import by.nareiko.fr.pool.ConnectionPool;
 import java.sql.*;
 import java.util.*;
 
-public class DirectorDaoImpl implements PersonDao<Director> {
-    private static final PersonDao INSTANCE = new DirectorDaoImpl();
+public class DirectorDaoImpl implements FilmPersonDao<Director> {
+    private static final FilmPersonDao INSTANCE = new DirectorDaoImpl();
 
     private DirectorDaoImpl() {
     }
 
-    public static PersonDao getInstance() {
+    public static FilmPersonDao getInstance() {
         return INSTANCE;
     }
 
@@ -139,7 +139,7 @@ public class DirectorDaoImpl implements PersonDao<Director> {
     public boolean create(Director director) throws DaoException {
         boolean isCreated;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_DIRECTOR)) {
+             PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_DIRECTOR, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, director.getFirstName());
             statement.setString(2, director.getLastName());
             long birtgday = director.getBirthday().getTimeInMillis();

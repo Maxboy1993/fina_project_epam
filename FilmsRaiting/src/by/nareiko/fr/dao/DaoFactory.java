@@ -5,8 +5,8 @@ import by.nareiko.fr.dao.impl.*;
 public final class DaoFactory {
     private static final DaoFactory INSTANCE = new DaoFactory();
 
-    private PersonDao actorDao;
-    private PersonDao directorDao;
+    private FilmPersonDao actorDao;
+    private FilmPersonDao directorDao;
 //    private FilmDao filmDao;
     private FilmDao fullFilmInfoDao;
     private FilmRaitingDao filmRaitingDao;
@@ -20,12 +20,12 @@ public final class DaoFactory {
         return INSTANCE;
     }
 
-    public PersonDao getActorDao() {
+    public FilmPersonDao getActorDao() {
         actorDao = ActorDaoImpl.getInstance();
         return actorDao;
     }
 
-    public PersonDao getDirectorDao() {
+    public FilmPersonDao getDirectorDao() {
         directorDao = DirectorDaoImpl.getInstance();
         return directorDao;
     }
