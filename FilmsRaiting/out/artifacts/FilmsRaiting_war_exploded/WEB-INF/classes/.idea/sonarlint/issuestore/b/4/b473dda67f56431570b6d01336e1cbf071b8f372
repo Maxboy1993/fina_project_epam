@@ -1,22 +1,22 @@
 
+j
+java:S2095@"HUse try-with-resources or close this "Connection" in a "finally" clause.(  ´Ôıÿÿÿÿ8•¦¤è¶.
+M
+java:S1128	"0Remove this unused import 'java.nio.file.Files'.(‚ƒü8İß½Œ·.
+B
+java:S3457j"%String contains no format specifiers.(–¹ˆ£8•¦¤è¶.
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8É…·è¶.
+M
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8İß½Œ·.
+M
+java:S2589,"7Remove this expression which always evaluates to "true"(·¦Æ˜
+K
+java:S1905s")Remove this unnecessary cast to "Driver".(»ÓŒíûÿÿÿÿ8•¦¤è¶.
+c
+java:S2142i"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8•¦¤è¶.
 M
 java:S1128
 "0Remove this unused import 'java.nio.file.Paths'.(áè°¯8İß½Œ·.
 O
 java:S1135]"2Complete the task associated to this TODO comment.(…ïœ†8•¦¤è¶.
-j
-java:S2095@"HUse try-with-resources or close this "Connection" in a "finally" clause.(  ´Ôıÿÿÿÿ8•¦¤è¶.
-B
-java:S3457j"%String contains no format specifiers.(–¹ˆ£8•¦¤è¶.
-M
-java:S2589,"7Remove this expression which always evaluates to "true"(·¦Æ˜
-M
-java:S1128	"0Remove this unused import 'java.nio.file.Files'.(‚ƒü8İß½Œ·.
-R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8É…·è¶.
-M
-java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8İß½Œ·.
-c
-java:S2142i"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8•¦¤è¶.
-K
-java:S1905s")Remove this unnecessary cast to "Driver".(»ÓŒíûÿÿÿÿ8•¦¤è¶.

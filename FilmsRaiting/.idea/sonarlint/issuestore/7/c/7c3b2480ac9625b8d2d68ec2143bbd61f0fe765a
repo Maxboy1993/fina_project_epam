@@ -2,4 +2,4 @@
 ’
 java:S1192"|Define a constant instead of duplicating this literal "SELECT personId, profession, firstName, lastName, birthday " 7 times.(ŒŸ”ƒ
 …
-java:S11925"oDefine a constant instead of duplicating this literal "SELECT userId, firstName, lastName, birthday, " 4 times.(Û™Žä
+java:S11924"oDefine a constant instead of duplicating this literal "SELECT userId, firstName, lastName, birthday, " 4 times.(Û™Žä

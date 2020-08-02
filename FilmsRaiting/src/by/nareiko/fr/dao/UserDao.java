@@ -11,7 +11,7 @@ public interface UserDao<T extends AbstractEntity> extends BaseDao<T> {
 
     Optional<T> findByLoginAndPassword(String login, String password) throws DaoException;
 
-    Optional<T> delete(String login) throws DaoException;
+    boolean delete(String login) throws DaoException;
 
     void verifyUser(String login) throws DaoException;
 }

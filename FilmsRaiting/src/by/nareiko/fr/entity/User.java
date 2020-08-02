@@ -1,24 +1,20 @@
 package by.nareiko.fr.entity;
 
-import java.sql.Blob;
-import java.util.Calendar;
-
 public class User extends AbstractEntity {
     private int id;
     private String firstName;
     private String lastName;
-    private Calendar birthday;
+    private String birthday;
     private RoleType role;
     private String login;
     private String password;
     private StatusType status;
     private boolean isVerified;
-    private Blob poster;
 
     public User() {
     }
 
-    public User(int id, String firstName, String lastName, Calendar birthday, RoleType role, String login, String password, StatusType status, boolean isVerified, Blob poster) {
+    public User(int id, String firstName, String lastName, String birthday, RoleType role, String login, String password, StatusType status, boolean isVerified) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,7 +23,6 @@ public class User extends AbstractEntity {
         this.login = login;
         this.password = password;
         this.status = status;
-        this.poster = poster;
         this.isVerified = isVerified;
     }
 
@@ -55,11 +50,11 @@ public class User extends AbstractEntity {
         this.lastName = lastName;
     }
 
-    public Calendar getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Calendar birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -103,13 +98,6 @@ public class User extends AbstractEntity {
         isVerified = verified;
     }
 
-    public Blob getPoster() {
-        return poster;
-    }
-
-    public void setPoster(Blob poster) {
-        this.poster = poster;
-    }
 
     @Override
     public boolean equals(Object o) {

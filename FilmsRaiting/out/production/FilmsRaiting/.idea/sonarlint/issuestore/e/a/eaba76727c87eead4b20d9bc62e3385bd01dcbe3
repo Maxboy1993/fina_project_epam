@@ -1,3 +1,7 @@
 
 c
-java:S2259"FA "NullPointerException" could be thrown; "director" is nullable here.(Øç ¯8ì‚éş¶.
+java:S1128"ARemove this unused import 'by.nareiko.fr.exception.DaoException'.(âà¸ıÿÿÿÿ8–ïÏ¸.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÊÎ¸.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÊÎ¸.

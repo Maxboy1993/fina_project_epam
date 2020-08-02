@@ -34,5 +34,6 @@
     <orderEntry type="library" exported="" name="javax.mail (3)" level="project" />
     <orderEntry type="library" exported="" name="log4j-api-2.13.3" level="project" />
     <orderEntry type="library" exported="" name="log4j-core-2.5" level="project" />
+    <orderEntry type="library" exported="" name="log4j-web-2.13.3" level="project" />
   </component>
 </module>

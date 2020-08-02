@@ -8,11 +8,19 @@ import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
 
 import java.sql.*;
-import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Optional;
 
 
 public class ActorDaoImpl implements FilmPersonDao<Actor> {
     private static final FilmPersonDao INSTANCE = new ActorDaoImpl();
+    private static final String SPLIT_REGEX = "-";
+    private static final int YEAR_INDEX = 0;
+    private static final int MONTH_INDEX = 1;
+    private static final int DAY_INDEX = 2;
+
 
     private ActorDaoImpl() {
     }
@@ -100,60 +108,61 @@ public class ActorDaoImpl implements FilmPersonDao<Actor> {
     }
 
     @Override
-    public Optional<Actor> delete(String lastName, String firstName) throws DaoException {
-        Optional<Actor> actor;
+    public boolean delete(String lastName, String firstName) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_ACTOR_BY_LAST_NAME_AND_FIRST_NAME)) {
-            actor = findByLastNameAndFirstName(lastName, firstName);
             statement.setString(1, lastName);
             statement.setString(2, firstName);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("Error while deleting actor by last name and first name: ", e);
         }
-        return actor;
+        return isDeleted;
     }
 
     @Override
-    public Optional<Actor> delete(Actor actor) throws DaoException {
-        Optional<Actor> foundActor = delete(actor.getId());
-        return foundActor;
+    public boolean delete(Actor actor) throws DaoException {
+        boolean isDeleted = delete(actor.getId());
+        return isDeleted;
     }
 
     @Override
-    public Optional<Actor> delete(int id) throws DaoException {
-        Optional<Actor> actor;
+    public boolean delete(int id) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_ACTOR_BY_ID)) {
-            actor = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("Error while deleting actor by id: ", e);
         }
-        return actor;
+        return isDeleted;
     }
 
     @Override
-    public boolean create(Actor actor) throws DaoException {
-        boolean isCreated;
+    public Optional<Actor> create(Actor actor) throws DaoException {
+        Optional<Actor> optionalActor;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_ACTOR, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, actor.getFirstName());
             statement.setString(2, actor.getLastName());
-            long birthday = actor.getBirthday().getTimeInMillis();
-            statement.setLong(3, birthday);
+            String birthday = actor.getBirthday();
+            long date = modifyDate(birthday);
+            statement.setLong(3, date);
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 actor.setId(id);
             }
-            isCreated = true;
+            optionalActor = findById(actor.getId());
         } catch (SQLException e) {
             throw new DaoException("Error while creating actor: ", e);
         }
-        return isCreated;
+        return optionalActor;
     }
 
     @Override
@@ -162,8 +171,9 @@ public class ActorDaoImpl implements FilmPersonDao<Actor> {
              PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_ACTOR)) {
             statement.setString(1, actor.getFirstName());
             statement.setString(2, actor.getLastName());
-            long birtgday = actor.getBirthday().getTimeInMillis();
-            statement.setLong(3, birtgday);
+            String birthday = actor.getBirthday();
+            long date = modifyDate(birthday);
+            statement.setLong(3, date);
             int id = actor.getId();
             statement.setInt(4, id);
             statement.executeUpdate();
@@ -173,4 +183,15 @@ public class ActorDaoImpl implements FilmPersonDao<Actor> {
         return Optional.ofNullable(actor);
     }
 
+    private long modifyDate(String birthday) {
+        String[] date = birthday.split(SPLIT_REGEX);
+        int year = Integer.parseInt(date[YEAR_INDEX]);
+        int month = Integer.parseInt(date[MONTH_INDEX]) - 1;
+        int day = Integer.parseInt(date[DAY_INDEX]);
+
+        Calendar calendarBirthday = new GregorianCalendar();
+        calendarBirthday.set(year, month, day);
+        long birthdayMillis = calendarBirthday.getTimeInMillis();
+        return birthdayMillis;
+    }
 }

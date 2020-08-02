@@ -1,21 +1,21 @@
 
-X	java:S125"<This block of commented-out lines of code should be removed.(¶ÒŠÒ8†º©î¶.
-]	java:S125
-"<This block of commented-out lines of code should be removed.(à¶¾ıÿÿÿÿ8†º©î¶.
-X	java:S125"<This block of commented-out lines of code should be removed.(•£ŒÉ8†º©î¶.
-X	java:S125"<This block of commented-out lines of code should be removed.(ıæßƒ8†º©î¶.
-X	java:S125"<This block of commented-out lines of code should be removed.(”´°8†º©î¶.
-]	java:S125"<This block of commented-out lines of code should be removed.(Ê±“Âüÿÿÿÿ8†º©î¶.
-]	java:S125+"<This block of commented-out lines of code should be removed.(§‰İ›ûÿÿÿÿ8†º©î¶.
-X	java:S1256"<This block of commented-out lines of code should be removed.(Ù­³ê8†º©î¶.
-X	java:S125D"<This block of commented-out lines of code should be removed.(½¶äĞ8†º©î¶.
-W	java:S125T"<This block of commented-out lines of code should be removed.(áÕä98†º©î¶.
-]	java:S125]"<This block of commented-out lines of code should be removed.(¥¯…êûÿÿÿÿ8†º©î¶.
-X	java:S125k"<This block of commented-out lines of code should be removed.(ÑıÌÁ8†º©î¶.
-X	java:S125n"<This block of commented-out lines of code should be removed.(âÕÆ8†º©î¶.
-]	java:S125s"<This block of commented-out lines of code should be removed.(åìœÇıÿÿÿÿ8†º©î¶.
-Y	java:S125ˆ"<This block of commented-out lines of code should be removed.(œ”ó8†º©î¶.
-Y	java:S125—"<This block of commented-out lines of code should be removed.(şÅÆå8†º©î¶.
-^	java:S125"<This block of commented-out lines of code should be removed.(ô¤©óşÿÿÿÿ8†º©î¶.
-Y	java:S125ª"<This block of commented-out lines of code should be removed.(ëÕ‡İ8†º©î¶.
-^	java:S125¾"<This block of commented-out lines of code should be removed.(‹ÈÒ¬ùÿÿÿÿ8†º©î¶.
+[
+java:S3518È"=Make sure "counter" can't be zero before doing this division.(ÂÏ¯²8»«¸Õ·.
+d
+java:S2095 "GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8»«¸Õ·.
+d
+java:S2095I"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8»«¸Õ·.
+L
+java:S3740"/Provide the parametrized type for this generic.(¾ßµÒ8»«¸Õ·.
+Q
+java:S3740"/Provide the parametrized type for this generic.(Øµùÿÿÿÿ8»«¸Õ·.
+R
+java:S3740¿"/Provide the parametrized type for this generic.(Õ•Äîşÿÿÿÿ8»«¸Õ·.
+
+java:S1488É"^Immediately return this expression instead of assigning it to the temporary variable "result".(‘½·üÿÿÿÿ8»«¸Õ·.
+Y
+java:S1854V"=Remove this useless assignment to local variable "foundFilm".(¯ĞÎ`8»«¸Õ·.
+_
+java:S1854À"<Remove this useless assignment to local variable "raitings".(¡ÈÕùÿÿÿÿ8»«¸Õ·.
+D
+java:S2111É"!Use "BigDecimal.valueOf" instead.(‘½·üÿÿÿÿ8»«¸Õ·.

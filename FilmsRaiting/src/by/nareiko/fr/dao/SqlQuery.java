@@ -7,7 +7,7 @@ public class SqlQuery {
     public static final String FIND_ACTORS_BY_LAST_NAME = "SELECT personId, profession, firstName, lastName, birthday " +
             "FROM FilmPerson WHERE profession  = 'actor' AND lastName =?";
     public static final String FIND_ACTOR_BY_LAST_NAME_AND_FIRST_NAME = "SELECT personId, profession, firstName, lastName, birthday " +
-            "FROM FilmPerson WHERE profession  = 'actor' AND lastName =? AND firstName = ?";
+            "FROM FilmPerson WHERE profession  = 'actor' AND lastName = ? AND firstName = ?";
     public static final String FIND_ACTOR_BY_ID = "SELECT personId, profession, firstName, lastName, birthday " +
             "FROM FilmPerson WHERE profession  = 'actor' AND personId = ?";
     public static final String FIND_ACTORS_BY_FILM_ID = "SELECT filmperson.personId, filmperson.profession, filmperson.firstName, " +
@@ -47,9 +47,8 @@ public class SqlQuery {
     public static final String FIND_REVIEW_BY_ID = "SELECT reviewId, filmId, userId, review, reviewDate FROM Review WHERE reviewId = ?";
     public static final String DELETE_REVIEW_BY_ID = "DELETE FROM Review WHERE reviewId = ?";
     public static final String CREATE_REVIEW = "INSERT INTO Review (filmId, userId, review, reviewDate) VALUES (?, ?, ?, ?)";
-    public static final String UPDATE_REVIEW = "UPDATE Review SET review = ?, reviewDate = ? WHERE reviewId = ?";
+    public static final String UPDATE_REVIEW = "UPDATE Review SET review = ? WHERE reviewId = ?";
     //user queries
-    private static final String INACTIVE_STATUS = "inactive";
     public static final String FIND_ALL_USERS = "SELECT userId, firstName, lastName, birthday, " +
             "login, password, status, role, verification FROM User";
     public static final String FIND_USER_BY_LOGIN = "SELECT userId, firstName, lastName, birthday, " +
@@ -60,23 +59,27 @@ public class SqlQuery {
             "login, password, status, role, verification FROM User WHERE userId = ?";
     public static final String CREATE_USER = "INSERT INTO user (firstName, lastName, birthday, " +
             "login, password, status, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    public static final String UPDATE_USER = "UPDATE user SET firstNmae = ?, lastName = ?, birthday = ? " +
+    public static final String UPDATE_USER = "UPDATE user SET firstName = ?, lastName = ?, birthday = ?, " +
             "login = ?, password = ?, role = ? WHERE userId = ?";
     public static final String VERIFY_USER = "UPDATE user SET verification = ? WHERE login = ?";
-    public static final String DELETE_USER_BY_ID = "UPDATE user SET status = " + INACTIVE_STATUS + " WHERE userId = ?";
-    public static final String DELETE_USER_BY_LOGIN = "UPDATE user SET status = " + INACTIVE_STATUS + " WHERE login = ?";
-    public static final String DELETE_FILM_BY_ID = "UPDATE Film SET status = " + INACTIVE_STATUS + " WHERE filmId = ?";
+    public static final String DELETE_USER_BY_ID = "UPDATE user SET status = 'inactive' WHERE userId = ?";
+    public static final String DELETE_USER_BY_LOGIN = "UPDATE user SET status = 'inactive' WHERE login = ?";
+    public static final String DELETE_FILM_BY_ID = "UPDATE Film SET status = 'inactive' WHERE filmId = ?";
     // film queries
-    private static final String ACTIVE_STATUS = "active";
     public static final String FIND_ALL_FILMS = "SELECT filmId, filmName, releaseDate, genre, status FROM film WHERE status = 'active'";
-    public static final String FIND_FILM_BY_ID = "SELECT filmId, filmName, releaseDate, genre, status FROM film" +
-            "WHERE filmId = ? AND status = " + ACTIVE_STATUS;
+    public static final String FIND_FILM_BY_ID = "SELECT filmId, filmName, releaseDate, genre, status FROM film " +
+            "WHERE filmId = ? AND status = 'active'";
     public static final String FIND_FILM_BY_NAME = "SELECT filmId, filmName, releaseDate, genre, status FROM film " +
-            "WHERE filmName = ? ";
+            "WHERE filmName LIKE ? ";
     public static final String CREATE_FILM = "INSERT INTO Film (filmName, releaseDate, genre, status) VALUES (?, ?, ?, ?)";
     public static final String UPDATE_FILM = "UPDATE Film SET filmName = ?, " +
             "releaseDate = ?, genre = ? WHERE filmId = ?";
     public static final String MAPPING_FILM_WITH_PERSON = "INSERT INTO Characters (filmId, characterId) VALUES (?, ?)";
+    //poster queries
+    public static final String FIND_FILM_POSTER = "SELECT poster FROM FilmPoster WHERE filmId = ?";
+    public static final String ADD_FILM_POSTER = "INSERT INTO FilmPoster (filmId, poster) VALUES (?, ?)";
+    public static final String UPDATE_FILM_POSTER = "UPDATE FilmPoster SET poster = ? WHERE filmId = ?";
+    public static final String DELETE_POSTER_BY_FILM_ID = "DELETE FROM FilmPoster WHERE filmId = ?";
 
     private SqlQuery() {
     }

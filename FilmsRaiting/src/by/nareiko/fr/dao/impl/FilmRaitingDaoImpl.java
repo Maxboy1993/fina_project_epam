@@ -68,30 +68,29 @@ public class FilmRaitingDaoImpl implements FilmRaitingDao<FilmRaiting> {
     }
 
     @Override
-    public Optional<FilmRaiting> delete(FilmRaiting filmRaiting) throws DaoException {
+    public boolean delete(FilmRaiting filmRaiting) throws DaoException {
         int id = filmRaiting.getId();
-        Optional<FilmRaiting> foundFilmRaiting = findById(id);
-        delete(id);
-        return foundFilmRaiting;
+        boolean isDeleted = delete(id);
+        return isDeleted;
     }
 
     @Override
-    public Optional<FilmRaiting> delete(int id) throws DaoException {
-        Optional<FilmRaiting> filmRaiting;
+    public boolean delete(int id) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_RAITING_BY_ID)) {
             statement.setInt(1, id);
-            filmRaiting = findById(id);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("Error while deleting Film's raiting by id: ", e);
         }
-        return filmRaiting;
+        return isDeleted;
     }
 
     @Override
-    public boolean create(FilmRaiting filmRaiting) throws DaoException {
-        boolean isCreated = false;
+    public Optional<FilmRaiting> create(FilmRaiting filmRaiting) throws DaoException {
+        Optional<FilmRaiting> optionalFilmRaiting;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_RAITING, Statement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, filmRaiting.getFilmId());
@@ -103,11 +102,11 @@ public class FilmRaitingDaoImpl implements FilmRaitingDao<FilmRaiting> {
                 int id = resultSet.getInt(1);
                 filmRaiting.setId(id);
             }
-            isCreated = true;
+            optionalFilmRaiting = findById(filmRaiting.getId());
         } catch (SQLException e) {
             throw new DaoException("Error while deleting Film's raitings: ", e);
         }
-        return isCreated;
+        return optionalFilmRaiting;
     }
 
     @Override

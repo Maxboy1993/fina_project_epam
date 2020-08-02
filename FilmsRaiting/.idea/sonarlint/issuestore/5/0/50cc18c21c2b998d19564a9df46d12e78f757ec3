@@ -1,12 +1,3 @@
 
-O
-java:S1135 "2Complete the task associated to this TODO comment.(…ïœ†8…§£æµ.
-]	java:S1256"<This block of commented-out lines of code should be removed.(Ë×üŸýÿÿÿÿ8ù¾Š¾·.
-T
-java:S11355"2Complete the task associated to this TODO comment.(«éÈ¹þÿÿÿÿ8ðˆ‹¾·.
-—
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÊÍ£È
 L
-java:S3740"/Provide the parametrized type for this generic.(–í„Ç8…¤áîµ.
-N
-java:S1135/"2Complete the task associated to this TODO comment.(®†î'8“–¦æµ.
+java:S3740"/Provide the parametrized type for this generic.(–í„Ç8…¤áîµ.

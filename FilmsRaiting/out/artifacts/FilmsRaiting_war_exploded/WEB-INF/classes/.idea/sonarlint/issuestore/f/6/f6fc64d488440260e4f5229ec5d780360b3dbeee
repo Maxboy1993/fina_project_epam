@@ -1,11 +1,15 @@
 
-d
-java:S20957"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8òÿã¶.
-L
-java:S3740"/Provide the parametrized type for this generic.(¦Ä§¹8†ò”Ø¶.
-d
-java:S2095d"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ª˜»ï³.
-d
-java:S2095$"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ª˜»ï³.
 Q
-java:S3740"/Provide the parametrized type for this generic.(Ö«Çşÿÿÿÿ8†ò”Ø¶.
+java:S3740 "/Provide the parametrized type for this generic.(Ö«Çşÿÿÿÿ8†ò”Ø¶.
+d
+java:S2095k"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ª˜»ï³.
+„
+java:S1488Ö"fImmediately return this expression instead of assigning it to the temporary variable "birthdayMillis".(âäùÁ8÷Ş´ù¸.
+d
+java:S2095>"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8òÿã¶.
+~
+java:S1488x"aImmediately return this expression instead of assigning it to the temporary variable "isDeleted".(ÿ ç¤8¶¯ğ“¸.
+d
+java:S2095+"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8ª˜»ï³.
+L
+java:S3740"/Provide the parametrized type for this generic.(¦Ä§¹8†ò”Ø¶.

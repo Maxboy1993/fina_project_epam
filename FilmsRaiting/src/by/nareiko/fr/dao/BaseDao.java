@@ -20,11 +20,11 @@ public interface BaseDao<T extends AbstractEntity> {
 
     Optional<T> findById(int id) throws DaoException;
 
-    Optional<T> delete(T t) throws DaoException;
+    boolean delete(T t) throws DaoException;
 
-    Optional<T> delete(int id) throws DaoException;
+    boolean delete(int id) throws DaoException;
 
-    boolean create(T t) throws DaoException;
+    Optional<T> create(T t) throws DaoException;
 
     Optional<T> update(T t) throws DaoException;
 

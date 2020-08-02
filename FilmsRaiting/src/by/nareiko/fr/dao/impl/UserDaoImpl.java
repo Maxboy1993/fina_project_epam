@@ -10,6 +10,8 @@ import by.nareiko.fr.pool.ConnectionPool;
 import by.nareiko.fr.util.PasswordHasher;
 
 import java.sql.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +20,10 @@ public class UserDaoImpl implements UserDao<User> {
     private static final String USER_ROLE = "user";
     private static final String ACTIVE_STATUS = "active";
     private static final int VERIFIED_MARKER = 1;
+    private static final String SPLIT_REGEX = "-";
+    private static final int YEAR_INDEX = 0;
+    private static final int MONTH_INDEX = 1;
+    private static final int DAY_INDEX = 2;
     private static final UserDao INSTANCE = new UserDaoImpl();
 
     private UserDaoImpl() {
@@ -64,17 +70,17 @@ public class UserDaoImpl implements UserDao<User> {
     }
 
     @Override
-    public Optional<User> delete(String login) throws DaoException {
-        Optional<User> user;
+    public boolean delete(String login) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_USER_BY_LOGIN)) {
             statement.setString(1, login);
-            user = findByLogin(login);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("User isn't deleted by login: ", e);
         }
-        return user;
+        return isDeleted;
     }
 
     @Override
@@ -109,37 +115,37 @@ public class UserDaoImpl implements UserDao<User> {
     }
 
     @Override
-    public Optional<User> delete(User user) throws DaoException {
+    public boolean delete(User user) throws DaoException {
         int id = user.getId();
-        Optional<User> foundUser = findById(id);
-        delete(id);
-        return foundUser;
+        boolean isDeleted = delete(id);
+        return isDeleted;
     }
 
     @Override
-    public Optional<User> delete(int id) throws DaoException {
-        Optional<User> user;
+    public boolean delete(int id) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_USER_BY_ID)) {
-            user = findById(id);
             statement.setInt(1, id);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("User isn't deleted by id: ", e);
         }
-        return user;
+        return isDeleted;
     }
 
 
     @Override
-    public boolean create(User user) throws DaoException {
-        boolean isCreated = false;
+    public Optional<User> create(User user) throws DaoException {
+        Optional<User> optionalUser;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_USER, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
-            long birtgday = user.getBirthday().getTimeInMillis();
-            statement.setLong(3, birtgday);
+            String birthday = user.getBirthday();
+            long date = modifyDate(birthday);
+            statement.setLong(3, date);
             String role = USER_ROLE;
             statement.setString(4, user.getLogin());
             statement.setString(5, user.getPassword());
@@ -154,11 +160,11 @@ public class UserDaoImpl implements UserDao<User> {
                 int id = resultSet.getInt(1);
                 user.setId(id);
             }
-            isCreated = true;
+            optionalUser = findById(user.getId());
         } catch (SQLException e) {
             throw new DaoException("User isn't created: ", e);
         }
-        return isCreated;
+        return optionalUser;
     }
 
     @Override
@@ -167,8 +173,9 @@ public class UserDaoImpl implements UserDao<User> {
              PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_USER)) {
             statement.setString(1, user.getFirstName());
             statement.setString(2, user.getLastName());
-            long birtgday = user.getBirthday().getTimeInMillis();
-            statement.setLong(3, birtgday);
+            String birthday = user.getBirthday();
+            long date = modifyDate(birthday);
+            statement.setLong(3, date);
             statement.setString(4, user.getLogin());
             statement.setString(5, user.getPassword());
             String role = USER_ROLE;
@@ -194,6 +201,18 @@ public class UserDaoImpl implements UserDao<User> {
         } catch (SQLException e) {
             throw new DaoException("User isn't verified: ", e);
         }
+    }
+
+    private long modifyDate(String birthday) {
+        String[] date = birthday.split(SPLIT_REGEX);
+        int year = Integer.parseInt(date[YEAR_INDEX]);
+        int month = Integer.parseInt(date[MONTH_INDEX]) - 1;
+        int day = Integer.parseInt(date[DAY_INDEX]);
+
+        Calendar calendarBirthday = new GregorianCalendar();
+        calendarBirthday.set(year, month, day);
+        long birthdayMillis = calendarBirthday.getTimeInMillis();
+        return birthdayMillis;
     }
 }
 

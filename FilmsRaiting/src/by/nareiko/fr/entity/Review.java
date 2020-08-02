@@ -1,18 +1,16 @@
 package by.nareiko.fr.entity;
 
-import java.util.Calendar;
-
 public class Review extends AbstractEntity {
     private int id;
     private int filmId;
     private int userId;
     private String review;
-    private Calendar reviewDate;
+    private String reviewDate;
 
     public Review() {
     }
 
-    public Review(int id, int filmId, int userId, String review, Calendar reviewDate) {
+    public Review(int id, int filmId, int userId, String review, String reviewDate) {
         this.id = id;
         this.filmId = filmId;
         this.userId = userId;
@@ -52,11 +50,11 @@ public class Review extends AbstractEntity {
         this.review = review;
     }
 
-    public Calendar getReviewDate() {
+    public String getReviewDate() {
         return reviewDate;
     }
 
-    public void setReviewDate(Calendar reviewDate) {
+    public void setReviewDate(String reviewDate) {
         this.reviewDate = reviewDate;
     }
 

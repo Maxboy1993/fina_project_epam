@@ -1,6 +1,6 @@
 package by.nareiko.fr.controller.command.impl;
 
-import by.nareiko.fr.controller.JspParameterName;
+import by.nareiko.fr.controller.RequestParameterName;
 import by.nareiko.fr.controller.Router;
 import by.nareiko.fr.controller.command.Command;
 import by.nareiko.fr.controller.command.PagePath;
@@ -14,8 +14,10 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
+import java.util.Set;
 
 public class SignUpCommand implements Command {
+    private static final String COMMAND = "controller?command=PASSING_TO_SIGN_IN";
     private static final Logger LOGGER = LogManager.getLogger();
 
     public SignUpCommand() {
@@ -23,32 +25,32 @@ public class SignUpCommand implements Command {
 
     @Override
     public Router execute(HttpServletRequest request) {
-        String firstNameValue = request.getParameter(JspParameterName.FIRST_NAME_PARAM);
-        String lastNameValue = request.getParameter(JspParameterName.LAST_NAME_PARAM);
-        String loginValue = request.getParameter(JspParameterName.LOGIN_PARAM);
-        String passwordValue = request.getParameter(JspParameterName.PASSWORD_PARAM);
-        String birthday = request.getParameter(JspParameterName.BIRTHDAY_PARAM);
+        String firstNameValue = request.getParameter(RequestParameterName.FIRST_NAME_PARAM);
+        String lastNameValue = request.getParameter(RequestParameterName.LAST_NAME_PARAM);
+        String loginValue = request.getParameter(RequestParameterName.LOGIN_PARAM);
+        String passwordValue = request.getParameter(RequestParameterName.PASSWORD_PARAM);
+        String birthday = request.getParameter(RequestParameterName.BIRTHDAY_PARAM);
 
         Router router = new Router();
-        router.setRedirect();
         try {
             UserService userService = ServiceFactory.getInstance().getUserService();
             if (userService.checkUserRegistrationData(firstNameValue, lastNameValue, loginValue, passwordValue, birthday)) {
                 Optional<User> user = userService.registrateUser(firstNameValue, lastNameValue, loginValue, passwordValue, birthday);
-                request.getSession().setAttribute(JspParameterName.USER_PARAM, user.get());
-                request.getSession().setAttribute(JspParameterName.USER_ROLE_PARAM, user.get().getRoleType());
-                router.setPage(PagePath.SIGN_IN);
+                request.getSession().setAttribute(RequestParameterName.USER_PARAM, user.get());
+                request.getSession().setAttribute(RequestParameterName.USER_ROLE_PARAM, user.get().getRoleType());
                 MailSender sender = new MailSender(loginValue);
                 sender.send();
-                request.setAttribute(JspParameterName.VERIFICATION_PARAM, "Dear " + user.get().getFirstName() + " ! " + "Letter was sent on your email adress. You can confirm your email by link.");
+                request.setAttribute(RequestParameterName.VERIFICATION_PARAM, RequestParameterName.VERIFICATION_CONFIRMING_VALUE);
+                router.setRedirect();
+                router.setPage(COMMAND);
             } else {
-                //TODO add sort of error message
-                request.setAttribute(JspParameterName.ERROR_REGISTRATION_PARAM, "Incorrect registration data");
+                Set<String> userValidationErrors = userService.getUserErrorMessages();
+                request.setAttribute(RequestParameterName.USER_VALIDATION_ERRORS_PARAM, userValidationErrors);
                 router.setPage(PagePath.SIGN_UP);
             }
         } catch (ServiceException e) {
             LOGGER.error("Registration error", e);
-            //TODO error page
+            router.setPage(PagePath.ERROR_500);
         }
         return router;
     }

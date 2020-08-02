@@ -20,6 +20,8 @@ public class SqlColumnName {
     public static final String STATUS = "status";
     public static final String GENRE = "genre";
     public static final String RELEASE_DATE = "releaseDate";
+    public static final String PSOTER = "poster";
+
     private SqlColumnName() {
     }
 }

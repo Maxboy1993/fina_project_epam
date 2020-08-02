@@ -13,18 +13,18 @@ import by.nareiko.fr.validator.UserValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public class UserServiceImpl implements UserService<User> {
     private static final RoleType DEFAULT_ROLE = RoleType.USER;
     private static final StatusType DEFAULT_STATUS = StatusType.ACTIVE;
-    private static final UserService INSTANCE = new UserServiceImpl();
     private static final Logger LOGGER = LogManager.getLogger();
-    private static int YEAR_INDEX = 0;
-    private static int MONTH_INDEX = 1;
-    private static int DAY_INDEX = 2;
+    private static final UserService INSTANCE = new UserServiceImpl();
+    private Set<String> errorMessages = new HashSet<>();
+
 
     private UserServiceImpl() {
     }
@@ -40,6 +40,9 @@ public class UserServiceImpl implements UserService<User> {
         if (validator.validateLoginAndPassword(login, password)) {
             isCorrectUser = true;
         }
+        if (!isCorrectUser) {
+            errorMessages.addAll(validator.getUserErrorMessages());
+        }
         return isCorrectUser;
     }
 
@@ -48,6 +51,9 @@ public class UserServiceImpl implements UserService<User> {
         UserValidator validator = new UserValidator();
         if (validator.validateRegistrationData(firstName, lastName, login, password, birthday)) {
             isCorrectUser = true;
+        }
+        if (!isCorrectUser) {
+            errorMessages.addAll(validator.getUserErrorMessages());
         }
         return isCorrectUser;
     }
@@ -58,10 +64,36 @@ public class UserServiceImpl implements UserService<User> {
         try {
             user = userDao.findByLoginAndPassword(login, password);
         } catch (DaoException e) {
-            LOGGER.error("Error while seaching by id: ", e);
-            throw new ServiceException("Error while seaching by id: ", e);
+            LOGGER.error("Error while searching user: ", e);
+            throw new ServiceException("Error while searching user: ", e);
         }
         return user;
+    }
+
+    @Override
+    public Optional<User> findById(int userId) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        Optional<User> user;
+        try {
+            user = userDao.findById(userId);
+        } catch (DaoException e) {
+            LOGGER.error("Error while searching user: ", e);
+            throw new ServiceException("Error while searching user: ", e);
+        }
+        return user;
+    }
+
+    @Override
+    public Optional<User> changeRole(User user) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        Optional<User> optionalUser;
+        try {
+            optionalUser = userDao.update(user);
+        } catch (DaoException e) {
+            LOGGER.error("Error while changing role: ", e);
+            throw new ServiceException("Error while changing role: ", e);
+        }
+        return optionalUser;
     }
 
     public Optional<User> registrateUser(String firstName, String lastName, String login, String password, String birthday) throws ServiceException {
@@ -69,13 +101,7 @@ public class UserServiceImpl implements UserService<User> {
         User user = new User();
         user.setFirstName(firstName);
         user.setLastName(lastName);
-        Calendar calendar = new GregorianCalendar();
-        String[] birhtdaySeparator = birthday.split("-");
-        int year = Integer.parseInt(birhtdaySeparator[YEAR_INDEX]);
-        int month = Integer.parseInt(birhtdaySeparator[MONTH_INDEX]) - 1;
-        int day = Integer.parseInt(birhtdaySeparator[DAY_INDEX]);
-        calendar.set(year, month, day);
-        user.setBirthday(calendar);
+        user.setBirthday(birthday);
         user.setLogin(login);
         String md5HexPassword = PasswordHasher.hashPassword(password);
         user.setPassword(md5HexPassword);
@@ -100,5 +126,39 @@ public class UserServiceImpl implements UserService<User> {
             throw new ServiceException("Error while user verification", e);
         }
 
+    }
+
+    @Override
+    public List<User> findAllUsers() throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        List<User> users;
+        try {
+            users = userDao.findAll();
+        } catch (DaoException e) {
+            LOGGER.error("Error while users searching: ", e);
+            throw new ServiceException("Error while users searching: ", e);
+        }
+        return users;
+    }
+
+    @Override
+    public boolean deleteUser(int userId) throws ServiceException {
+        UserDao userDao = DaoFactory.getInstance().getUserDao();
+        boolean isDeleted;
+        try {
+            isDeleted = userDao.delete(userId);
+        } catch (DaoException e) {
+            LOGGER.error("Error while users deleting: ", e);
+            throw new ServiceException("Error while users deleting:: ", e);
+        }
+        return isDeleted;
+    }
+
+    @Override
+    public Set<String> getUserErrorMessages() {
+        Set<String> errors = new HashSet<>();
+        errors.addAll(errorMessages);
+        errorMessages.removeAll(errorMessages);
+        return errors;
     }
 }

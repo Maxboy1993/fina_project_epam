@@ -1,9 +1,11 @@
 
-Z
-java:S3518H"=Make sure "counter" can't be zero before doing this division.(ÂÏ¯²8‘¹ş¶.
 L
-java:S3740?"/Provide the parametrized type for this generic.(¬¸’ú8‘¹ş¶.
-€
-java:S1488I"^Immediately return this expression instead of assigning it to the temporary variable "result".(‘½·üÿÿÿÿ8‘¹ş¶.
+java:S37400"/Provide the parametrized type for this generic.(¬¸’ú8‘¹ş¶.
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8°¹¸.
 C
-java:S2111I"!Use "BigDecimal.valueOf" instead.(‘½·üÿÿÿÿ8‘¹ş¶.
+java:S2111<"!Use "BigDecimal.valueOf" instead.(”ÃËŒúÿÿÿÿ8ó¨™‰¸.
+[
+java:S11556">Use isEmpty() to check whether the collection is empty or not.(‚‰ì8‹Û˜‰¸.
+Z
+java:S3518;"=Make sure "counter" can't be zero before doing this division.(ÂÏ¯²8ó¨™‰¸.

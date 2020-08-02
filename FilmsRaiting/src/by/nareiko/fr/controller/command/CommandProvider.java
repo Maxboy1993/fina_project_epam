@@ -4,8 +4,6 @@ import by.nareiko.fr.controller.command.impl.DefaultCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.Optional;
-
 public class CommandProvider {
     private static final Logger LOGGER = LogManager.getLogger();
 

@@ -13,7 +13,7 @@ public class TransactionManager {
         try {
             connection.setAutoCommit(false);
         } catch (SQLException e) {
-            LOGGER.error("Auto commit isn't seted as false: ", e);
+            LOGGER.error("Auto commit isn't setted as false: ", e);
         }
     }
 
@@ -21,7 +21,7 @@ public class TransactionManager {
         try {
             connection.setAutoCommit(true);
         } catch (SQLException e) {
-            LOGGER.error("Auto commit isn't seted as true: ", e);
+            LOGGER.error("Auto commit isn't setted as true: ", e);
         }
     }
 
@@ -37,7 +37,7 @@ public class TransactionManager {
         try {
             connection.commit();
         } catch (SQLException e) {
-            LOGGER.error("Transaction isn't commited: ", e);
+            LOGGER.error("Transaction isn't committed: ", e);
         }
     }
 }

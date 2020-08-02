@@ -23,7 +23,7 @@ public enum RoleType {
                 return role;
             }
         }
-        LOGGER.error("Illegal argument, required role doesn't exist. Returned defualt role - user.");
+        LOGGER.error("Illegal argument, required role doesn't exist. Returned default role - user.");
         return USER;
     }
 

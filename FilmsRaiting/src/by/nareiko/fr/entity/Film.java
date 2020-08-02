@@ -1,13 +1,13 @@
 package by.nareiko.fr.entity;
 
-import java.util.Calendar;
 import java.util.List;
 
 public class Film extends AbstractEntity {
+    String poster;
     private int id;
     private String name;
     private GenreType genreType;
-    private Calendar releaseDate;
+    private String releaseDate;
     private List<Actor> actors;
     private Director director;
     private double raiting;
@@ -15,7 +15,7 @@ public class Film extends AbstractEntity {
     public Film() {
     }
 
-    public Film(int id, String name, GenreType genreType, Calendar releaseDate, List<Actor> actors, Director director, double raiting) {
+    public Film(int id, String name, GenreType genreType, String releaseDate, List<Actor> actors, Director director, double raiting, String poster) {
         this.id = id;
         this.name = name;
         this.genreType = genreType;
@@ -23,6 +23,7 @@ public class Film extends AbstractEntity {
         this.actors = actors;
         this.director = director;
         this.raiting = raiting;
+        this.poster = poster;
     }
 
     public int getId() {
@@ -49,11 +50,11 @@ public class Film extends AbstractEntity {
         this.genreType = genreType;
     }
 
-    public Calendar getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Calendar releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 
@@ -61,9 +62,10 @@ public class Film extends AbstractEntity {
         return actors;
     }
 
-    public void setActors(List<Actor> actorsr) {
+    public void setActors(List<Actor> actors) {
         this.actors = actors;
     }
+
 
     public Director getDirector() {
         return director;
@@ -79,6 +81,14 @@ public class Film extends AbstractEntity {
 
     public void setRaiting(double raiting) {
         this.raiting = raiting;
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 
     @Override

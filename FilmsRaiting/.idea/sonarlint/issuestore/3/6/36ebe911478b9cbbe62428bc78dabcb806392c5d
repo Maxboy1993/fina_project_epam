@@ -1,15 +1,17 @@
 
-ž
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8¡º‹Ù¶.
-[
-java:S1068"9Remove this unused "roleAndCommandMapping" private field.(Ÿ©ÁÅþÿÿÿÿ8’¨ÂÂ·.
-W
-java:S1161":Add the "@Override" annotation above this method signature(‚“¶î8¡º‹Ù¶.
-X	java:S125("<This block of commented-out lines of code should be removed.(úœªÑ8þñ¾í¶.
-X	java:S1251"<This block of commented-out lines of code should be removed.(ëì©8’¨ÂÂ·.
+`
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë8«¼éÒº.
 O
-java:S1135'"2Complete the task associated to this TODO comment.(œ…ìÔ8ú™¿í¶.
+java:S1135)"2Complete the task associated to this TODO comment.(˜äü8¿Š·Ìº.
+L
+java:S10661"/Merge this if statement with the enclosing one.(Ÿù“8¸Àè†¹.
 \
-java:S11610":Add the "@Override" annotation above this method signature(àä™´ýÿÿÿÿ8¡º‹Ù¶.
-X	java:S125&"<This block of commented-out lines of code should be removed.(Ðšñý8ò¯»Ž·.
-]	java:S125"<This block of commented-out lines of code should be removed.(Í‘ÀÌøÿÿÿÿ8’¨ÂÂ·.
+java:S1161B":Add the "@Override" annotation above this method signature(àä™´ýÿÿÿÿ8ÜÂ¶Ÿº.
+Q
+java:S10669"/Merge this if statement with the enclosing one.(è„àùüÿÿÿÿ8îÄ°Ìº.
+Q
+java:S1066*"/Merge this if statement with the enclosing one.(ëâ˜Žøÿÿÿÿ8¸Àè†¹.
+ž
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8¡º‹Ù¶.
+W
+java:S1161":Add the "@Override" annotation above this method signature(‚“¶î8¡º‹Ù¶.

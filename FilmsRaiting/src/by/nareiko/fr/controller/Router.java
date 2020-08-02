@@ -3,27 +3,27 @@ package by.nareiko.fr.controller;
 import by.nareiko.fr.controller.command.PagePath;
 
 public class Router {
-    enum DisPathType {
-        FORWARD,
-        REDIRECT
-    }
-
     private String page = PagePath.INDEX;
     private DisPathType disPathType = DisPathType.FORWARD;
 
-    public String getPage(){
+    public String getPage() {
         return page;
     }
 
-    public void setPage(String page){
+    public void setPage(String page) {
         this.page = page;
     }
 
-    public DisPathType getDisPathType(){
+    public DisPathType getDisPathType() {
         return disPathType;
     }
 
-    public void setRedirect(){
+    public void setRedirect() {
         this.disPathType = DisPathType.REDIRECT;
+    }
+
+    enum DisPathType {
+        FORWARD,
+        REDIRECT
     }
 }

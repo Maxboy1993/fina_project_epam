@@ -4,15 +4,14 @@ import by.nareiko.fr.exception.DaoException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Enumeration;
+import java.util.Queue;
+import java.util.ResourceBundle;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.locks.Lock;
@@ -54,10 +53,10 @@ public class ConnectionPool {
     private void initConnection() {
         try {
             ResourceBundle bundle = ResourceBundle.getBundle(PROPERTIES_PATH);
-            String driverClass =  bundle.getString(DRIVER_CLASS);
-            String url =  bundle.getString(URL);
-            String userName =  bundle.getString(USER_NAME);
-            String password =  bundle.getString(PASSWORD);
+            String driverClass = bundle.getString(DRIVER_CLASS);
+            String url = bundle.getString(URL);
+            String userName = bundle.getString(USER_NAME);
+            String password = bundle.getString(PASSWORD);
 
             Class.forName(driverClass);
             for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {

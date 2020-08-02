@@ -1,6 +1,4 @@
 
-c	java:S107"BConstructor has 10 parameters, which is greater than 7 authorized.(öõ¿øÿÿÿÿ8¿ãŸÉ°.
-E
-java:S1948"(Make "poster" transient or serializable.(·„Ø¥8´Æîé².
+\	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(»×ê8¿ãŸÉ°.
 F
-java:S1125"(Remove the literal "true" boolean value.(›á¦8‚üŒ¿·.
+java:S1125‚"(Remove the literal "true" boolean value.(›á¦8‚üŒ¿·.

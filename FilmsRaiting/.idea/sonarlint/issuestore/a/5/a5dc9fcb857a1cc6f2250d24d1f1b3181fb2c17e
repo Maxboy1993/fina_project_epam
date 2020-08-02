@@ -1,7 +1,15 @@
 
-W
-java:S1161":Add the "@Override" annotation above this method signature(‚“¶î8†ÎÂ·.
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8†ÎÂ·.
 \
-java:S1161":Add the "@Override" annotation above this method signature(àä™´ıÿÿÿÿ8†ÎÂ·.
+java:S1161":Add the "@Override" annotation above this method signature(àä™´ıÿÿÿÿ8­¸ãËº.
+W
+java:S1161":Add the "@Override" annotation above this method signature(‚“¶î8­¸ãËº.
+_
+java:S1128"BRemove this unused import 'javax.servlet.annotation.WebInitParam'.(µ¾åÀ8Ğ‰ÉÍº.
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8­¸ãËº.
+g
+java:S1128"JRemove this unused import 'by.nareiko.fr.controller.RequestParameterName'.(©¾ïĞ8²ÑÉÍº.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(àä™´ıÿÿÿÿ8²ÑÉÍº.
+=
+java:S1170"!Make this final field static too.(ÊàñL8¹óßÑº.

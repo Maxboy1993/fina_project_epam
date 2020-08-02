@@ -12,7 +12,7 @@
 //import java.sql.*;
 //import java.util.*;
 //
-//public class FilmDaoImpl extends EntityInitializer<Film> implements FilmDao<Film> {
+//public class FilmDaoImpl implements FilmDao<Film> {
 //    private static final String ACTIVE_STATUS = "active";
 //    private static final FilmDao INSTANCE = new FilmDaoImpl();
 //

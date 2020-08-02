@@ -2,10 +2,7 @@ package by.nareiko.fr.controller;
 
 import by.nareiko.fr.controller.command.Command;
 import by.nareiko.fr.controller.command.CommandProvider;
-import by.nareiko.fr.controller.command.PagePath;
 import by.nareiko.fr.pool.ConnectionPool;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,8 +13,6 @@ import java.io.IOException;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
-//    private static final Logger LOGGER = LogManager.getLogger();
-//    private static final String DEFAULT_COMMAND_NAME = "DEFAULT_COMMAND";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,7 +30,7 @@ public class Controller extends HttpServlet {
     }
 
     private void processServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Command command = CommandProvider.defineCommand(request.getParameter("command"));
+        Command command = CommandProvider.defineCommand(request.getParameter(RequestParameterName.COMMAND_PARAM));
         Router router = command.execute(request);
 
         if (Router.DisPathType.FORWARD.equals(router.getDisPathType())) {

@@ -1,17 +1,15 @@
 package by.nareiko.fr.entity;
 
-import java.util.Calendar;
-
 public class Actor extends AbstractEntity {
     private int id;
     private String firstName;
     private String lastName;
-    private Calendar birthday;
+    private String birthday;
 
     public Actor() {
     }
 
-    public Actor(int id, String firstName, String lastName, Calendar birthday) {
+    public Actor(int id, String firstName, String lastName, String birthday) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -42,11 +40,11 @@ public class Actor extends AbstractEntity {
         this.lastName = lastName;
     }
 
-    public Calendar getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Calendar birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

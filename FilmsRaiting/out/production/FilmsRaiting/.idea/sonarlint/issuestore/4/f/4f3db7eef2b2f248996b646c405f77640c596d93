@@ -1,7 +1,15 @@
 
+R
+java:S1144…"/Remove this unused private "modifyDate" method.(ŒÄÒıÿÿÿÿ8„±Û¹.
+d
+java:S2095@"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–8Åâ­ù¸.
 L
-java:S3740"/Provide the parametrized type for this generic.(–´€ñ8áƒâş¶.
-]
-java:S2095;"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(„‡–
+java:S3740"/Provide the parametrized type for this generic.(–´€ñ8áƒâş¶.
+~
+java:S1488M"aImmediately return this expression instead of assigning it to the temporary variable "isDeleted".(ÿ ç¤8Åâ­ù¸.
+Q
+java:S1481|"/Remove this unused "reviewDate" local variable.(ÜŸ¸üÿÿÿÿ8“ÚØ¹.
 L
-java:S3740"/Provide the parametrized type for this generic.(ˆ×ğø8áƒâş¶.
+java:S3740"/Provide the parametrized type for this generic.(ˆ×ğø8Åâ­ù¸.
+„
+java:S1488"fImmediately return this expression instead of assigning it to the temporary variable "birthdayMillis".(âäùÁ8Åâ­ù¸.

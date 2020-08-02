@@ -8,10 +8,18 @@ import by.nareiko.fr.exception.DaoException;
 import by.nareiko.fr.pool.ConnectionPool;
 
 import java.sql.*;
-import java.util.*;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Optional;
 
 public class ReviewDaoImpl implements ReviewDao<Review> {
+    private static final String SPLIT_REGEX = "-";
+    private static final int YEAR_INDEX = 0;
+    private static final int MONTH_INDEX = 1;
+    private static final int DAY_INDEX = 2;
     private static final ReviewDao INSTANCE = new ReviewDaoImpl();
+
 
     private ReviewDaoImpl() {
     }
@@ -67,48 +75,48 @@ public class ReviewDaoImpl implements ReviewDao<Review> {
     }
 
     @Override
-    public Optional<Review> delete(Review review) throws DaoException {
+    public boolean delete(Review review) throws DaoException {
         int id = review.getId();
-        Optional<Review> foundReview = findById(id);
-        delete(id);
-        return foundReview;
+        boolean isDeleted = delete(id);
+        return isDeleted;
     }
 
     @Override
-    public Optional<Review> delete(int id) throws DaoException {
-        Optional<Review> review;
+    public boolean delete(int id) throws DaoException {
+        boolean isDeleted;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.DELETE_REVIEW_BY_ID)) {
             statement.setInt(1, id);
-            review = findById(id);
             statement.executeUpdate();
+            isDeleted = true;
         } catch (SQLException e) {
             throw new DaoException("Review isn't deleted by id: ", e);
         }
-        return review;
+        return isDeleted;
     }
 
     @Override
-    public boolean create(Review review) throws DaoException {
-        boolean isCreated;
+    public Optional<Review> create(Review review) throws DaoException {
+        Optional<Review> optionalReview;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.CREATE_REVIEW, Statement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, review.getFilmId());
             statement.setInt(2, review.getUserId());
             statement.setString(3, review.getReview());
-            long reviewDate = review.getReviewDate().getTimeInMillis();
-            statement.setLong(4, reviewDate);
+            Calendar reviewDate = new GregorianCalendar();
+            long date = reviewDate.getTimeInMillis();
+            statement.setLong(4, date);
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 review.setId(id);
             }
-            isCreated = true;
+            optionalReview = findById(review.getId());
         } catch (SQLException e) {
             throw new DaoException("Review isn't created: ", e);
         }
-        return isCreated;
+        return optionalReview;
     }
 
     @Override
@@ -116,13 +124,24 @@ public class ReviewDaoImpl implements ReviewDao<Review> {
         try (Connection connection = ConnectionPool.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SqlQuery.UPDATE_REVIEW)) {
             statement.setString(1, review.getReview());
-            long reviewDate = review.getReviewDate().getTimeInMillis();
-            statement.setLong(2, reviewDate);
-            statement.setInt(3, review.getId());
+            String reviewDate = review.getReviewDate();
+            statement.setInt(2, review.getId());
             statement.executeUpdate();
         } catch (SQLException e) {
             throw new DaoException("Review isn't updated: ", e);
         }
         return Optional.ofNullable(review);
+    }
+
+    private long modifyDate(String birthday) {
+        String[] date = birthday.split(SPLIT_REGEX);
+        int year = Integer.parseInt(date[YEAR_INDEX]);
+        int month = Integer.parseInt(date[MONTH_INDEX]) - 1;
+        int day = Integer.parseInt(date[DAY_INDEX]);
+
+        Calendar calendarBirthday = new GregorianCalendar();
+        calendarBirthday.set(year, month, day);
+        long birthdayMillis = calendarBirthday.getTimeInMillis();
+        return birthdayMillis;
     }
 }

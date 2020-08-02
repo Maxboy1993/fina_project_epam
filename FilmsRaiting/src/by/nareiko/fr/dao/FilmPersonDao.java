@@ -11,5 +11,5 @@ public interface FilmPersonDao<T extends AbstractEntity> extends BaseDao<T> {
 
     Optional<T> findByLastNameAndFirstName(String lastName, String firstName) throws DaoException;
 
-    Optional<T> delete(String lastName, String firstName) throws DaoException;
+    boolean delete(String lastName, String firstName) throws DaoException;
 }
