@@ -12,6 +12,9 @@ import by.nareiko.fr.service.UserService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * The type Delete user command.
+ */
 public class DeleteUserCommand implements Command {
     private static final String COMMAND = "controller?command=PASSING_TO_SHOW_USERS";
     @Override

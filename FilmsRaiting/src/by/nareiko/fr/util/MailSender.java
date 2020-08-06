@@ -11,6 +11,9 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+/**
+ * The type Mail sender.
+ */
 public class MailSender {
     private static final String MAIL_PROPERTIES_PATH = "mail";
     private static final String USER_NAME = "mail.user.name";
@@ -30,10 +33,18 @@ public class MailSender {
 
     private String sendToAddress;
 
+    /**
+     * Instantiates a new Mail sender.
+     *
+     * @param sendToAddress the send to address
+     */
     public MailSender(String sendToAddress) {
         this.sendToAddress = sendToAddress;
     }
 
+    /**
+     * Send.
+     */
     public void send() {
         try {
             Message message = initMessage();

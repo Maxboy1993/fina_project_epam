@@ -16,10 +16,16 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Sign up command.
+ */
 public class SignUpCommand implements Command {
     private static final String COMMAND = "controller?command=PASSING_TO_SIGN_IN";
     private static final Logger LOGGER = LogManager.getLogger();
 
+    /**
+     * Instantiates a new Sign up command.
+     */
     public SignUpCommand() {
     }
 

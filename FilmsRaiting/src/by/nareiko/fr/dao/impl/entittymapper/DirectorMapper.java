@@ -10,6 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * The type Director mapper.
+ */
 public class DirectorMapper extends EntityMapper<Director> {
 
     @Override
@@ -29,6 +32,12 @@ public class DirectorMapper extends EntityMapper<Director> {
         return director;
     }
 
+    /**
+     * Gets date from long.
+     *
+     * @param dateMillis the date millis
+     * @return the date from long
+     */
     public Calendar getDateFromLong(long dateMillis) {
         Calendar date = new GregorianCalendar();
         date.setTimeInMillis(dateMillis);

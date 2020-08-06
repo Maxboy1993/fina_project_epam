@@ -6,6 +6,9 @@ import by.nareiko.fr.controller.command.PagePath;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * The type Passing to sign in command.
+ */
 public class PassingToSignInCommand implements Command {
     @Override
     public Router execute(HttpServletRequest request) {

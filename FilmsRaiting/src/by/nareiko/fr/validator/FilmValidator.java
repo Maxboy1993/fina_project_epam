@@ -9,6 +9,9 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type Film validator.
+ */
 public class FilmValidator {
     private static final String SPLIT_REGEX = "-";
     private static final long MIN_DATE = -2366725226371L;
@@ -20,11 +23,22 @@ public class FilmValidator {
     private static final String GENRE_REGEX = "[a-zA-Z ]{5,50}";
     private Set<String> errorMessage;
 
+    /**
+     * Instantiates a new Film validator.
+     */
     public FilmValidator() {
         errorMessage = new HashSet<>();
     }
 
 
+    /**
+     * Validate film data boolean.
+     *
+     * @param filmName    the film name
+     * @param releaseDate the release date
+     * @param genre       the genre
+     * @return the boolean
+     */
     public boolean validateFilmData(String filmName, String releaseDate, String genre) {
         boolean isCorrectFilm = false;
         if (filmName != null && !filmName.isBlank() && releaseDate != null && !releaseDate.isBlank() && genre != null && !genre.isBlank()) {
@@ -38,6 +52,12 @@ public class FilmValidator {
         return isCorrectFilm;
     }
 
+    /**
+     * Validate film name boolean.
+     *
+     * @param filmName the film name
+     * @return the boolean
+     */
     public boolean validateFilmName(String filmName) {
         Pattern pattern = Pattern.compile(FILM_NAME_REGEX);
         Matcher matcher = pattern.matcher(filmName);
@@ -78,6 +98,11 @@ public class FilmValidator {
         return isCorrect;
     }
 
+    /**
+     * Gets film error message.
+     *
+     * @return the film error message
+     */
     public Set<String> getFilmErrorMessage() {
         Set<String> errors = new HashSet<>();
         errors.addAll(errorMessage);

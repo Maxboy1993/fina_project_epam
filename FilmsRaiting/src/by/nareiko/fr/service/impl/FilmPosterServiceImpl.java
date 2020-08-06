@@ -18,6 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Film poster service.
+ */
 public class FilmPosterServiceImpl implements PosterService<Blob> {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final PosterService INSTANCE = new FilmPosterServiceImpl();
@@ -25,6 +28,11 @@ public class FilmPosterServiceImpl implements PosterService<Blob> {
     private FilmPosterServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static PosterService getInstance() {
         return INSTANCE;
     }

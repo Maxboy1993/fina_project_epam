@@ -16,6 +16,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Add actor command.
+ */
 public class AddActorCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String COMMAND = "controller?command=PASSING_TO_ADD_ACTOR";

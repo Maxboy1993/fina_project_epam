@@ -13,6 +13,9 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Director dao.
+ */
 public class DirectorDaoImpl implements FilmPersonDao<Director> {
     private static final FilmPersonDao INSTANCE = new DirectorDaoImpl();
     private static final String SPLIT_REGEX = "-";
@@ -24,6 +27,11 @@ public class DirectorDaoImpl implements FilmPersonDao<Director> {
     private DirectorDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmPersonDao getInstance() {
         return INSTANCE;
     }
@@ -92,6 +100,13 @@ public class DirectorDaoImpl implements FilmPersonDao<Director> {
         return Optional.ofNullable(director);
     }
 
+    /**
+     * Find by film id optional.
+     *
+     * @param id the id
+     * @return the optional
+     * @throws DaoException the dao exception
+     */
     public Optional<Director> findByFilmId(int id) throws DaoException {
         Director director = null;
         DirectorMapper directorMapper = new DirectorMapper();

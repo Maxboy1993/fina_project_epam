@@ -18,6 +18,9 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+/**
+ * The type Full film info mapper.
+ */
 public class FullFilmInfoMapper extends EntityMapper<Film> {
     @Override
     public Film initEntity(ResultSet resultSet) throws SQLException, DaoException {
@@ -44,6 +47,13 @@ public class FullFilmInfoMapper extends EntityMapper<Film> {
         return date;
     }
 
+    /**
+     * Countfinal film raiting double.
+     *
+     * @param filmId the film id
+     * @return the double
+     * @throws DaoException the dao exception
+     */
     public double countfinalFilmRaiting(int filmId) throws DaoException {
         DaoFactory daoFactory = DaoFactory.getInstance();
         FilmRaitingDao raitingDao = daoFactory.getFilmRaitingDao();

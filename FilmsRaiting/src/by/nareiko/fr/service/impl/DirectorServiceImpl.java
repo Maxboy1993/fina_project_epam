@@ -14,6 +14,9 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Director service.
+ */
 public class DirectorServiceImpl implements FilmPersonService<Director> {
     private static final FilmPersonService INSTANCE = new DirectorServiceImpl();
     private static final Logger LOGGER = LogManager.getLogger();
@@ -22,6 +25,11 @@ public class DirectorServiceImpl implements FilmPersonService<Director> {
     private DirectorServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmPersonService getInstance() {
         return INSTANCE;
     }

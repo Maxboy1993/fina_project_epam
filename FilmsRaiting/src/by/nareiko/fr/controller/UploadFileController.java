@@ -21,6 +21,9 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Upload file controller.
+ */
 @WebServlet("/uploadController")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024,
         maxFileSize = 1024 * 1024 * 10, maxRequestSize = 1024 * 1024 * 5 * 5)

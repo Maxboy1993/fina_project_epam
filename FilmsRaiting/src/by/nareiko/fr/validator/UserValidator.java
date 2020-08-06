@@ -9,6 +9,9 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type User validator.
+ */
 public class UserValidator {
     private static final String SPLIT_REGEX = "-";
     private static final String LOGIN_REGEX = "[a-zA-Z0-9_.-]{1,40}@[a-zA-Z0-9_-]{2,40}.[a-z]{2,4}";
@@ -24,10 +27,20 @@ public class UserValidator {
     private static final long MIN_AGE = -2524447659733L;
     private Set<String> errorMessages;
 
+    /**
+     * Instantiates a new User validator.
+     */
     public UserValidator() {
         errorMessages = new HashSet<>();
     }
 
+    /**
+     * Validate login and password boolean.
+     *
+     * @param login    the login
+     * @param password the password
+     * @return the boolean
+     */
     public boolean validateLoginAndPassword(String login, String password) {
         boolean isCorrect = false;
         if (login != null && !login.isBlank() && password != null && !password.isBlank()) {
@@ -40,6 +53,16 @@ public class UserValidator {
         return isCorrect;
     }
 
+    /**
+     * Validate registration data boolean.
+     *
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param login     the login
+     * @param password  the password
+     * @param birthday  the birthday
+     * @return the boolean
+     */
     public boolean validateRegistrationData(String firstName, String lastName, String login, String password, String birthday) {
         boolean isCorrect = false;
 
@@ -122,6 +145,11 @@ public class UserValidator {
         return isCorrect;
     }
 
+    /**
+     * Gets user error messages.
+     *
+     * @return the user error messages
+     */
     public Set<String> getUserErrorMessages() {
         Set<String> errors = new HashSet<>();
         errors.addAll(errorMessages);

@@ -17,6 +17,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * The type Connection pool.
+ */
 public class ConnectionPool {
     private static final String PROPERTIES_PATH = "database";
     private static final String DRIVER_CLASS = "MYSQLJDBC.driver";
@@ -36,6 +39,11 @@ public class ConnectionPool {
         initConnection();
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static ConnectionPool getInstance() {
         if (pool == null) {
             try {
@@ -68,6 +76,11 @@ public class ConnectionPool {
         }
     }
 
+    /**
+     * Gets connection.
+     *
+     * @return the connection
+     */
     public Connection getConnection() {
         ProxyConnection connection = null;
         if (!freeConnections.isEmpty()) {
@@ -82,6 +95,13 @@ public class ConnectionPool {
         return connection;
     }
 
+    /**
+     * Release connection.
+     *
+     * @param connection the connection
+     * @throws DaoException the dao exception
+     * @throws SQLException the sql exception
+     */
     public void releaseConnection(Connection connection) throws DaoException, SQLException {
         if (connection.getClass() != ProxyConnection.class) {
             throw new DaoException("Invalid connection");
@@ -89,14 +109,15 @@ public class ConnectionPool {
         connection.setAutoCommit(true);
         if (givenAwayConnections.contains(connection)) {
             givenAwayConnections.remove(connection);
-            //TODO
-            // очитстить конекшин, потом вернуть в пул (транзакции)
             freeConnections.add((ProxyConnection) connection);
         } else {
             throw new DaoException("Connection is off. It cannot be released!");
         }
     }
 
+    /**
+     * Destroy pool.
+     */
     public void destroyPool() {
         for (int i = 0; i < DEFAULT_POOL_SIZE; i++) {
             try {
@@ -111,12 +132,20 @@ public class ConnectionPool {
     private void deregisterDrivers() {
         Enumeration<Driver> drivers = DriverManager.getDrivers();
         while (drivers.hasMoreElements()) {
-            Driver driver = (Driver) drivers.nextElement();
+            Driver driver = drivers.nextElement();
             try {
                 DriverManager.deregisterDriver(driver);
             } catch (SQLException e) {
                 LOGGER.error("Deregister driver error", e);
             }
         }
+    }
+
+    protected int getFreeConnactionsCount(){
+        return freeConnections.size();
+    }
+
+    protected int getGivenConnactionsCount(){
+        return givenAwayConnections.size();
     }
 }

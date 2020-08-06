@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Add director command.
+ */
 public class AddDirectorCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String COMMAND = "controller?command=PASSING_TO_ADD_FILM";

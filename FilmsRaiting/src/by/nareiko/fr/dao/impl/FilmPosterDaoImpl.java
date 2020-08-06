@@ -10,12 +10,20 @@ import java.io.InputStream;
 import java.sql.*;
 import java.util.Optional;
 
+/**
+ * The type Film poster dao.
+ */
 public class FilmPosterDaoImpl implements PosterDao {
     private static final PosterDao INSTANCE = new FilmPosterDaoImpl();
 
     private FilmPosterDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static PosterDao getInstance() {
         return INSTANCE;
     }

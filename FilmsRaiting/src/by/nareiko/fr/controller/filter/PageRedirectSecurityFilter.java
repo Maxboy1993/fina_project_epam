@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * The type Page redirect security filter.
+ */
 @WebFilter(urlPatterns = {"/jsp/*"})
 public class PageRedirectSecurityFilter implements Filter {
     private final String indexPath = PagePath.INDEX;

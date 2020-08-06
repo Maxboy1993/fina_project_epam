@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Add film command.
+ */
 public class AddFilmCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String COMMAND = "controller?command=PASSING_TO_ADD_POSTER";

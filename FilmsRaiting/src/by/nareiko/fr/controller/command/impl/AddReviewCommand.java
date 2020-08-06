@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Add review command.
+ */
 public class AddReviewCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final String COMMAND = "controller?command=PASSING_TO_FILM_INFO";

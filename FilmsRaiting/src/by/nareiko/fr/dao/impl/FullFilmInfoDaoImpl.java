@@ -19,6 +19,9 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Full film info dao.
+ */
 public class FullFilmInfoDaoImpl implements FilmDao<Film> {
     private static final String ACTIVE_STATUS = "active";
     private static final String FILM_NAME_PLACE_REGEX = "%";
@@ -32,6 +35,11 @@ public class FullFilmInfoDaoImpl implements FilmDao<Film> {
     private FullFilmInfoDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmDao getInstance() {
         return INSTANCE;
     }

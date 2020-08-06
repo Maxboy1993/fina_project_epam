@@ -14,6 +14,9 @@ import java.math.RoundingMode;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Film raiting service.
+ */
 public class FilmRaitingServiceImpl implements FilmRaitingService<FilmRaiting> {
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -22,6 +25,11 @@ public class FilmRaitingServiceImpl implements FilmRaitingService<FilmRaiting> {
     private FilmRaitingServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmRaitingService getInstance() {
         return INSTANCE;
     }

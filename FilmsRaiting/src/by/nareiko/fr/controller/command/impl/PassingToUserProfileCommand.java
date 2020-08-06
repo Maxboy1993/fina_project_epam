@@ -6,6 +6,9 @@ import by.nareiko.fr.controller.command.PagePath;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * The type Passing to user profile command.
+ */
 public class PassingToUserProfileCommand implements Command {
     @Override
     public Router execute(HttpServletRequest request) {

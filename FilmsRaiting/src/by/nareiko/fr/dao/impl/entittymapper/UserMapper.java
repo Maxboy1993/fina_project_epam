@@ -12,6 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * The type User mapper.
+ */
 public class UserMapper extends EntityMapper<User> {
     @Override
     public User initEntity(ResultSet resultSet) throws SQLException {

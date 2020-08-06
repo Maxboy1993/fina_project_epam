@@ -14,6 +14,9 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Actor service.
+ */
 public class ActorServiceImpl implements FilmPersonService<Actor> {
     private static final FilmPersonService INSTANCE = new ActorServiceImpl();
     private static final Logger LOGGER = LogManager.getLogger();
@@ -23,6 +26,11 @@ public class ActorServiceImpl implements FilmPersonService<Actor> {
     private ActorServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmPersonService getInstance() {
         return INSTANCE;
     }

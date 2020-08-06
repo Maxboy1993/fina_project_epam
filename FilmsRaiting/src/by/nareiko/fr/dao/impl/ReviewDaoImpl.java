@@ -13,6 +13,9 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Review dao.
+ */
 public class ReviewDaoImpl implements ReviewDao<Review> {
     private static final String SPLIT_REGEX = "-";
     private static final int YEAR_INDEX = 0;
@@ -24,6 +27,11 @@ public class ReviewDaoImpl implements ReviewDao<Review> {
     private ReviewDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static ReviewDao getInstance() {
         return INSTANCE;
     }

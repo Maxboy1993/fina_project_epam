@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Show film info command.
+ */
 public class ShowFilmInfoCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
 

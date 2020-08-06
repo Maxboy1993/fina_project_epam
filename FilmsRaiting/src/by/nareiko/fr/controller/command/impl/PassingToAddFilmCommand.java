@@ -6,6 +6,9 @@ import by.nareiko.fr.controller.command.PagePath;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * The type Passing to add film command.
+ */
 public class PassingToAddFilmCommand implements Command {
     @Override
     public Router execute(HttpServletRequest request) {

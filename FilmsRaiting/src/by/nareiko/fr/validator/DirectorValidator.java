@@ -9,6 +9,9 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type Director validator.
+ */
 public class DirectorValidator {
     private static final String SPLIT_REGEX = "-";
     private static final String NAME_REGEX = "[a-zA-Z ]{2,30}";
@@ -19,10 +22,21 @@ public class DirectorValidator {
     private static final long MIN_AGE = -2524447659733L;
     private Set<String> errorDirectorMessages;
 
+    /**
+     * Instantiates a new Director validator.
+     */
     public DirectorValidator() {
         errorDirectorMessages = new HashSet<>();
     }
 
+    /**
+     * Validate director data boolean.
+     *
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param birthday  the birthday
+     * @return the boolean
+     */
     public boolean validateDirectorData(String firstName, String lastName, String birthday) {
         boolean isCorrect = false;
 
@@ -67,6 +81,11 @@ public class DirectorValidator {
         return isCorrect;
     }
 
+    /**
+     * Gets error director messages.
+     *
+     * @return the error director messages
+     */
     public Set<String> getErrorDirectorMessages() {
         Set<String> errors = new HashSet<>();
         errors.addAll(errorDirectorMessages);

@@ -7,6 +7,9 @@ import by.nareiko.fr.controller.command.PagePath;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * The type Change language command.
+ */
 public class ChangeLanguageCommand implements Command {
 
     @Override

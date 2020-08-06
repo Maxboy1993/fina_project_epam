@@ -15,6 +15,9 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type User dao.
+ */
 public class UserDaoImpl implements UserDao<User> {
     private static final String ADMIN_ROLE = "admin";
     private static final String USER_ROLE = "user";
@@ -29,6 +32,11 @@ public class UserDaoImpl implements UserDao<User> {
     private UserDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static UserDao getInstance() {
         return INSTANCE;
     }

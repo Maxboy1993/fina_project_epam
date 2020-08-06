@@ -6,6 +6,9 @@ import by.nareiko.fr.controller.command.PagePath;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * The type Passing to show users command.
+ */
 public class PassingToShowUsersCommand implements Command {
     @Override
     public Router execute(HttpServletRequest request) {

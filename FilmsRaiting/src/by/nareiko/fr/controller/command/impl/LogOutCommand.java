@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 
+/**
+ * The type Log out command.
+ */
 public class LogOutCommand implements Command {
     @Override
     public Router execute(HttpServletRequest request) {

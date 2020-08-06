@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Count film raiting.
+ */
 public class CountFilmRaiting implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
 

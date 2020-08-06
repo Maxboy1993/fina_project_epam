@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Passing to add actor command.
+ */
 public class PassingToAddActorCommand implements Command {
 
     @Override

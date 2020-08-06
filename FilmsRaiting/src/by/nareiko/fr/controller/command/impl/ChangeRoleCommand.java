@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Change role command.
+ */
 public class ChangeRoleCommand implements Command {
     private static final String COMMAND = "controller?command=PASSING_TO_SHOW_USERS";
     private static final Logger LOGGER = LogManager.getLogger();

@@ -12,6 +12,9 @@ import by.nareiko.fr.service.ServiceFactory;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * The type Delete film command.
+ */
 public class DeleteFilmCommand implements Command {
     private static final String COMMAND = "controller?command=PASSING_TO_MAIN";
 

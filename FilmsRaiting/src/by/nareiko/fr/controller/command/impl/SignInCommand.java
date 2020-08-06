@@ -16,6 +16,9 @@ import javax.servlet.http.HttpSession;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Sign in command.
+ */
 public class SignInCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -36,7 +39,7 @@ public class SignInCommand implements Command {
                         session.setAttribute(RequestParameterName.USER_PARAM, user.get());
                         session.setAttribute(RequestParameterName.USER_ROLE_PARAM, user.get().getRoleType());
                         request.getSession().removeAttribute(RequestParameterName.VERIFICATION_PARAM);
-                        LOGGER.debug("It's ok!");
+                        //TODO delete
                         LOGGER.error("It's ok!");
                         router.setPage(PagePath.MAIN);
                     } else {
@@ -58,5 +61,4 @@ public class SignInCommand implements Command {
         }
         return router;
     }
-
 }

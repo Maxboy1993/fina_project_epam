@@ -10,6 +10,9 @@ import by.nareiko.fr.entity.Director;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * The type Passing to add poster command.
+ */
 public class PassingToAddPosterCommand implements Command {
 
     @Override

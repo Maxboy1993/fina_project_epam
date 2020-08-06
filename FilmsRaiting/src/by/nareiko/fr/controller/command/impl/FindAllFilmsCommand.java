@@ -14,6 +14,9 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * The type Find all films command.
+ */
 public class FindAllFilmsCommand implements Command {
     private static final Logger LOGGER = LogManager.getLogger();
 

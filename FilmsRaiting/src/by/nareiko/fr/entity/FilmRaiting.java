@@ -1,14 +1,28 @@
 package by.nareiko.fr.entity;
 
+/**
+ * The type Film raiting.
+ */
 public class FilmRaiting extends AbstractEntity {
     private int id;
     private int filmId;
     private int userId;
     private int raiting;
 
+    /**
+     * Instantiates a new Film raiting.
+     */
     public FilmRaiting() {
     }
 
+    /**
+     * Instantiates a new Film raiting.
+     *
+     * @param id      the id
+     * @param filmId  the film id
+     * @param userId  the user id
+     * @param raiting the raiting
+     */
     public FilmRaiting(int id, int filmId, int userId, int raiting) {
         this.id = id;
         this.filmId = filmId;
@@ -16,34 +30,74 @@ public class FilmRaiting extends AbstractEntity {
         this.raiting = raiting;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets film id.
+     *
+     * @return the film id
+     */
     public int getFilmId() {
         return filmId;
     }
 
+    /**
+     * Sets film id.
+     *
+     * @param filmId the film id
+     */
     public void setFilmId(int filmId) {
         this.filmId = filmId;
     }
 
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
     public int getUserId() {
         return userId;
     }
 
+    /**
+     * Sets user id.
+     *
+     * @param userId the user id
+     */
     public void setUserId(int userId) {
         this.userId = userId;
     }
 
+    /**
+     * Gets raiting.
+     *
+     * @return the raiting
+     */
     public int getRaiting() {
         return raiting;
     }
 
+    /**
+     * Sets raiting.
+     *
+     * @param raiting the raiting
+     */
     public void setRaiting(int raiting) {
         this.raiting = raiting;
     }

@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * The type Session locale filter.
+ */
 @WebFilter("*.jsp")
 public class SessionLocaleFilter implements Filter {
 

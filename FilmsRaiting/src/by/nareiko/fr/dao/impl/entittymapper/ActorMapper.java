@@ -10,6 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * The type Actor mapper.
+ */
 public class ActorMapper extends EntityMapper<Actor> {
     @Override
     public Actor initEntity(ResultSet resultSet) throws SQLException {
@@ -28,6 +31,12 @@ public class ActorMapper extends EntityMapper<Actor> {
         return actor;
     }
 
+    /**
+     * Gets date from long.
+     *
+     * @param dateMillis the date millis
+     * @return the date from long
+     */
     public Calendar getDateFromLong(long dateMillis) {
         Calendar date = new GregorianCalendar();
         date.setTimeInMillis(dateMillis);

@@ -83,8 +83,6 @@ b
 2src/by/nareiko/fr/controller/command/PagePath.java,e\b\eb39902f5190728b586b8ebbe7736511f90e81ab
 l
 <src/by/nareiko/fr/controller/command/impl/SignInCommand.java,5\0\50cc18c21c2b998d19564a9df46d12e78f757ec3
-n
->src/by/nareiko/fr/controller/filter/ServletSecurityFilter.java,3\6\36ebe911478b9cbbe62428bc78dabcb806392c5d
 B
 web/jsp/signIn.jsp,6\9\69732ee0989fb9a7fac5e279533cc42cd36b20da
 S
@@ -135,9 +133,6 @@ Dsrc/by/nareiko/fr/controller/command/impl/ChangeLanguageCommand.java,4\2\42472
 .src/by/nareiko/fr/validator/UserValidator.java,a\3\a3434f5cafee7fc780c0aad09c0b03f1733d9e80
 r
 Bsrc/by/nareiko/fr/controller/command/impl/ConfirmEmailCommand.java,3\2\32ca0d96b2fd6938cb7bd08b8a147d69ca8dbb48
-:
-
-web/log4j2,e\2\e26bdbe77803dda5fc8858506d36c2f7b8e4cc8e
 X
 (src/by/nareiko/fr/dao/SqlColumnName.java,8\b\8be34bb27fb14c476bc954659ae1d10a61d42e09
 s
@@ -256,5 +251,15 @@ p
 @src/by/nareiko/fr/controller/command/impl/ChangeRoleCommand.java,a\6\a6d1bf6c3c824acf9e78a8d23d73d671d9553f9e
 =
 log/log4j.log,3\f\3f365a5e54c05cd409f28b7265e57d88cbff62b2
-B
-web/WEB-INF/log4j2,3\d\3d3ec15b6da91537a60a2f1f676e1959d42b83be
+d
+4test/by/nareiko/fr/validator/ActorValidatorTest.java,8\2\82166a402b31cbac13ae1114b13731a228d97c3a
+c
+3test/by/nareiko/fr/validator/FilmValidatorTest.java,5\6\562e2cdae258383d25bebd2ba342287db7629481
+e
+5test/by/nareiko/fr/validator/ReviewValidatorTest.java,9\3\9396a83721b6753c8d7a0dad1e61acb4c423119d
+c
+3test/by/nareiko/fr/validator/UserValidatorTest.java,e\2\e21ecc31c25f69649e59af0182885dc5de87d04b
+g
+7test/by/nareiko/fr/validator/DirectorValidatorTest.java,9\e\9e86f64dd3930e92a7df3601a7e1ba03419badfe
+_
+/test/by/nareiko/fr/pool/ConnectionPoolTest.java,b\9\b9ddb2f51f1e303b06fc4ad8f29f36132c6c0835

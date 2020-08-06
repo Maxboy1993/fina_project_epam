@@ -1,5 +1,8 @@
 package by.nareiko.fr.entity;
 
+/**
+ * The type Review.
+ */
 public class Review extends AbstractEntity {
     private int id;
     private int filmId;
@@ -7,9 +10,21 @@ public class Review extends AbstractEntity {
     private String review;
     private String reviewDate;
 
+    /**
+     * Instantiates a new Review.
+     */
     public Review() {
     }
 
+    /**
+     * Instantiates a new Review.
+     *
+     * @param id         the id
+     * @param filmId     the film id
+     * @param userId     the user id
+     * @param review     the review
+     * @param reviewDate the review date
+     */
     public Review(int id, int filmId, int userId, String review, String reviewDate) {
         this.id = id;
         this.filmId = filmId;
@@ -18,42 +33,92 @@ public class Review extends AbstractEntity {
         this.reviewDate = reviewDate;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets film id.
+     *
+     * @return the film id
+     */
     public int getFilmId() {
         return filmId;
     }
 
+    /**
+     * Sets film id.
+     *
+     * @param filmId the film id
+     */
     public void setFilmId(int filmId) {
         this.filmId = filmId;
     }
 
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
     public int getUserId() {
         return userId;
     }
 
+    /**
+     * Sets user id.
+     *
+     * @param userId the user id
+     */
     public void setUserId(int userId) {
         this.userId = userId;
     }
 
+    /**
+     * Gets review.
+     *
+     * @return the review
+     */
     public String getReview() {
         return review;
     }
 
+    /**
+     * Sets review.
+     *
+     * @param review the review
+     */
     public void setReview(String review) {
         this.review = review;
     }
 
+    /**
+     * Gets review date.
+     *
+     * @return the review date
+     */
     public String getReviewDate() {
         return reviewDate;
     }
 
+    /**
+     * Sets review date.
+     *
+     * @param reviewDate the review date
+     */
     public void setReviewDate(String reviewDate) {
         this.reviewDate = reviewDate;
     }

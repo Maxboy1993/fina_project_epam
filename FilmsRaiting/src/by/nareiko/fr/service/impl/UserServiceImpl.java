@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type User service.
+ */
 public class UserServiceImpl implements UserService<User> {
     private static final RoleType DEFAULT_ROLE = RoleType.USER;
     private static final StatusType DEFAULT_STATUS = StatusType.ACTIVE;
@@ -29,6 +32,11 @@ public class UserServiceImpl implements UserService<User> {
     private UserServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static UserService getInstance() {
         return INSTANCE;
     }

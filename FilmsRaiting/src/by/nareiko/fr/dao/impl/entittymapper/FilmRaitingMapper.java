@@ -7,6 +7,9 @@ import by.nareiko.fr.entity.FilmRaiting;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * The type Film raiting mapper.
+ */
 public class FilmRaitingMapper extends EntityMapper<FilmRaiting> {
     @Override
     public FilmRaiting initEntity(ResultSet resultSet) throws SQLException {

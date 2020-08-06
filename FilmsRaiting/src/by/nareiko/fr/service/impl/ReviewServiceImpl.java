@@ -13,6 +13,9 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Review service.
+ */
 public class ReviewServiceImpl implements ReviewService<Review> {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final ReviewService INSTANCE = new ReviewServiceImpl();
@@ -20,6 +23,11 @@ public class ReviewServiceImpl implements ReviewService<Review> {
     private ReviewServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static ReviewService getInstance() {
         return INSTANCE;
     }

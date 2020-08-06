@@ -1,14 +1,28 @@
 package by.nareiko.fr.entity;
 
+/**
+ * The type Actor.
+ */
 public class Actor extends AbstractEntity {
     private int id;
     private String firstName;
     private String lastName;
     private String birthday;
 
+    /**
+     * Instantiates a new Actor.
+     */
     public Actor() {
     }
 
+    /**
+     * Instantiates a new Actor.
+     *
+     * @param id        the id
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param birthday  the birthday
+     */
     public Actor(int id, String firstName, String lastName, String birthday) {
         this.id = id;
         this.firstName = firstName;
@@ -16,34 +30,74 @@ public class Actor extends AbstractEntity {
         this.birthday = birthday;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets first name.
+     *
+     * @return the first name
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Sets first name.
+     *
+     * @param firstName the first name
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     * Gets last name.
+     *
+     * @return the last name
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     * Sets last name.
+     *
+     * @param lastName the last name
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     * Gets birthday.
+     *
+     * @return the birthday
+     */
     public String getBirthday() {
         return birthday;
     }
 
+    /**
+     * Sets birthday.
+     *
+     * @param birthday the birthday
+     */
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }

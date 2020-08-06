@@ -14,6 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 
+/**
+ * The type Actor dao.
+ */
 public class ActorDaoImpl implements FilmPersonDao<Actor> {
     private static final FilmPersonDao INSTANCE = new ActorDaoImpl();
     private static final String SPLIT_REGEX = "-";
@@ -25,6 +28,11 @@ public class ActorDaoImpl implements FilmPersonDao<Actor> {
     private ActorDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmPersonDao getInstance() {
         return INSTANCE;
     }
@@ -93,6 +101,13 @@ public class ActorDaoImpl implements FilmPersonDao<Actor> {
         return Optional.ofNullable(actor);
     }
 
+    /**
+     * Find by film id list.
+     *
+     * @param id the id
+     * @return the list
+     * @throws DaoException the dao exception
+     */
     public List<Actor> findByFilmId(int id) throws DaoException {
         List<Actor> actors;
         ActorMapper actorMapper = new ActorMapper();

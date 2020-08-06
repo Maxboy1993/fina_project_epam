@@ -11,12 +11,20 @@ import java.sql.*;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Film raiting dao.
+ */
 public class FilmRaitingDaoImpl implements FilmRaitingDao<FilmRaiting> {
     private static final FilmRaitingDao INSTANCE = new FilmRaitingDaoImpl();
 
     private FilmRaitingDaoImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmRaitingDao getInstance() {
         return INSTANCE;
     }

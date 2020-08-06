@@ -18,6 +18,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The type Film service.
+ */
 public class FilmServiceImpl implements FilmService<Film> {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final FilmService INSTANCE = new FilmServiceImpl();
@@ -26,6 +29,11 @@ public class FilmServiceImpl implements FilmService<Film> {
     private FilmServiceImpl() {
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static FilmService getInstance() {
         return INSTANCE;
     }

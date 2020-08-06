@@ -9,6 +9,9 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type Actor validator.
+ */
 public class ActorValidator {
     private static final String SPLIT_REGEX = "-";
     private static final String NAME_REGEX = "[a-zA-Z ]{2,30}";
@@ -19,11 +22,22 @@ public class ActorValidator {
     private static final long MIN_AGE = -2524447659733L;
     private Set<String> errorActorMessages;
 
+    /**
+     * Instantiates a new Actor validator.
+     */
     public ActorValidator() {
         errorActorMessages = new HashSet<>();
     }
 
 
+    /**
+     * Validate actor data boolean.
+     *
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param birthday  the birthday
+     * @return the boolean
+     */
     public boolean validateActorData(String firstName, String lastName, String birthday) {
         boolean isCorrect = false;
 
@@ -68,6 +82,11 @@ public class ActorValidator {
         return isCorrect;
     }
 
+    /**
+     * Gets error actor messages.
+     *
+     * @return the error actor messages
+     */
     public Set<String> getErrorActorMessages() {
         Set<String> errors = new HashSet<>();
         errors.addAll(errorActorMessages);

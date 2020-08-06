@@ -10,6 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+/**
+ * The type Review mapper.
+ */
 public class ReviewMapper extends EntityMapper<Review> {
     @Override
     public Review initEntity(ResultSet resultSet) throws SQLException {
