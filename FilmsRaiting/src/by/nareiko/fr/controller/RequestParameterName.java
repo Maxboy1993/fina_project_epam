@@ -143,7 +143,10 @@ public class RequestParameterName {
     /**
      * The constant FILM_SEARCHING_ERROR_PARAM.
      */
-    public static final String FILM_SEARCHING_ERROR_PARAM = "errorFilmSearching";
+    public static final String FILM_SEARCHING_ERROR_PARAM = "errorFilmSearching";  /**
+     * The constant FILM_SEARCHING_RESULT_PARAM.
+     */
+    public static final String FILM_SEARCHING_RESULT_PARAM = "noFilmsFound";
     /**
      * The constant FILM_RAITING_PARAM.
      */
@@ -215,8 +218,17 @@ public class RequestParameterName {
     /**
      * The constant VERIFICATION_VALUE.
      */
-//for values
+
+//values
+
+    /**
+     * The constant VERIFICATION_VALUE.
+     */
     public static final String VERIFICATION_VALUE = "label.verificationNotConfirmed";
+    /**
+     * The constant FILM_SEARCHING_RESULT_VALUE.
+     */
+    public static final String FILM_SEARCHING_RESULT_VALUE = "label.filmsNotFound";
     /**
      * The constant NO_LOGIN_OR_PASSWORD_VALUE.
      */

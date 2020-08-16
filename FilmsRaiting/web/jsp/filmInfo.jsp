@@ -1,8 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
+<%@ taglib prefix="ctd" uri="customDate" %>
 
-<fmt:setLocale value="${sessionScope.language}"/>
+<fmt:setLocale value="en"/>
+<c:if test="${ not empty language}">
+    <fmt:setLocale value="${language}"/>
+</c:if>
 <fmt:setBundle basename="pagecontent.pagecontent" var="pc"/>
 <html>
 <head>
@@ -34,7 +38,7 @@
         </p>
         <p class="mt-0">
             <h7><fmt:message bundle="${pc}" key="label.filmRaiting"/> <span
-                    class="badge badge-secondary"> ${film.releaseDate}</span></h7>
+                    class="badge badge-secondary"> <ctd:custom-date date="${film.releaseDate}"/></span></h7>
         </p>
         <p class="mt-0">
             <h7></h7>
@@ -45,7 +49,7 @@
                     class="badge badge-secondary"> ${film.director.firstName} ${film.director.lastName}</span></h7>
             <h7><fmt:message bundle="${pc}" key="label.birthday"/> :
                 <br>
-                <span class="badge badge-secondary"> ${film.director.birthday}</span></h7>
+                <span class="badge badge-secondary"> <ctd:custom-date date="${film.director.birthday}"/></span></h7>
         </p>
         <p class="mt-0">
             <h7><fmt:message bundle="${pc}" key="label.actor"/> :</h7>
@@ -53,7 +57,7 @@
             <c:forEach var="actor" items="${film.actors}" varStatus="Status">
                 <h7><span class="badge badge-secondary"> ${actor.firstName} ${actor.lastName}</span></h7>
                 <h7><fmt:message bundle="${pc}" key="label.birthday"/> : <span
-                        class="badge badge-secondary"> ${actor.birthday}</span></h7>
+                        class="badge badge-secondary"> <ctd:custom-date date="${actor.birthday}"/></span></h7>
                 <br>
             </c:forEach>
         </p>
@@ -95,7 +99,7 @@
                 <td class="col col-2"
                     data-label="<fmt:message bundle="${pc}" key="label.review"/>">${review.review}</td>
                 <td class="col col-3"
-                    data-label="<fmt:message bundle="${pc}" key="label.reviewDate"/>">${review.reviewDate}</td>
+                    data-label="<fmt:message bundle="${pc}" key="label.reviewDate"/>"> <ctd:custom-date date="${review.reviewDate}"/></td>
             </tr>
             <tr>
                 <td></td>

@@ -22,15 +22,20 @@ public class FindFilmByNameCommand implements Command {
 
     @Override
     public Router execute(HttpServletRequest request) {
-        String filmNmae = request.getParameter(RequestParameterName.FILM_NAME_PARAM);
+        String filmName = request.getParameter(RequestParameterName.FILM_NAME_PARAM);
 
         Router router = new Router();
         FilmService filmService = ServiceFactory.getInstance().getFilmService();
-        if (filmService.checkFilmName(filmNmae)) {
+        if (filmService.checkFilmName(filmName)) {
             try {
-                List<Film> filmList = filmService.findFilmsByName(filmNmae);
-                request.setAttribute(RequestParameterName.FILMS_LIST_BY_NAME_PARAM, filmList);
-                router.setPage(PagePath.MAIN);
+                List<Film> filmList = filmService.findFilmsByName(filmName);
+                if (filmList.size() > 0){
+                    request.setAttribute(RequestParameterName.FILMS_LIST_BY_NAME_PARAM, filmList);
+                    router.setPage(PagePath.MAIN);
+                }else {
+                    request.setAttribute(RequestParameterName.FILM_SEARCHING_RESULT_PARAM, RequestParameterName.FILM_SEARCHING_RESULT_VALUE);
+                    router.setPage(PagePath.MAIN);
+                }
             } catch (ServiceException e) {
                 LOGGER.error("Error while film searching by name", e);
                 router.setPage(PagePath.ERROR_500);

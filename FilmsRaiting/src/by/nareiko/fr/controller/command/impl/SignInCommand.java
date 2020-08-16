@@ -39,8 +39,6 @@ public class SignInCommand implements Command {
                         session.setAttribute(RequestParameterName.USER_PARAM, user.get());
                         session.setAttribute(RequestParameterName.USER_ROLE_PARAM, user.get().getRoleType());
                         request.getSession().removeAttribute(RequestParameterName.VERIFICATION_PARAM);
-                        //TODO delete
-                        LOGGER.error("It's ok!");
                         router.setPage(PagePath.MAIN);
                     } else {
                         request.setAttribute(RequestParameterName.VERIFICATION_PARAM, RequestParameterName.VERIFICATION_VALUE);

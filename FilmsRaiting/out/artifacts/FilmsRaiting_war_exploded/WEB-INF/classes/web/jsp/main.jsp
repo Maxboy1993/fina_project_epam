@@ -1,8 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
+<%@ taglib prefix="ctd" uri="customDate" %>
 
-<fmt:setLocale value="${sessionScope.language}"/>
+<fmt:setLocale value="en"/>
+<c:if test="${ not empty language}">
+    <fmt:setLocale value="${language}"/>
+</c:if>
 <fmt:setBundle basename="pagecontent.pagecontent" var="pc"/>
 
 <html>
@@ -65,6 +69,10 @@
     <fmt:message bundle="${pc}" key="${verification}"/>
 </c:if>
 <br>
+<c:if test="${not empty noFilmsFound}">
+    <fmt:message bundle="${pc}" key="${noFilmsFound}"/>
+</c:if>
+<br>
 <c:if test="${not empty errorFilmSearching}">
     <fmt:message bundle="${pc}" key="${errorFilmSearching}"/>
 </c:if>
@@ -82,7 +90,7 @@
                             href="${pageContext.request.contextPath}/controller?command=SHOW_FILM_INFO&filmId=${film.id}">${film.name}</a>
                     </h5>
                     <h8 class="mt-0 mb-1"><br><fmt:message bundle="${pc}" key="label.releaseDate"/>: <span
-                            class="badge badge-secondary">${film.releaseDate}</span></h8>
+                            class="badge badge-secondary"><ctd:custom-date date="${film.releaseDate}"/></span></h8>
                     <div class="dropdown ">
                         <button class="btn btn-outline-success my-2 my-sm-0 dropdown-toggle" type="button"
                                 id="dropdownMenuButton"
@@ -144,12 +152,12 @@
     <c:forEach var="filmByName" items="${filmsListByName}" varStatus="Status">
         <li class="media">
             <img src="data:image/jpg;base64,${filmByName.poster}" class="mr-3" alt="POSTER" width="100" height="150">
-            <p class="media-body">
+            <div class="media-body">
             <h5 class="mt-0 mb-1"><a
                     href="${pageContext.request.contextPath}/controller?command=SHOW_FILM_INFO&filmId=${filmByName.id}">${filmByName.name}</a>
             </h5>
             <h8 class="mt-0 mb-1"><br><fmt:message bundle="${pc}" key="label.releaseDate"/>: <span
-                    class="badge badge-secondary">${film.releaseDate}</span></h8>
+                    class="badge badge-secondary"><ctd:custom-date date="${film.releaseDate}"/></span></h8>
             <div class="dropdown ">
                 <button class="btn btn-outline-success my-2 my-sm-0 dropdown-toggle" type="button"
                         id="dropdownMenuButton2"

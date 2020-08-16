@@ -22,4 +22,11 @@
         <error-code>500</error-code>
         <location>/jsp/errors/error500.jsp</location>
     </error-page>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>customDate</taglib-uri>
+            <taglib-location>/WEB-INF/tld/custom_date.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>
